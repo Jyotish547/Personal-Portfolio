@@ -1,3 +1,3 @@
-import './input.css';
+import '../public/output.css';
 
 console.log("Boyus");
