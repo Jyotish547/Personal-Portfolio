@@ -14,3 +14,8 @@ html {
     background-size: cover;
 }
 
+.about-img {
+    background-image: url('../assets/about.png');
+    background-size: no-repeat;
+}
+

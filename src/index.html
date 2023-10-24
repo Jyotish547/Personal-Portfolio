@@ -18,8 +18,9 @@
         <li class="list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
       </div>
     </nav>
-    <main id="app" class="h-screen w-screen pt-20 px-96 flex flex-col items-center">
+    <main id="app" class="w-screen pt-20 px-96 flex flex-col items-center">
       <!-- Hero Section -->
+      <!-- Background is extending more than screen width for some reason -->
       <div id="hero-section" class="primary-bg bg-red-300 text-3xl text-stone-600 bg-white px-96 py-48 w-screen justify-center">
         Hi! I am
         <br>
@@ -31,14 +32,15 @@
         <button id="hero-button" class="bg-blue-500 py-5 px-8 rounded-lg text-xl text-white font-semibold drop-shadow-xl"><i class="fa-solid fa-paper-plane pr-5"></i></span>Contact Me</button>
       </div>
       <!-- About Section -->
-      <div id="about-section" class="bg-gray-100 w-screen py-12 ">
+      <div id="about-section" class="bg-gray-100 w-screen py-12 flex flex-col items-center">
         <div id="about-title" class="primary-bg text-3xl bg-red-300 p-5 text-center font-bold w-64 rounded-lg m-auto drop-shadow-xl text-stone-600">
           ABOUT ME
         </div>
-        <div id="about-container">
-          <img id="about-photo" src="../assets/about.png"></img>
+        <div id="about-container" class="flex flex-row ">
+          <!-- Image not loading -->
+          <img id="about-img" src="../assets/about.png" class="bg-blue-500"> Yo bros
           <div id="about-content">
-
+            Hello there
           </div>
         </div>
       </div>
