@@ -7,27 +7,40 @@
     <title>Jyothish | Portfolio</title>
   </head>
   <body id="container" class="flex h-full">
-    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full h-20 px-96 items-center bg-blue-500 text-white shadow-lg shadow-stone-400/75">
-      <div id="logo" class="text-4xl items-center fixed">Logo</div>
-      <div class="flex flex-row items-center justify-end w-full text-lg font-semibold">
-        <li class="list-none py-5"><a target="./index.html" class="p-5">Home</i></a></li>
-        <li class="list-none py-5"><a target="./resume.html" class="p-5">Resume</i></a></li>
-        <li class="list-none py-5"><a target="./projects.html" class="p-5">Projects</a></li>
+    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full h-20 px-96 items-center bg-white-300 text-stone-600 shadow-lg shadow-stone-400/50">
+      <div id="logo" class="text-4xl items-center">Logo</div>
+      <div class="flex flex-row items-center justify-end w-full text-lg font-bold">
+        <li class="list-none py-5"><a target="./index.html" class="p-5">HOME</i></a></li>
+        <li class="list-none py-5"><a target="./index.html" class="p-5">ABOUT</i></a></li>
+        <li class="list-none py-5"><a target="./resume.html" class="p-5">RESUME</i></a></li>
+        <li class="list-none py-5"><a target="./projects.html" class="p-5">PROJECTS</a></li>
         <!-- For Case studies refer to Sahil's portfolio www.thisissahil.com for group projects, and add your seperate personal projects -->
-        <li class="list-none py-5"><a target="./contact.html" class="p-5">Contact</a></li>
+        <li class="list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
       </div>
     </nav>
     <main id="app" class="h-screen w-screen pt-20 px-96 flex flex-col items-center">
       <!-- Hero Section -->
-      <div id="hero-section" class="bg-red-200 text-3xl bg-white px-96 py-48 w-screen justify-center">
+      <div id="hero-section" class="primary-bg bg-red-300 text-3xl text-stone-600 bg-white px-96 py-48 w-screen justify-center">
         Hi! I am
         <br>
-        <span class="text-8xl font-bold leading-tight">Jyothish <br> Gompa <br> </span>
+        <span class="text-8xl font-bold leading-tight text-stone-800">Jyothish <br> Gompa <br> </span>
         <br>
-        <span class="text-4xl leading-none">UI/UX Designer | Front-End Developer | Graphic Designer</span>
+        <span class="text-3xl leading-none font-semibold">UI/UX Designer | Front-End Developer | Graphic Designer</span>
         <br>
         <br>
-        <button id="hero-button" class="bg-blue-500 py-5 px-10 rounded-lg text-xl text-white font-semibold drop-shadow-xl">Contact Me</button>
+        <button id="hero-button" class="bg-blue-500 py-5 px-8 rounded-lg text-xl text-white font-semibold drop-shadow-xl"><i class="fa-solid fa-paper-plane pr-5"></i></span>Contact Me</button>
+      </div>
+      <!-- About Section -->
+      <div id="about-section" class="bg-gray-100 w-screen py-12 ">
+        <div id="about-title" class="primary-bg text-3xl bg-red-300 p-5 text-center font-bold w-64 rounded-lg m-auto drop-shadow-xl text-stone-600">
+          ABOUT ME
+        </div>
+        <div id="about-container">
+          <img id="about-photo" src="../assets/about.png"></img>
+          <div id="about-content">
+
+          </div>
+        </div>
       </div>
     </main>
     <script type="module" src="./main.ts"></script>

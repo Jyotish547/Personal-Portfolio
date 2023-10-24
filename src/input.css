@@ -9,3 +9,8 @@ html {
     /* background-color: cyan; */
 }
 
+.primary-bg {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),  url('../assets/hero-background.png');
+    background-size: cover;
+}
+
