@@ -1,3 +1,5 @@
 import '../public/output.css';
 
-console.log("Boyus");
+import '@fortawesome/fontawesome-free/css/all.css';
+
+console.log("Bolla");

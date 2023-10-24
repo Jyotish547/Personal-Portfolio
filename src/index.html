@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jyothish | Portfolio</title>
   </head>
-  <body>
-    <div id="app" class="text-4xl">Yo Bros</div>
+  <body id="container" class="flex h-full">
+    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full h-16 px-96 items-center bg-blue-500 text-white shadow-lg shadow-stone-400/75">
+      <div id="logo" class="text-4xl items-center fixed">Logo</div>
+      <div class="flex flex-row items-center justify-end w-full text-lg font-semibold">
+        <li class="list-none py-5"><a target="./index.html" class="p-5">Home</i></a></li>
+        <li class="list-none py-5"><a target="./resume.html" class="p-5">Resume</i></a></li>
+        <li class="list-none py-5"><a target="./projects.html" class="p-5">Projects</a></li>
+        <!-- For Case studies refer to Sahil's portfolio www.thisissahil.com for group projects, and add your seperate personal projects -->
+        <li class="list-none py-5"><a target="./contact.html" class="p-5">Contact</a></li>
+      </div>
+    </nav>
+    <main id="app" class="h-screen w-screen pt-24 px-96 flex flex-col items-center">
+      <div class="bg-red-300 px-8 py-4 w-full justify-center">
+        Yo Bros
+      </div>
+    </main>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-    background-color: red;
+html {
+    margin: 0;
+    padding: 0;
+    /* Add background color later */
+    /* background-color: cyan; */
 }
+
