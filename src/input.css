@@ -14,6 +14,11 @@ html {
     background-size: cover;
 }
 
+.primary-bg-80 {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.80)),  url('../assets/hero-background.png');
+    background-size: cover;
+}
+
 .about-img {
     background-image: url('../assets/about.png');
     background-size: no-repeat;
