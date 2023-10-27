@@ -1,0 +1,6 @@
+{
+    "watch": ["src/**/*", "index.html"],
+    "ignore": ["node_modules"],
+    "exec": "rimraf node_modules/.vite && vite"
+  }
+  
