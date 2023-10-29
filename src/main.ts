@@ -1,3 +1,7 @@
+// Test Console Log
+
+console.log("Bolla");
+
 // CSS Declaration
 
 import '../public/output.css';
@@ -268,5 +272,3 @@ if (filterOptions && dropdownMenu) {
     });
 
 }
-
-console.log("Bolla");
