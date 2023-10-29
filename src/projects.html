@@ -6,7 +6,7 @@
     <title>Projects | Jyothish Gompa</title>
 </head>
 <body id="container" class="flex h-full overflow-x-hidden">
-    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full px-96 items-center bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-10">
+    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96 items-center bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-10">
         <div id="logo" class="text-4xl items-center">Logo</div>
         <div class="flex flex-row items-center justify-end w-full text-lg font-bold">
           <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">HOME</i></a></li>
@@ -17,9 +17,9 @@
           <li class="nav-item list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
         </div>
       </nav>
-      <main id="projects-app" class="w-screen pt-20 px-96 flex flex-col items-center">
+      <main id="projects-app" class="w-screen pt-20 flex flex-col items-center">
         <!-- Projects Hero Section -->
-      <div id="hero-section" class="primary-bg text-3xl text-stone-600 bg-white px-96 py-48 w-screen justify-center">
+      <div id="hero-section" class="primary-bg text-3xl text-stone-600 bg-white py-48 w-screen justify-center sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         Scroll down to view
         <br>
         <span class="text-8xl font-bold leading-tight text-stone-800">My Projects <br></span>
@@ -31,24 +31,23 @@
       </div>
       <!-- End of Projects Hero Section -->
       <!-- All Projects Section -->
-      <div id="my-projects" class="flex flex-col my-16 items-center w-screen px-96">
+      <div id="my-projects" class="flex flex-col my-16 items-center w-screen sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         
-        <div id="filter-title-container" class="w-full flex flex-row items-center justify-between mb-12 text-slate-700">
-          <div>
+        <div id="filter-title-container" class="w-full flex sm:flex-col sm:items-start md:flex-row md:items-center justify-between mb-12 text-slate-700">
+          <div class="md:w-4/5 lg:w-fit">
             <h2 id="filter-title" class="text-3xl font-semibold pb-3">All Projects</h2>
-            <p id="filter-content" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p>
-            
+            <p id="filter-content" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p> 
           </div>
-          <div id="filter-options" class="w-fit font-semibold text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative">
-            <div class="flex items-center justify-between py-5 px-8 rounded-lg hover:bg-slate-100" data-color="text-blue-500">
-                <div id="selected-filter">
+          <div id="filter-options" class="w-fit font-semibold text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative sm:mt-8 md:mt-0">
+            <div class="flex flex-row w-full items-center justify-between py-5 px-8 rounded-lg hover:bg-slate-100" data-color="text-blue-500">
+                <div id="selected-filter" class="w-fit">
                     <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
                 </div>
                 <div>
                     <i class="fa-solid fa-chevron-down fa-lg ml-3"></i>
                 </div>
             </div>
-            <div id="dropdown-menu" class="hidden flex flex-col w-fit absolute top-full bg-white shadow-custom shadow-stone-500/50 rounded-lg">
+            <div id="dropdown-menu" class="hidden flex flex-col w-fit absolute top-full bg-white shadow-custom shadow-stone-500/50 rounded-lg ">
                 <!-- Note the added data-color attributes -->
                 <div class="all-filter bg-white py-5 px-8 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700 rounded-t-lg" data-color="text-blue-500">
                     <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
@@ -71,7 +70,7 @@
             </div>
           </div>
         </div>
-        <div id="my-projects-container" class="grid grid-cols-2 grid-flow-row gap-12 min-h-64">
+        <div id="my-projects-container" class="grid md:grid-cols-1 lg:grid-cols-2 grid-flow-row gap-12 min-h-64">
           <!-- Create grid columns 3 for width > 1920 -->
             <div id="project-1" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-xl">
               <img id="pr-1-img" class="rounded-t-xl">

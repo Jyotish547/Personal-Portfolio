@@ -19,11 +19,6 @@ html {
     background-size: cover;
 }
 
-.about-img {
-    background-image: url('../assets/about.png');
-    background-size: no-repeat;
-}
-
 .w-80 {
     width: 80%;
 }
