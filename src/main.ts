@@ -1,10 +1,3 @@
-/*
-1. Done - Create Selected Element state for nav-bar and other required elements
-2. Done - Create dropdown menu for the filter options in projects.html
-3. Done - Create formspree for Contact Form
-4. Initite download of resume
-*/
-
 // CSS Declaration
 
 import '../public/output.css';
@@ -12,6 +5,17 @@ import '../public/output.css';
 // Icons Declaration
 
 import '@fortawesome/fontawesome-free/css/all.css';
+
+//  Resume Download
+
+import resume from '../assets/resume.pdf';
+
+const resumeDownloads = document.querySelectorAll(".download-resume");
+
+resumeDownloads.forEach(downloadLink => {
+    (downloadLink as HTMLAnchorElement).href = resume;
+});
+
 
 // About Image Declaration
 
@@ -76,12 +80,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function showAllGridItems() {
     const gridItemsClasses = document.querySelectorAll("#my-projects-container > div");
 
-    console.log(`Found ${gridItemsClasses.length} grid items.`);
-
 
     gridItemsClasses.forEach(item => {
-        console.log('Classes for item:', Array.from(item.classList));
-        console.log(item);
+        
         item.classList.remove("hidden");
 
     });
