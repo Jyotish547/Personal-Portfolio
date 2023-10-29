@@ -51,12 +51,17 @@ html {
 }
 
 #dropdown-menu {
-    /* ...other styles... */
-    flex-wrap: nowrap; /* prevents the flex items from wrapping */
+    
+    flex-wrap: nowrap; 
   }
   
-  #dropdown-menu div {
-    flex: 0 0 auto; /* flex-grow, flex-shrink, flex-basis */
-    white-space: nowrap; /* prevents wrapping inside each item */
-  }
-  
+#dropdown-menu div {
+    flex: 0 0 auto; 
+    white-space: nowrap; 
+}
+
+.hidden-item {
+    display: none;
+}
+
+
