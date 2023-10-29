@@ -6,15 +6,15 @@
     <title>Projects | Jyothish Gompa</title>
 </head>
 <body id="container" class="flex h-full overflow-x-hidden">
-    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full h-20 px-96 items-center bg-white text-stone-600 shadow-lg shadow-stone-400/50">
+    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full px-96 items-center bg-white text-stone-600 shadow-lg shadow-stone-400/50">
         <div id="logo" class="text-4xl items-center">Logo</div>
         <div class="flex flex-row items-center justify-end w-full text-lg font-bold">
-          <li class="list-none py-5"><a href="./index.html" class="p-5">HOME</i></a></li>
-          <li class="list-none py-5"><a href="./index.html" class="p-5">ABOUT</i></a></li>
-          <li class="list-none py-5"><a href="./index.html" class="p-5">RESUME</i></a></li>
-          <li class="list-none py-5"><a href="./projects.html" class="p-5">PROJECTS</a></li>
+          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">HOME</i></a></li>
+          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">ABOUT</i></a></li>
+          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">RESUME</i></a></li>
+          <li class="nav-item list-none py-5 selected"><a href="./projects.html" class="p-5">PROJECTS</a></li>
           <!-- For Case studies refer to Sahil's portfolio www.thisissahil.com for group projects, and add your seperate personal projects -->
-          <li class="list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
+          <li class="nav-item list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
         </div>
       </nav>
       <main id="projects-app" class="w-screen pt-20 px-96 flex flex-col items-center">
@@ -32,40 +32,56 @@
       <!-- End of Projects Hero Section -->
       <!-- All Projects Section -->
       <div id="my-projects" class="flex flex-col my-12 items-center">
-        <!-- Code this in main.ts to filter based on specific class -->
-        <div id="filter-options" class="font-semibold text-lg flex flex-row justify-center w-fit shadow-custom shadow-stone-500/50 cursor-pointer">
-            <div id="all-filter" class="py-5 px-8 border-r-2 border-slate-100 rounded-l-lg text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700">
-                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
+        
+        <div id="filter-title-container" class="w-full flex flex-row items-center justify-between mb-12 text-slate-700">
+          <div>
+            <h2 id="filter-title-1" class="text-3xl font-semibold pb-3">All Projects</h2>
+            <p id="filter-content-1" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p>
+            <!-- Content for other filters:
+            Web Development:
+            "Crafting responsive and interactive web experiences for diverse audiences."
+            iOS Development:
+            "Designing and developing intuitive apps tailored for the iOS ecosystem."
+            Graphic Design:
+            "Visual creations that capture attention and convey messages effectively."
+            UI/UX Design:
+            "Prioritizing user experience with aesthetically pleasing interface designs."
+            -->
+          </div>
+          <div id="filter-options" class="font-semibold text-lg flex flex-col justify-center shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative">
+            <div  class="flex items-center justify-between py-5 px-8 rounded-lg hover:bg-slate-100" data-color="text-blue-500">
+                <div id="selected-filter">
+                    <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
+                </div>
+                <div>
+                    <i class="fa-solid fa-chevron-down fa-lg ml-3"></i>
+                </div>
             </div>
-            <div id="wd-filter" class="py-5 px-8 border-r-2 border-slate-100 text-amber-500 hover:bg-amber-500 hover:text-white active:bg-amber-700">
-              <i class="fa-solid fa-laptop-code fa-lg mr-3"></i> Web Development
+            <div id="dropdown-menu" class="hidden flex flex-col w-full absolute w-64 top-full bg-white shadow-custom shadow-stone-500/50 rounded-lg">
+                <!-- Note the added data-color attributes -->
+                <div class="bg-white py-5 px-8 text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700 rounded-t-lg" data-color="text-blue-500">
+                    <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
+                </div>
+                <div class="bg-white py-5 px-8 text-amber-500 hover:bg-amber-500 hover:text-white active:bg-amber-700" data-color="text-amber-500">
+                    <i class="fa-solid fa-laptop-code fa-lg mr-3"></i> Web Development
+                </div>
+                <div class="bg-white py-5 px-8 text-red-500 hover:bg-red-500 hover:text-white active:bg-red-700" data-color="text-red-500">
+                    <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> UI/UX Design
+                </div>
+                <div class="bg-white py-5 px-8 text-emerald-600 hover:bg-emerald-600 hover:text-white active:bg-emerald-800" data-color="text-emerald-600">
+                  <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> UX Research
+              </div>
+                <div class="bg-white py-5 px-8 text-violet-500 hover:bg-violet-500 hover:text-white active:bg-violet-700" data-color="text-violet-500">
+                    <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> iOS Development
+                </div>
+                <div class="bg-white py-5 px-8 text-green-500 hover:bg-green-500 hover:text-white active:bg-green-700 rounded-b-lg" data-color="text-green-500">
+                    <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> Graphic Design
+                </div>
             </div>
-            <div id="ux-filter" class="py-5 px-8 border-r-2 border-slate-100 text-red-500 hover:bg-red-500 hover:text-white active:bg-red-700">
-                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> UI/UX Design
-            </div>
-            <div id="ios-filter" class="py-5 px-8 border-r-2 border-slate-100 text-violet-500 hover:bg-violet-500 hover:text-white active:bg-violet-700">
-              <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> iOS Development
-            </div>
-            <div id="gd-filter" class="py-5 px-8 rounded-r-lg text-green-500 hover:bg-green-500 hover:text-white active:bg-green-700">
-                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> Graphic Design
-            </div>
-            <!-- Add UX Research later and modify to fit the width of the filter. Maybe create a dropdown filter -->
-        </div>
-        <div id="filter-title-container" class="my-12 text-center text-slate-700">
-          <h2 id="filter-title-1" class="text-3xl font-semibold pb-3">All Projects</h2>
-          <p id="filter-content-1" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p>
-          <!-- Content for other filters:
-           Web Development:
-          "Crafting responsive and interactive web experiences for diverse audiences."
-          iOS Development:
-          "Designing and developing intuitive apps tailored for the iOS ecosystem."
-          Graphic Design:
-          "Visual creations that capture attention and convey messages effectively."
-          UI/UX Design:
-          "Prioritizing user experience with aesthetically pleasing interface designs."
-          -->
+          </div>
         </div>
         <div id="my-projects-container" class="grid grid-cols-2 grid-flow-row gap-12">
+          <!-- Create grid columns 3 for width > 1920 -->
             <div id="project-1" class="ux-design shadow-custom shadow-stone-500/50 rounded-xl">
               <img id="pr-1-img" class="rounded-t-xl">
               <div class="pr-content px-10 py-8">

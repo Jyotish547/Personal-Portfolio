@@ -39,3 +39,24 @@ html {
 .w-95 {
     width: 95%;
 }
+
+.list-none {
+    border-bottom: solid 5px transparent;
+    border-top: solid 5px transparent;
+}
+
+.selected {
+    color: #3B82F6;
+    border-bottom: solid 5px #3B82F6;
+}
+
+#dropdown-menu {
+    /* ...other styles... */
+    flex-wrap: nowrap; /* prevents the flex items from wrapping */
+  }
+  
+  #dropdown-menu div {
+    flex: 0 0 auto; /* flex-grow, flex-shrink, flex-basis */
+    white-space: nowrap; /* prevents wrapping inside each item */
+  }
+  
