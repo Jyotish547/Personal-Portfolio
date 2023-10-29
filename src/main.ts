@@ -1,7 +1,7 @@
 /*
 1. Done - Create Selected Element state for nav-bar and other required elements
 2. Done - Create dropdown menu for the filter options in projects.html
-3. Create formspree for Contact Form
+3. Done - Create formspree for Contact Form
 4. Initite download of resume
 */
 

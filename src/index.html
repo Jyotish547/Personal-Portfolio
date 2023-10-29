@@ -494,23 +494,24 @@
         <div id="contact-container" class="flex flex-row pt-12 justify-between">
           <div id="form-container" class="w-1/2 pr-5">
             <h3 class="text-3xl font-semibold">Say Hello</h3>
-            <form>
+            <form action="https://formspree.io/f/mknlyarv" method="POST">
               <div class="flex flex-col">
                 <label for="name" class="font-medium text-2xl pt-5">Name</label>
-                <input type="text" name="name" autocomplete="given-name" class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith">
+                <input type="text" name="name" autocomplete="given-name" required class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith">
               </div>
               <div class="flex flex-col">
                 <label for="email" class="font-medium text-2xl pt-5">Email</label>
-                <input type="email" name="email" autocomplete="email" class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="xyz@example.com">
+                <input type="email" name="email" autocomplete="email" required class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="xyz@example.com">
               </div>
               <div class="flex flex-col">
                 <label for="subject" class="font-medium text-2xl pt-5">Subject</label>
-                <input type="text" name="subject" autocomplete="off" class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith">
+                <input type="text" name="subject" autocomplete="off" required class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith">
               </div>
               <div class="flex flex-col">
-                <label for="message" class="font-medium text-2xl pt-5">Subject</label>
-                <textarea name="message" autocomplete="off" rows="6" class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none resize-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith"></textarea>
+                <label for="message" class="font-medium text-2xl pt-5">Message</label>
+                <textarea name="message" autocomplete="off" rows="6" required class="border-2 border-violet-300 rounded-lg p-4 mt-4 w-full outline-none resize-none shadow-lg focus:border-violet-600 transition-colors duration-400" placeholder="John Smith"></textarea>
               </div>
+              <button type="submit" class="bg-blue-500 rounded-md py-4 px-5 font-semibold text-white shadow-lg shadow-stone-400/50 mt-8"><i class="fa-solid fa-paper-plane fa-lg pr-5"></i>Send Message</button>
             </form>
           </div>
           <div id="info-container" class="w-1/2 pl-5">
