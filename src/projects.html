@@ -31,25 +31,86 @@
       </div>
       <!-- End of Projects Hero Section -->
       <!-- All Projects Section -->
-      <div id="my-projects" class="flex flex-col my-12">
+      <div id="my-projects" class="flex flex-col my-12 items-center">
         <!-- Code this in main.ts to filter based on specific class -->
-        <div id="filter-options" class="font-semibold text-xl flex flex-row justify-center w-full shadow-custom shadow-stone-500/50">
-            <div id="all-filter" class="py-5 px-8 border-r-2 border-slate-100 rounded-l-lg text-blue-300 hover:bg-blue-500 hover:text-white active:bg-red-300">
+        <div id="filter-options" class="font-semibold text-lg flex flex-row justify-center w-fit shadow-custom shadow-stone-500/50 cursor-pointer">
+            <div id="all-filter" class="py-5 px-8 border-r-2 border-slate-100 rounded-l-lg text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700">
                 <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
             </div>
-            <div id="all-filter" class="py-5 px-8 border-r-2 border-slate-100">
-                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> Web Development
+            <div id="wd-filter" class="py-5 px-8 border-r-2 border-slate-100 text-amber-500 hover:bg-amber-500 hover:text-white active:bg-amber-700">
+              <i class="fa-solid fa-laptop-code fa-lg mr-3"></i> Web Development
             </div>
-            <div id="all-filter" class="py-5 px-8 border-r-2 border-slate-100">
-                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> iOS Development
+            <div id="ux-filter" class="py-5 px-8 border-r-2 border-slate-100 text-red-500 hover:bg-red-500 hover:text-white active:bg-red-700">
+                <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> UI/UX Design
             </div>
-            <div id="all-filter" class="py-5 px-8 rounded-r-lg">
+            <div id="ios-filter" class="py-5 px-8 border-r-2 border-slate-100 text-violet-500 hover:bg-violet-500 hover:text-white active:bg-violet-700">
+              <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> iOS Development
+            </div>
+            <div id="gd-filter" class="py-5 px-8 rounded-r-lg text-green-500 hover:bg-green-500 hover:text-white active:bg-green-700">
                 <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> Graphic Design
             </div>
+            <!-- Add UX Research later and modify to fit the width of the filter. Maybe create a dropdown filter -->
         </div>
-        
-        <div id="my-projects-container">
-            
+        <div id="filter-title-container" class="my-12 text-center text-slate-700">
+          <h2 id="filter-title-1" class="text-3xl font-semibold pb-3">All Projects</h2>
+          <p id="filter-content-1" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p>
+          <!-- Content for other filters:
+           Web Development:
+          "Crafting responsive and interactive web experiences for diverse audiences."
+          iOS Development:
+          "Designing and developing intuitive apps tailored for the iOS ecosystem."
+          Graphic Design:
+          "Visual creations that capture attention and convey messages effectively."
+          UI/UX Design:
+          "Prioritizing user experience with aesthetically pleasing interface designs."
+          -->
+        </div>
+        <div id="my-projects-container" class="grid grid-cols-2 grid-flow-row gap-12">
+            <div id="project-1" class="ux-design shadow-custom shadow-stone-500/50 rounded-xl">
+              <img id="pr-1-img" class="rounded-t-xl">
+              <div class="pr-content px-10 py-8">
+                <div class="category mb-3 text-lg font-medium text-amber-500">
+                  <i class="fa-solid fa-laptop-code mr-1"></i> Web Development
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">Sample 1</h3>
+                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate numquam doloremque ipsam aspernatur.</p>
+                <p class="mb-5">Date: 5th September, 2020</p>
+                <div class="flex flex-row items-center justify-between">
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-link mr-2"></i>Figma File</button>
+                </div>
+              </div>
+            </div>
+            <div id="project-2" class="ux-design shadow-custom shadow-stone-500/50 rounded-xl">
+              <img id="pr-2-img" class="rounded-t-xl">
+              <div class="pr-content px-10 py-8">
+                <div class="category mb-3 text-lg font-medium text-amber-500">
+                  <i class="fa-solid fa-laptop-code mr-1"></i> Web Development
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">Sample 1</h3>
+                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate numquam doloremque ipsam aspernatur.</p>
+                <p class="mb-5">Date: 5th September, 2020</p>
+                <div class="flex flex-row items-center justify-between">
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-link mr-2"></i>Figma File</button>
+                </div>
+              </div>
+            </div>
+            <div id="project-3" class="ux-design shadow-custom shadow-stone-500/50 rounded-xl">
+              <img id="pr-3-img" class="rounded-t-xl">
+              <div class="pr-content px-10 py-8">
+                <div class="category mb-3 text-lg font-medium text-amber-500">
+                  <i class="fa-solid fa-laptop-code mr-1"></i> Web Development
+                </div>
+                <h3 class="text-2xl font-semibold mb-2">Sample 1</h3>
+                <p class="mb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate numquam doloremque ipsam aspernatur.</p>
+                <p class="mb-5">Date: 5th September, 2020</p>
+                <div class="flex flex-row items-center justify-between">
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+                  <button class="py-3 px-4 bg-blue-500 rounded-md text-white font-medium"><i class="fa-solid fa-link mr-2"></i>Figma File</button>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
       <!-- End of All Projects Section -->
