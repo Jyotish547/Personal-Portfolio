@@ -6,15 +6,20 @@
     <title>Projects | Jyothish Gompa</title>
 </head>
 <body id="container" class="flex h-full overflow-x-hidden">
-    <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96 items-center bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-10">
+      <nav id="navbar" class="top-0 left-0 fixed flex flex-row w-full items-center justify-between bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-10 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         <div id="logo" class="text-4xl items-center">Logo</div>
-        <div class="flex flex-row items-center justify-end w-full text-lg font-bold">
-          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">HOME</i></a></li>
-          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">ABOUT</i></a></li>
-          <li class="nav-item list-none py-5"><a href="./index.html" class="p-5">RESUME</i></a></li>
-          <li class="nav-item list-none py-5 selected"><a href="./projects.html" class="p-5">PROJECTS</a></li>
-          <!-- For Case studies refer to Sahil's portfolio www.thisissahil.com for group projects, and add your seperate personal projects -->
-          <li class="nav-item list-none py-5"><a target="./contact.html" class="p-5">CONTACT</a></li>
+        <div class="sm:flex sm:flex-col sm:items-center">
+          <div id="nav-button" class="hidden flex flex-row items-center text-lg font-bold py-5 cursor-pointer">
+            <i class="fa-solid fa-bars mr-3"></i>MENU
+          </div>
+          <div id="nav-menu" class="cursor-pointer text-lg sm:shadow-lg sm:-mr-12 sm:w-72 sm:h-screen sm:shadow-stone-400/50 font-bold bg-white sm:flex-col sm:absolute sm:top-16 sm:mt-1 md:-mr-36 md:w-96 lg:mr-auto lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-full lg:relative lg:top-0 lg:shadow-none lg:w-fit lg:h-fit">
+            <li class="nav-item list-none py-5"><a href="./index.html" class="sm:px-10 lg:px-5 py-5"><i class="hidden nav-icon fa-solid fa-house mr-3"></i>HOME</a></li>
+            <li class="nav-item list-none py-5"><a href="./index.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-address-card mr-3"></i>ABOUT</a></li>
+            <li class="nav-item list-none py-5"><a href="./index.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-file-lines mr-3"></i>RESUME</a></li>
+            <li class="nav-item list-none py-5 selected"><a href="./projects.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-laptop-file mr-3"></i>PROJECTS</a></li>
+            <!-- For Case studies refer to Sahil's portfolio www.thisissahil.com for group projects, and add your seperate personal projects -->
+            <li class="nav-item list-none py-5"><a target="./contact.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-paper-plane mr-3"></i>CONTACT</a></li>
+          </div>
         </div>
       </nav>
       <main id="projects-app" class="w-screen pt-20 flex flex-col items-center">
@@ -33,12 +38,12 @@
       <!-- All Projects Section -->
       <div id="my-projects" class="flex flex-col my-16 items-center w-screen sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         
-        <div id="filter-title-container" class="w-full flex sm:flex-col sm:items-start md:flex-row md:items-center justify-between mb-12 text-slate-700">
+        <div id="filter-title-container" class="w-full flex sm:flex-col sm:items-start lg:flex-row lg:items-center justify-between mb-12 text-slate-700">
           <div class="md:w-4/5 lg:w-fit">
             <h2 id="filter-title" class="text-3xl font-semibold pb-3">All Projects</h2>
             <p id="filter-content" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p> 
           </div>
-          <div id="filter-options" class="w-fit font-semibold text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative sm:mt-8 md:mt-0">
+          <div id="filter-options" class="w-fit font-semibold text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative sm:mt-8 lg:mt-0">
             <div class="flex flex-row w-full items-center justify-between py-5 px-8 rounded-lg hover:bg-slate-100" data-color="text-blue-500">
                 <div id="selected-filter" class="w-fit">
                     <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects

@@ -95,13 +95,12 @@ function showAllGridItems() {
 
 
 
-const selectedFilter = document.getElementById("selected-filter");
-const filterOptions = document.getElementById("filter-options");
-const dropdownMenu = document.getElementById("dropdown-menu");
-const gridItems = document.getElementById("my-projects-container");
+const selectedFilter = document.getElementById("selected-filter") as HTMLImageElement;
+const filterOptions = document.getElementById("filter-options") as HTMLImageElement;
+const dropdownMenu = document.getElementById("dropdown-menu") as HTMLImageElement;
+const gridItems = document.getElementById("my-projects-container") as HTMLImageElement;
 const colorClasses = ["text-blue-500", "text-amber-500", "text-red-500", "text-emerald-600", "text-violet-500", "text-green-500"];
 
-// Declare the array outside the if block
 const matchedElements: HTMLElement[] = [];
 
 if (gridItems) {
@@ -117,23 +116,24 @@ if (gridItems) {
         }
     });
 }
+
 console.log(matchedElements);
 
 // Function to hide/show based on category
 function filterElementsByCategory(targetCategory: string) {
     matchedElements.forEach(element => {
         if (element.classList.contains(targetCategory)) {
-            element.classList.remove('hidden-item');
+            element.classList.remove('hidden');
         } else {
-            element.classList.add('hidden-item');
+            element.classList.add('hidden');
         }
     });
 }
 
 // Add event listeners to the filter elements
 
-const filterTitle = document.getElementById("filter-title");
-const filterContent = document.getElementById("filter-content");
+const filterTitle = document.getElementById("filter-title") as HTMLImageElement;
+const filterContent = document.getElementById("filter-content") as HTMLImageElement;
 
 const allFilter = document.querySelector('.all-filter')
 const uxrFilter = document.querySelector('.uxr-filter');
@@ -272,3 +272,58 @@ if (filterOptions && dropdownMenu) {
     });
 
 }
+
+// Media Queries for Navbar Responsiveness
+
+document.addEventListener('DOMContentLoaded', function() {
+    const navMenu = document.getElementById('nav-menu') as HTMLElement; // Type assertion
+    const navButton = document.getElementById('nav-button') as HTMLElement; // Type assertion
+
+    if(window.innerWidth <= 1024) {
+        if(navMenu) {
+            navMenu.classList.add('hidden');
+        }
+
+        if(navButton) {
+            navButton.classList.remove('hidden');
+
+            navButton.addEventListener('click', function() {
+                if(navMenu){
+                    if(navMenu.classList.contains('hidden')){
+                        navMenu.classList.remove('hidden');
+                    } else {
+                        navMenu.classList.add('hidden');
+                    }
+                }
+            });
+
+            // Close navMenu on click anywhere outside the navMenu
+            document.addEventListener('click', function(event) {
+                
+                if (event.target instanceof Node) {
+                    if (!navMenu.contains(event.target) && !navButton.contains(event.target) && !navMenu.classList.contains('hidden')) {
+                        navMenu.classList.add('hidden');
+                    }
+                }
+            });
+        }
+
+        // Button toggling between Menu and Close
+
+        navButton.addEventListener('click', function() {
+            if (!navMenu.classList.contains('hidden')) {
+                
+                navButton.innerHTML = '<i class="fa-regular fa-circle-xmark fa-lg mr-3"></i>CLOSE';
+                navButton.classList.add('text-red-500');
+            } else {
+                
+                navButton.innerHTML = '<i class="fa-solid fa-bars mr-3"></i> MENU';
+
+                if(navButton.classList.contains('text-red-500')) {
+                    navButton.classList.remove('text-red-500');
+                }
+            }
+        });
+    }
+});
+

@@ -55,8 +55,27 @@ html {
     white-space: nowrap; 
 }
 
-.hidden-item {
-    display: none;
+/* Media Queries */
+
+@media screen and (min-width: 1024px) {
+    #nav-button {
+        display: none;
+    }
+
+    #nav-menu {
+        display: flex;
+    }
+
+    .nav-icon {
+        display: none !important;
+    }
+
 }
 
+@media screen and (max-width: 1023px) {
+    
+    #nav-button {
+        display: flex;
+    }
 
+}
