@@ -71,9 +71,81 @@ navItems.forEach(item => {
     item.addEventListener('click', function(event) {
         navItems.forEach(i => i.classList.remove("selected"));
 
-        (event.target as HTMLElement).classList.add("selected");
+        if (event.target && event.target instanceof HTMLElement) {
+            // Check if the event target is the <li> element
+            if (event.target === item) {
+                event.target.classList.add("selected");
+            } 
+            // If the event target is a child of <li> (like the <a> or <i>), add the "selected" class to the parent <li>
+            else if (event.target.parentElement && event.target.parentElement === item) {
+                event.target.parentElement.classList.add("selected");
+            }
+        }
     });
 });
+
+// Navbar Scroll
+
+window.addEventListener("DOMContentLoaded", () => {
+
+    const navbarLinks: NodeListOf<HTMLAnchorElement> = document.querySelectorAll('.nav-item a');
+    
+    navbarLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e: Event) {
+            const href = this.getAttribute('href');
+            
+            if (href && href.startsWith("#")) {
+                const targetSection: HTMLElement | null = document.querySelector(href);
+                if (targetSection) {
+                    // Prevent default only if the target section exists on the page
+                    e.preventDefault();
+
+                    const navbar: HTMLElement | null = document.querySelector('.navbar');
+                    const navbarHeight = navbar ? navbar.offsetHeight : 0;
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
+    // Only run this if a hash exists and it's not being handled by the click event.
+    if (window.location.hash && !document.activeElement?.classList.contains('nav-item')) {
+        const targetElement: HTMLElement | null = document.querySelector(window.location.hash);
+        if (targetElement) {
+            // Wait a bit to let other potential scripts run, then adjust scroll.
+            setTimeout(() => {
+                const navbar: HTMLElement | null = document.querySelector('.navbar');
+                if (navbar && targetElement) {
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 10);
+        }
+    }
+});
+
+// Hero-Button Scroll
+
+document.getElementById("hero-button")?.addEventListener("click", function() {
+    const targetElement = document.getElementById("contact-section");
+
+    if (targetElement) {
+        targetElement.scrollIntoView({
+            behavior: "smooth"
+        });
+    }
+});
+
 
 // Dropdown Menu for Projects Section
 
@@ -91,9 +163,6 @@ function showAllGridItems() {
 
     });
 }
-
-
-
 
 const selectedFilter = document.getElementById("selected-filter") as HTMLImageElement;
 const filterOptions = document.getElementById("filter-options") as HTMLImageElement;
@@ -313,7 +382,7 @@ document.addEventListener('DOMContentLoaded', function() {
         navButton.addEventListener('click', function() {
             if (!navMenu.classList.contains('hidden')) {
                 
-                navButton.innerHTML = '<i class="fa-regular fa-circle-xmark fa-lg mr-3"></i>CLOSE';
+                navButton.innerHTML = '<i class="fa-regular fa-circle-xmark fa-lg mr-3"></i> CLOSE';
                 navButton.classList.add('text-red-500');
             } else {
                 
@@ -326,4 +395,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
-
