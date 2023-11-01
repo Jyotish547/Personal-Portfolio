@@ -596,16 +596,28 @@ video {
   top: 100%;
 }
 
-.z-20 {
-  z-index: 20;
+.left-32 {
+  left: 8rem;
 }
 
-.z-30 {
-  z-index: 30;
+.right-32 {
+  right: 8rem;
+}
+
+.right-10 {
+  right: 2.5rem;
+}
+
+.right-5 {
+  right: 1.25rem;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
 
 .m-auto {
@@ -1079,6 +1091,11 @@ video {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
 }
 
+.bg-violet-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -1459,8 +1476,8 @@ html {
 }
 
 .selected {
-  color: #3B82F6;
-  border-bottom: solid 5px #3B82F6;
+  color: #6D28D9;
+  border-bottom: solid 4px #6D28D9;
 }
 
 #dropdown-menu {
@@ -1470,6 +1487,11 @@ html {
 #dropdown-menu div {
   flex: 0 0 auto;
   white-space: nowrap;
+}
+
+.nav-hover {
+  color: #C4B5FD;
+  border-bottom: solid 4px #C4B5FD;
 }
 
 /* Animation Queries */
@@ -1494,6 +1516,20 @@ html {
   #nav-button {
     display: flex;
   }
+}
+
+.hover\:border-b-4:hover {
+  border-bottom-width: 4px;
+}
+
+.hover\:border-b-violet-300:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(196 181 253 / var(--tw-border-opacity));
+}
+
+.hover\:border-b-violet-400:hover {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(167 139 250 / var(--tw-border-opacity));
 }
 
 .hover\:bg-amber-500:hover {
@@ -1531,9 +1567,37 @@ html {
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-violet-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 29 149 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-violet-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
+}
+
+.hover\:text-violet-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(196 181 253 / var(--tw-text-opacity));
+}
+
+.hover\:text-violet-400:hover {
+  --tw-text-opacity: 1;
+  color: rgb(167 139 250 / var(--tw-text-opacity));
+}
+
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:duration-300:hover {
+  transition-duration: 300ms;
+}
+
+.hover\:duration-500:hover {
+  transition-duration: 500ms;
 }
 
 .focus\:border-violet-600:focus {
@@ -1569,6 +1633,11 @@ html {
 .active\:bg-violet-700:active {
   --tw-bg-opacity: 1;
   background-color: rgb(109 40 217 / var(--tw-bg-opacity));
+}
+
+.active\:bg-violet-900:active {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 29 149 / var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:ml-3 {

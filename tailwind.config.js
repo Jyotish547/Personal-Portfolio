@@ -5,10 +5,10 @@ module.exports = {
       "./src/projects.html"],
     theme: {
       extend: {
-      boxShadow: {
-        'custom': '0 0 30px -10px rgba(0, 0, 0, 0.7)',
-      }
-    },
+        boxShadow: {
+          'custom': '0 0 30px -10px rgba(0, 0, 0, 0.7)',
+        },
+      },
     },
     plugins: [],
   }

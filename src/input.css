@@ -40,8 +40,8 @@ html {
 }
 
 .selected {
-    color: #3B82F6;
-    border-bottom: solid 5px #3B82F6;
+    color: #6D28D9;
+    border-bottom: solid 4px #6D28D9;
 }
 
 #dropdown-menu {
@@ -53,6 +53,10 @@ html {
     white-space: nowrap; 
 }
 
+.nav-hover {
+    color: #C4B5FD;
+    border-bottom: solid 4px #C4B5FD;
+}
 
 /* Animation Queries */
 

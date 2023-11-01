@@ -377,6 +377,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         navMenu.classList.add('hidden');
                     }
                 }
+
+                if(navMenu.classList.contains('hidden')) {
+                    if(navButton.innerHTML === '<i class="fa-regular fa-circle-xmark fa-lg mr-3"></i> CLOSE') {
+                        navButton.innerHTML = '<i class="fa-solid fa-bars mr-3"></i> MENU';
+                        navButton.classList.remove('text-red-500');
+                    }
+                }
+
             });
         }
 
@@ -395,6 +403,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     navButton.classList.remove('text-red-500');
                 }
             }
+
+            anime({
+                targets: navButton,
+                opacity: [0,1],
+                duration: 500,
+                easing: 'easeInOutQuad',
+            });
+
         });
     }
 });
@@ -405,11 +421,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 anime({
     targets: '#navbar',
-    opacity: [0, 10],
+    opacity: [0, 1],
     duration: 1000,
     translateY: ['-50px', '0px'],
     easing: 'easeInOutQuad'
 });
+
+if(window.innerWidth <= 1024) {
+
+    const animeNavButton = document.getElementById('nav-button');
+    const animeNavMenu = document.getElementById('nav-menu');
+
+    if(animeNavButton) {
+        animeNavButton.addEventListener('click', () => {
+
+            anime({
+                targets: animeNavButton,
+                opacity: [0,1],
+                duration: 500,
+                easing: 'easeInOutQuad',
+            });
+            
+            anime({
+                targets: animeNavMenu,
+                translateX: ['100px', '0px'],
+                opacity: [0, 1],
+                duration: 500,
+                easing: 'easeInOutQuad',
+            });  
+
+        });
+        
+    }
+
+}
 
 // Hero Section
 
@@ -481,6 +526,7 @@ let animeMyProjectsTitle = false;
 let animateMyProjectsUX = false;
 let animateMyProjectsFD = false;
 let animateMyProjectsGD = false;
+let animeMyProjectsButton = false;
 
 window.addEventListener('scroll', () => {
 
@@ -488,6 +534,7 @@ window.addEventListener('scroll', () => {
     const myProjectsUX = document.getElementById('projects-ux')?.getBoundingClientRect();
     const myProjectsFD = document.getElementById('projects-fd')?.getBoundingClientRect();
     const myProjectsGD = document.getElementById('projects-gd')?.getBoundingClientRect();
+    const myProjectsButton = document.getElementById('projects-button')?.getBoundingClientRect();
 
     if(myProjectsTitle){
         if (!animeMyProjectsTitle && myProjectsTitle.top <= window.innerHeight && myProjectsTitle.bottom >= 0) {
@@ -534,6 +581,19 @@ window.addEventListener('scroll', () => {
                 targets: '#projects-gd',
                 opacity: [0, 1],
                 translateX: ['50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(myProjectsButton){
+        if (!animeMyProjectsButton && myProjectsButton.top <= window.innerHeight && myProjectsButton.bottom >= 0) {
+            animeMyProjectsButton = true;
+            anime({
+                targets: '#projects-button',
+                opacity: [0, 1],
+                translateY: ['50px', '0px'],
                 duration: 1000,
                 easing: 'easeInOutQuad',
             });
@@ -752,6 +812,7 @@ window.addEventListener('scroll', () => {
             anime({
                 targets: '#resume-button',
                 opacity: [0, 1],
+                translateY: ['50px', '0px'],
                 duration: 1000,
                 easing: 'easeInOutQuad',
             });
@@ -813,8 +874,6 @@ window.addEventListener('scroll', () => {
 
 });
 
-
-
 // Animations - projects.html
 
 // Projects Hero Section
@@ -835,6 +894,7 @@ anime({
     translateY: ['-50px', '0px'],
     duration: 1000,
     easing: 'easeInOutQuad',
+    delay: 500
 });
 
 const filterAnimeButtons = document.querySelectorAll('.filter-button');
@@ -848,7 +908,6 @@ filterAnimeButtons.forEach((elem: Element) => {
             translateY: ['-50px', '0px'],
             duration: 1000,
             easing: 'easeInOutQuad',
-            
         });
     });
 });
