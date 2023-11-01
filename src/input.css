@@ -11,11 +11,17 @@ html {
 
 .primary-bg {
     background-image:linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),  url('../assets/hero-background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
 .primary-bg-80 {
     background-image:linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.80)),  url('../assets/hero-background.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -69,7 +75,7 @@ html {
 
 #hero-section {
     position: relative;
-    height: 90vh;
+    height: 80vh;
     z-index: -3;
 }
 
