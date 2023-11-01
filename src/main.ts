@@ -20,15 +20,18 @@ resumeDownloads.forEach(downloadLink => {
     (downloadLink as HTMLAnchorElement).href = resume;
 });
 
+// Animejs Declaration
+
+import anime from 'animejs/lib/anime.es.js';
 
 // About Image Declaration
 
-import imgUrl from '../assets/about.png';
+import imgAbout from '../assets/about.png';
 
-let img = document.getElementById("about-img") as HTMLImageElement;
+let imgAb = document.getElementById("about-img") as HTMLImageElement;
 
-if (img) {
-    img.src = imgUrl;
+if (imgAb) {
+    imgAb.src = imgAbout;
   }
 
 // Project Images
@@ -394,4 +397,199 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+});
+
+// Animations
+
+// Navbar
+
+anime({
+    targets: '#navbar',
+    opacity: [0, 10],
+    duration: 1000,
+    translateY: ['-50px', '0px'],
+    easing: 'easeInOutQuad'
+});
+
+// Hero Section
+
+anime({
+    targets: '#hero-content, #hero-button',
+    opacity: [0, 10],
+    duration: 1000,
+    translateX: ['-50px', '0px'],
+    easing: 'easeInOutQuad',
+    delay: 400
+});
+
+// About Section
+
+let animeAboutTitle = false;
+let animeAboutImg = false;
+let animeAboutCont = false;
+
+window.addEventListener('scroll', () => {
+
+    const aboutImgTitle = document.getElementById('about-title')?.getBoundingClientRect();
+    const aboutImgRect = document.getElementById('about-img')?.getBoundingClientRect();
+    const aboutContRect = document.getElementById('about-content')?.getBoundingClientRect();
+
+    if(aboutImgTitle){
+        if (!animeAboutTitle && aboutImgTitle.top <= window.innerHeight && aboutImgTitle.bottom >= 0) {
+            animeAboutTitle = true;
+            anime({
+                targets: '#about-title',
+                opacity: [0, 1],
+                translateY: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(aboutImgRect){
+        if (!animeAboutImg && aboutImgRect.top <= window.innerHeight && aboutImgRect.bottom >= 0) {
+            animeAboutImg = true;
+            anime({
+                targets: '#about-img',
+                opacity: [0, 1],
+                translateX: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(aboutContRect){
+        if (!animeAboutCont && aboutContRect.top <= window.innerHeight && aboutContRect.bottom >= 0) {
+            animeAboutCont = true;
+            anime({
+                targets: '#about-content',
+                opacity: [0, 1],
+                translateX: ['50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+});
+
+// My Projects Section
+
+let animeProjectsTitle = false;
+let animateProjectsUX = false;
+let animateProjectsFD = false;
+let animateProjectsGD = false;
+
+window.addEventListener('scroll', () => {
+
+    const projectsTitle = document.getElementById('projects-title')?.getBoundingClientRect();
+    const projectsUX = document.getElementById('projects-ux')?.getBoundingClientRect();
+    const projectsFD = document.getElementById('projects-fd')?.getBoundingClientRect();
+    const projectsGD = document.getElementById('projects-gd')?.getBoundingClientRect();
+
+    if(projectsTitle){
+        if (!animeProjectsTitle && projectsTitle.top <= window.innerHeight && projectsTitle.bottom >= 0) {
+            animeProjectsTitle = true;
+            anime({
+                targets: '#projects-title',
+                opacity: [0, 1],
+                translateY: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(projectsUX){
+        if (!animateProjectsUX && projectsUX.top <= window.innerHeight && projectsUX.bottom >= 0) {
+            animateProjectsUX = true;
+            anime({
+                targets: '#projects-ux',
+                opacity: [0, 1],
+                translateX: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(projectsFD){
+        if (!animateProjectsFD && projectsFD.top <= window.innerHeight && projectsFD.bottom >= 0) {
+            animateProjectsFD = true;
+            anime({
+                targets: '#projects-fd',
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(projectsGD){
+        if (!animateProjectsGD && projectsGD.top <= window.innerHeight && projectsGD.bottom >= 0) {
+            animateProjectsGD = true;
+            anime({
+                targets: '#projects-gd',
+                opacity: [0, 1],
+                translateX: ['50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+});
+
+// My Skills
+
+let animeSkillsTitle = false;
+let animeSkillsLeft = false;
+let animeSkillsRight = false;
+
+window.addEventListener('scroll', () => {
+
+    const skillsTitle = document.getElementById('skills-title')?.getBoundingClientRect();
+    const skillsLeft = document.getElementById('skills-left')?.getBoundingClientRect();
+    const skillsRight = document.getElementById('skills-right')?.getBoundingClientRect();
+
+    if(skillsTitle){
+        if (!animeSkillsTitle && skillsTitle.top <= window.innerHeight && skillsTitle.bottom >= 0) {
+            animeSkillsTitle = true;
+            anime({
+                targets: '#skills-title',
+                opacity: [0, 1],
+                translateY: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(skillsLeft){
+        if (!animeSkillsLeft && skillsLeft.top <= window.innerHeight && skillsLeft.bottom >= 0) {
+            animeSkillsLeft = true;
+            anime({
+                targets: '#skills-left',
+                opacity: [0, 1],
+                translateX: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(skillsRight){
+        if (!animeSkillsRight && skillsRight.top <= window.innerHeight && skillsRight.bottom >= 0) {
+            animeSkillsRight = true;
+            anime({
+                targets: '#skills-right',
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
 });

@@ -19,6 +19,21 @@ html {
     background-size: cover;
 }
 
+.resume-bg {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.80)),  url('../assets/resume-background.png');
+    background-size: cover;
+}
+
+.projects-bg {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),  url('../assets/work-background.png');
+    
+}
+
+.contact-bg {
+    background-image:linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),  url('../assets/contact-background.png');
+    background-size: cover;
+}
+
 .w-80 {
     width: 80%;
 }
@@ -54,6 +69,10 @@ html {
     flex: 0 0 auto; 
     white-space: nowrap; 
 }
+
+/* Animation Queries */
+
+
 
 /* Media Queries */
 

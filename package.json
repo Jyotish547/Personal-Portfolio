@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/animejs": "^3.1.10",
     "concurrently": "^8.2.2",
     "nodemon": "^3.0.1",
     "rimraf": "^5.0.5",
@@ -22,6 +23,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.4.2"
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "animejs": "^3.2.1"
   }
 }

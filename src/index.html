@@ -38,13 +38,15 @@ Create Logo and add a Favicon
     <main id="app" class="w-screen pt-20 flex flex-col items-center">
       <!-- Hero Section -->
       <div id="hero-section" class="primary-bg text-3xl text-stone-600 bg-white py-48 w-screen justify-center sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-        Hi! I am
-        <br>
-        <span class="text-8xl font-bold leading-tight text-stone-800">Jyothish <br> Gompa <br> </span>
-        <br>
-        <span class="text-3xl leading-none font-semibold">UI/UX Designer | Front-End Developer | Graphic Designer</span>
-        <br>
-        <br>
+        <div id="hero-content">
+          Hi! I am
+          <br>
+          <span class="text-8xl font-bold leading-tight text-stone-800">Jyothish <br> Gompa <br> </span>
+          <br>
+          <span class="text-3xl leading-none font-semibold">UI/UX Designer | Front-End Developer | Graphic Designer</span>
+          <br>
+          <br>
+        </div>
         <!-- Create a Primary Button to Download Resume -->
         <!-- Make this Secondary Button -->
         <button id="hero-button" class="bg-blue-500 py-5 px-8 rounded-lg text-xl text-white font-semibold shadow-lg shadow-stone-400/50"><i class="fa-solid fa-paper-plane pr-5"></i></span>Contact Me</button>
@@ -77,14 +79,14 @@ Create Logo and add a Favicon
       </div>
       <!-- End of About Me Section -->
       <!-- My Projects Section-->
-      <div id="projects-section" class="bg-white-200 w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+      <div id="projects-section" class="projects-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         <div id="projects-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
           MY PROJECTS
         </div>
         <!-- Grid Declaration -->
         <div id="projects-content" class="grid gap-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center pt-12">
           <!-- UI/UX Design -->
-          <div class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-rose-600/50 h-fit">
+          <div id="projects-ux" class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-rose-600/50 h-fit">
             <div class="">
                 <svg id="ui-ux-icon" class="w-full mb-6" viewBox="0 0 667 435">
                   <path d="M553.823 60C570.392 60 583.823 46.5685 583.823 30C583.823 13.4315 570.392 0 553.823 0C537.255 0 523.823 13.4315 523.823 30C523.823 46.5685 537.255 60 553.823 60Z" fill="#FF6584"/>
@@ -134,7 +136,7 @@ Create Logo and add a Favicon
             </div>
           </div>
           <!-- Front-End Development -->
-          <div class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-violet-600/50 h-full">
+          <div id="projects-fd" class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-violet-600/50 h-full">
             <div class="">
                 <svg id="front-end-icon" class="w-full mb-6" viewBox="0 0 681 392">
                   <path d="M147.554 347.329C167.113 347.329 182.97 331.472 182.97 311.913C182.97 292.353 167.113 276.497 147.554 276.497C127.994 276.497 112.138 292.353 112.138 311.913C112.138 331.472 127.994 347.329 147.554 347.329Z" fill="#F2F2F2"/>
@@ -191,7 +193,7 @@ Create Logo and add a Favicon
             </div>
           </div>
           <!-- Graphic Design -->
-          <div class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-orange-600/50 h-full">
+          <div id="projects-gd" class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-orange-600/50 h-full">
             <div class="">
                 <svg id="graphic-design-icon" class="w-full mb-6" viewBox="0 0 681 328">
                   <path d="M169.936 326.284H658.703C661.502 326.284 664.274 325.733 666.86 324.662C669.446 323.591 671.796 322.021 673.775 320.042C675.754 318.062 677.324 315.713 678.395 313.127C679.466 310.541 680.017 307.769 680.017 304.97V22.3303C680.021 20.4413 679.77 18.5605 679.27 16.7388C678.044 12.2233 675.366 8.23709 671.648 5.39542C667.931 2.55376 663.382 1.01471 658.703 1.01584H467.797C463.343 8.51757 460.599 16.9091 459.759 25.5927C457.39 50.8379 471.865 74.1766 484.817 95.9824C497.769 117.788 510.121 143.141 503.262 167.561C498.624 184.031 486.055 195.951 470.46 203.095C455.475 209.726 438.991 212.237 422.711 210.367C412.934 209.132 403.303 206.933 393.958 203.802C381.704 199.823 369.735 194.664 357.785 189.445C357.776 189.445 357.776 189.445 357.766 189.436C357.559 189.347 357.343 189.249 357.137 189.161C347.89 185.122 338.653 181.073 329.278 177.506C318.293 173.21 306.892 170.068 295.257 168.131C277.579 165.36 259.753 166.362 243.981 174.381C218.274 187.441 204.497 215.663 193.717 242.412C182.828 269.456 173.07 297.403 169.936 326.284Z" fill="#EA580C"/>
@@ -221,7 +223,7 @@ Create Logo and add a Favicon
       <!-- End of My Projects Section -->
       <!-- My Skills -->
       <div id="skills-section" class="bg-slate-100 w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-        <div id="projects-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
+        <div id="skills-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
           MY SKILLS
         </div>
         <div id="skills-container" class="flex pt-12 sm:flex-col sm:items-center lg:flex-row lg:items-start">
@@ -376,7 +378,7 @@ Create Logo and add a Favicon
       </div>
       <!-- End of My Skills Section -->
       <!-- Resume Section -->
-      <div id="resume-section" class="bg-white w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+      <div id="resume-section" class="resume-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         <div id="resume-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
           RESUME
         </div>
@@ -496,7 +498,7 @@ Create Logo and add a Favicon
       <!-- End of Resume Section -->
       <!-- Contact Section -->
       <!-- Formspree -->
-      <div id="contact-section" class="primary-bg-80 w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+      <div id="contact-section" class="contact-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         <div id="contact-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
           Contact
         </div>
@@ -530,7 +532,7 @@ Create Logo and add a Favicon
             </div>
             <div id="info-content" class="flex flex-col my-5">
               <div id="contact-email" class="flex flex-row items-center">
-                <div class="p-4 mr-5 border-2 border-red-300 rounded-md shadow-lg text-red-500">
+                <div class="p-4 mr-5 bg-white border-2 border-red-300 rounded-md shadow-lg text-red-500">
                   <i class="fa-solid fa-envelope fa-2xl"></i>
                 </div>
                 <div>
@@ -542,7 +544,7 @@ Create Logo and add a Favicon
                 Visit my social profile and get connected
               </div>
               <div class="flex flex-row items-center">
-                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 border-2 border-pink-500 rounded-md shadow-lg text-pink-500">
+                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 bg-white border-2 border-pink-500 rounded-md shadow-lg text-pink-500">
                   <a href="https://dribbble.com/Jyotish547" target="_blank" class="flex items-center group">
                       <div>
                           <i class="fa-brands fa-dribbble fa-2xl"></i>
@@ -553,7 +555,7 @@ Create Logo and add a Favicon
                   </a> 
                 </div>
 
-                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 border-2 border-blue-500 rounded-md shadow-lg text-blue-500">
+                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 bg-white border-2 border-blue-500 rounded-md shadow-lg text-blue-500">
                   <a href="https://www.behance.net/jyotishvardhan" target="_blank" class="flex items-center group">
                       <div>
                           <i class="fa-brands fa-behance fa-2xl"></i>
@@ -564,7 +566,7 @@ Create Logo and add a Favicon
                   </a> 
                 </div>
 
-                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 border-2 border-blue-800 rounded-md shadow-lg text-blue-800">
+                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 bg-white border-2 border-blue-800 rounded-md shadow-lg text-blue-800">
                   <a href="https://www.linkedin.com/in/jyothishgompa" target="_blank" class="flex items-center group">
                       <div>
                           <i class="fa-brands fa-linkedin fa-2xl"></i>
@@ -576,7 +578,7 @@ Create Logo and add a Favicon
                 </div>
               
 
-                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 border-2 border-purple-500 rounded-md shadow-lg text-purple-500">
+                <div class="relative flex flex-row w-fit items-center h-16 p-4 mr-5 bg-white border-2 border-purple-500 rounded-md shadow-lg text-purple-500">
                   <a href="https://www.instagram.com/jyotish547/" target="_blank" class="flex items-center group">
                       <div>
                           <i class="fa-brands fa-instagram fa-2xl"></i>

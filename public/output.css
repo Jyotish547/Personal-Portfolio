@@ -596,18 +596,6 @@ video {
   top: 100%;
 }
 
-.top-10 {
-  top: 2.5rem;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
-.top-20 {
-  top: 5rem;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -720,18 +708,6 @@ video {
 
 .mt-9 {
   margin-top: 2.25rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.-mt-20 {
-  margin-top: -5rem;
-}
-
-.-mt-32 {
-  margin-top: -8rem;
 }
 
 .inline-block {
@@ -1180,11 +1156,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-36 {
-  padding-top: 9rem;
-  padding-bottom: 9rem;
-}
-
 .pb-12 {
   padding-bottom: 3rem;
 }
@@ -1223,14 +1194,6 @@ video {
 
 .pt-5 {
   padding-top: 1.25rem;
-}
-
-.pt-36 {
-  padding-top: 9rem;
-}
-
-.pt-6 {
-  padding-top: 1.5rem;
 }
 
 .text-center {
@@ -1472,6 +1435,20 @@ html {
   background-size: cover;
 }
 
+.resume-bg {
+  background-image:linear-gradient(rgba(255, 255, 255, 0.80), rgba(255, 255, 255, 0.80)),  url('../assets/resume-background.png');
+  background-size: cover;
+}
+
+.projects-bg {
+  background-image:linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),  url('../assets/work-background.png');
+}
+
+.contact-bg {
+  background-image:linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),  url('../assets/contact-background.png');
+  background-size: cover;
+}
+
 .w-80 {
   width: 80%;
 }
@@ -1506,6 +1483,8 @@ html {
   flex: 0 0 auto;
   white-space: nowrap;
 }
+
+/* Animation Queries */
 
 /* Media Queries */
 
