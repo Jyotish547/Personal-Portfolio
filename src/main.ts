@@ -945,9 +945,20 @@ document.addEventListener('scroll', () => {
     }
 });
 
+declare var particlesJS: any;
 
+particlesJS.load('particles-js', './particles.json', function() {
+    console.log('callback - particles.js config loaded');
+});
 
+// Loader
 
+window.addEventListener('load', function() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    if (loaderWrapper) {
+        loaderWrapper.style.display = 'none';
+    }
+});
 
 
 

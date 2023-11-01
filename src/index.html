@@ -1,6 +1,4 @@
 <!-- 
-Use JS libraries for Interactivity
-Use Loading Animation
 Create Logo and add a Favicon
 -->
 
@@ -13,7 +11,19 @@ Create Logo and add a Favicon
     <title>Jyothish | Portfolio</title>
   </head>
   <body id="container" class="flex h-full overflow-x-hidden">
-    <nav id="navbar" class="navbar top-0 left-0 fixed flex flex-row w-full items-center justify-between bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-20 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+    <!-- Particle.JS Declaration -->
+    <div id="particles-js"></div>
+    <!-- Loader -->
+    <div id="loader-wrapper" class="loader-wrapper">
+      <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </div>
+    <!-- NavBar -->
+    <nav id="navbar" class="navbar top-0 left-0 fixed flex flex-row w-full items-center justify-between bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-40 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
       <div id="logo" class="text-4xl items-center">Logo</div>
       <div class="sm:flex sm:flex-col sm:items-center">
         <div id="nav-button" class="hidden flex flex-row items-center text-lg font-bold py-5 cursor-pointer">
@@ -48,12 +58,12 @@ Create Logo and add a Favicon
       </div>
       <!-- End of Hero Section -->
       <!-- About Me Section -->
-      <div id="about-section" class="bg-slate-100 w-screen pt-16  sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96 z-30">
-        <div id="about-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600 lg:mb-8">
+      <div id="about-section" class="bg-white w-screen pt-16  sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+        <div id="about-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600 lg:mb-8 relative z-20">
           ABOUT ME
         </div>
-        <div id="about-container" class="flex sm:flex-col lg:flex-row pb-12 items-center">
-          <img id="about-img" class="pr-12 sm:w-4/5 lg:w-3/5">
+        <div id="about-container" class="bg-white flex sm:flex-col lg:flex-row pb-12 items-center relative z-20">
+          <img id="about-img" class="pr-12 sm:w-4/5 lg:w-3/5 relative z-20">
           <div id="about-content" class="">
             <h2 class="font-semibold text-2xl mb-3">Hi There! I'm Jyothish Vardhan</h2>
 								<h4 class="font-semibold text-xl mb-3">UI/UX Designer | Front-End Developer | Graphic Designer</h4>
@@ -75,11 +85,11 @@ Create Logo and add a Favicon
       <!-- End of About Me Section -->
       <!-- My Projects Section-->
       <div id="projects-section" class="projects-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-        <div id="projects-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
+        <div id="projects-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600 relative z-20">
           MY PROJECTS
         </div>
         <!-- Grid Declaration -->
-        <div id="projects-content" class="grid gap-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center pt-12">
+        <div id="projects-content" class="grid gap-10 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center pt-12 relative z-20">
           <!-- UI/UX Design -->
           <div id="projects-ux" class="flex flex-col bg-white items-center justify-between px-8 py-10 rounded-2xl shadow-custom shadow-rose-600/50 h-fit">
             <div class="">
@@ -199,17 +209,17 @@ Create Logo and add a Favicon
             </div>
           </div>
         </div>
-        <div id="projects-button" class="mt-16 mx-auto w-fit">
-          <a class="bg-violet-700 rounded-md py-4 px-5 font-semibold text-2xl text-white shadow-lg shadow-stone-400/50 hover:bg-violet-800 hover:duration-500 active:bg-violet-900" href="./projects.html"><i class="fa-solid fa-eye pr-3"></i>View Projects</a>
+        <div id="projects-button" class="mt-16 mx-auto w-fit relative z-20">
+          <a class="bg-violet-700 rounded-md py-4 px-5 font-semibold text-2xl text-white shadow-lg shadow-stone-400/50 hover:bg-violet-800 hover:duration-500 active:bg-violet-900 z-30" href="./projects.html"><i class="fa-solid fa-eye pr-3"></i>View Projects</a>
         </div>
       </div>
       <!-- End of My Projects Section -->
       <!-- My Skills -->
-      <div id="skills-section" class="bg-slate-100 w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+      <div id="skills-section" class="bg-white w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
         <div id="skills-title" class="primary-bg text-3xl p-5 text-center font-bold min-w-xs max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
           MY SKILLS
         </div>
-        <div id="skills-container" class="flex pt-12 sm:flex-col sm:items-center lg:flex-row lg:items-start">
+        <div id="skills-container" class="flex pt-12 sm:flex-col sm:items-center lg:flex-row lg:items-start relative z-20">
           <div id="skills-left" class="font-semibold text-3xl pr-12">
             <!-- Add logos of software at this part -->
             All the skills that I have in that field of work are mentioned.
@@ -362,10 +372,10 @@ Create Logo and add a Favicon
       <!-- End of My Skills Section -->
       <!-- Resume Section -->
       <div id="resume-section" class="resume-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-        <div id="resume-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
+        <div id="resume-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600 relative z-20">
           RESUME
         </div>
-        <div id="resume-container" class="flex sm:flex-col sm:items-center lg:flex-row lg:items-start">
+        <div id="resume-container" class="flex sm:flex-col sm:items-center lg:flex-row lg:items-start relative z-30">
           <div id="resume-exp" class="flex flex-col mt-12 w-1/2 sm:items-center lg:items-start sm:w-fit lg:w-1/2">
             <div id="exp-title" class="flex flex-row max-w-fit items-center py-5 px-10 border-b-4 border-violet-500 shadow-custom shadow-violet-400 rounded-lg">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="stroke-violet-600 mr-3">
@@ -474,18 +484,18 @@ Create Logo and add a Favicon
               </div>
           </div>
         </div>
-        <div id="resume-button" class="mt-16 mx-auto w-fit">
+        <div id="resume-button" class="mt-16 mx-auto w-fit relative z-20">
           <a class="download-resume bg-violet-700 rounded-md py-4 px-5 font-semibold text-2xl text-white shadow-lg shadow-stone-400/50 hover:bg-violet-800 hover:duration-500 active:bg-violet-900" target="_blank"><i class="fa-solid fa-floppy-disk pr-3"></i>My Resume</a>
         </div>        
       </div>
       <!-- End of Resume Section -->
       <!-- Contact Section -->
       <!-- Formspree -->
-      <div id="contact-section" class="contact-bg w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-        <div id="contact-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600">
+      <div id="contact-section" class="bg-white w-screen py-16 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+        <div id="contact-title" class="primary-bg text-3xl p-5 text-center font-bold max-w-sm rounded-lg m-auto shadow-xl text-stone-600 relative z-20">
           Contact
         </div>
-        <div id="contact-container" class="flex sm:flex-col lg:flex-row pt-12 justify-between">
+        <div id="contact-container" class="flex sm:flex-col lg:flex-row pt-12 justify-between relative z-20">
           <div id="contact-left" class="sm:w-full lg:w-1/2 lg:pr-5">
             <h3 class="text-3xl font-semibold">Say Hello</h3>
             <form action="https://formspree.io/f/mknlyarv" method="POST">
@@ -508,7 +518,7 @@ Create Logo and add a Favicon
               <button type="submit" class="bg-violet-700 rounded-md py-4 px-5 font-semibold text-white shadow-lg shadow-stone-400/50 mt-8 hover:bg-violet-800 hover:duration-500 active:bg-violet-900"><i class="fa-solid fa-paper-plane fa-lg pr-5"></i>Send Message</button>
             </form>
           </div>
-          <div id="contact-right" class="sm:w-full sm:mt-8 lg:w-1/2 lg:pl-5">
+          <div id="contact-right" class="sm:w-full sm:mt-8 lg:w-1/2 lg:pl-5 ">
             <h3 class="text-3xl font-semibold">Contact Info</h3>
             <div class="text-lg my-6 font-medium">
               Do reach out to me for any queries.
@@ -579,11 +589,12 @@ Create Logo and add a Favicon
       </div>
       <!-- End of Contact Section -->
       <!-- Footer -->
-      <footer class="w-screen bg-gray-200 py-4 text-slate-700 text-center font-medium">
+      <footer class="w-screen bg-gray-200 py-4 text-slate-700 text-center font-medium relative z-10">
         © 2023 Jyothish Vardhan Gompa. All rights reserved.
       </footer>
       <!-- End of Footer -->
     </main>
+    <script src="./particles.js"></script>
     <script type="module" src="./main.ts"></script>
   </body>
 </html>
