@@ -911,3 +911,43 @@ filterAnimeButtons.forEach((elem: Element) => {
         });
     });
 });
+
+// Parallax Effect for Hero Sections
+
+document.addEventListener('scroll', () => {
+    const offset: number = window.scrollY;
+    const factor: number = 0.5; // Adjust for stronger/weaker parallax effect
+
+    // Hero Section
+    const heroSection: HTMLElement | null = document.querySelector('#hero-section');
+    const heroContent: HTMLElement | null = document.querySelector('#hero-content');
+
+    if (heroSection && heroContent) {
+        const sectionHeight: number = heroSection.offsetHeight;
+        const contentHeight: number = heroContent.offsetHeight;
+
+        if (offset * factor + contentHeight <= sectionHeight) {
+            heroContent.style.transform = `translateY(calc(${offset * factor}px))`;
+        }
+    }
+
+    // Projects Hero Section
+    const pHeroSection: HTMLElement | null = document.querySelector('#p-hero-section');
+    const pHeroContent: HTMLElement | null = document.querySelector('#p-hero-content');
+
+    if (pHeroSection && pHeroContent) {
+        const sectionHeight: number = pHeroSection.offsetHeight;
+        const contentHeight: number = pHeroContent.offsetHeight;
+
+        if (offset * factor + contentHeight <= sectionHeight) {
+            pHeroContent.style.transform = `translateY(calc(${offset * factor}px))`;
+        }
+    }
+});
+
+
+
+
+
+
+
