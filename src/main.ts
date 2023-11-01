@@ -399,7 +399,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Animations
+// Animations - index.html
 
 // Navbar
 
@@ -430,12 +430,12 @@ let animeAboutCont = false;
 
 window.addEventListener('scroll', () => {
 
-    const aboutImgTitle = document.getElementById('about-title')?.getBoundingClientRect();
+    const aboutTitle = document.getElementById('about-title')?.getBoundingClientRect();
     const aboutImgRect = document.getElementById('about-img')?.getBoundingClientRect();
     const aboutContRect = document.getElementById('about-content')?.getBoundingClientRect();
 
-    if(aboutImgTitle){
-        if (!animeAboutTitle && aboutImgTitle.top <= window.innerHeight && aboutImgTitle.bottom >= 0) {
+    if(aboutTitle){
+        if (!animeAboutTitle && aboutTitle.top <= window.innerHeight && aboutTitle.bottom >= 0) {
             animeAboutTitle = true;
             anime({
                 targets: '#about-title',
@@ -477,21 +477,21 @@ window.addEventListener('scroll', () => {
 
 // My Projects Section
 
-let animeProjectsTitle = false;
-let animateProjectsUX = false;
-let animateProjectsFD = false;
-let animateProjectsGD = false;
+let animeMyProjectsTitle = false;
+let animateMyProjectsUX = false;
+let animateMyProjectsFD = false;
+let animateMyProjectsGD = false;
 
 window.addEventListener('scroll', () => {
 
-    const projectsTitle = document.getElementById('projects-title')?.getBoundingClientRect();
-    const projectsUX = document.getElementById('projects-ux')?.getBoundingClientRect();
-    const projectsFD = document.getElementById('projects-fd')?.getBoundingClientRect();
-    const projectsGD = document.getElementById('projects-gd')?.getBoundingClientRect();
+    const myProjectsTitle = document.getElementById('projects-title')?.getBoundingClientRect();
+    const myProjectsUX = document.getElementById('projects-ux')?.getBoundingClientRect();
+    const myProjectsFD = document.getElementById('projects-fd')?.getBoundingClientRect();
+    const myProjectsGD = document.getElementById('projects-gd')?.getBoundingClientRect();
 
-    if(projectsTitle){
-        if (!animeProjectsTitle && projectsTitle.top <= window.innerHeight && projectsTitle.bottom >= 0) {
-            animeProjectsTitle = true;
+    if(myProjectsTitle){
+        if (!animeMyProjectsTitle && myProjectsTitle.top <= window.innerHeight && myProjectsTitle.bottom >= 0) {
+            animeMyProjectsTitle = true;
             anime({
                 targets: '#projects-title',
                 opacity: [0, 1],
@@ -502,9 +502,9 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    if(projectsUX){
-        if (!animateProjectsUX && projectsUX.top <= window.innerHeight && projectsUX.bottom >= 0) {
-            animateProjectsUX = true;
+    if(myProjectsUX){
+        if (!animateMyProjectsUX && myProjectsUX.top <= window.innerHeight && myProjectsUX.bottom >= 0) {
+            animateMyProjectsUX = true;
             anime({
                 targets: '#projects-ux',
                 opacity: [0, 1],
@@ -515,9 +515,9 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    if(projectsFD){
-        if (!animateProjectsFD && projectsFD.top <= window.innerHeight && projectsFD.bottom >= 0) {
-            animateProjectsFD = true;
+    if(myProjectsFD){
+        if (!animateMyProjectsFD && myProjectsFD.top <= window.innerHeight && myProjectsFD.bottom >= 0) {
+            animateMyProjectsFD = true;
             anime({
                 targets: '#projects-fd',
                 opacity: [0, 1],
@@ -527,9 +527,9 @@ window.addEventListener('scroll', () => {
         }
     }
 
-    if(projectsGD){
-        if (!animateProjectsGD && projectsGD.top <= window.innerHeight && projectsGD.bottom >= 0) {
-            animateProjectsGD = true;
+    if(myProjectsGD){
+        if (!animateMyProjectsGD && myProjectsGD.top <= window.innerHeight && myProjectsGD.bottom >= 0) {
+            animateMyProjectsGD = true;
             anime({
                 targets: '#projects-gd',
                 opacity: [0, 1],
@@ -592,4 +592,263 @@ window.addEventListener('scroll', () => {
         }
     }
 
+    // Animating skills for 80%, 85%, 90%, 95%
+
+    const skillsW80 = document.querySelectorAll('.anime-80');
+    const skillsW85 = document.querySelectorAll('.anime-85');
+    const skillsW90 = document.querySelectorAll('.anime-90');
+    const skillsW95 = document.querySelectorAll('.anime-95');
+
+    skillsW80.forEach((elem: Element) => {
+
+        const w80Rect = elem.getBoundingClientRect();
+
+        const skillsAnimated80 = elem.getAttribute('animated-80');
+
+        if(w80Rect){
+            if (w80Rect && skillsAnimated80 !== 'true' && w80Rect.top <= window.innerHeight && w80Rect.bottom >= 0) {
+                
+                elem.setAttribute('animated-80', 'true');
+
+                anime({
+                    targets: elem,
+                    width: '80%',
+                    duration: 1000,
+                    easing: 'easeInOutQuad',
+                    delay: 600,
+                });
+            }
+        }
+
+    });
+
+    skillsW85.forEach((elem: Element) => {
+
+        const w85Rect = elem.getBoundingClientRect();
+
+        const skillsAnimated85 = elem.getAttribute('animated-85');
+
+        if(w85Rect){
+            if (w85Rect && skillsAnimated85 !== 'true' && w85Rect.top <= window.innerHeight && w85Rect.bottom >= 0) {
+                
+                elem.setAttribute('animated-85', 'true');
+
+                anime({
+                    targets: elem,
+                    width: '85%',
+                    duration: 1000,
+                    easing: 'easeInOutQuad',
+                    delay: 600,
+                });
+            }
+        }
+
+    });
+
+    skillsW90.forEach((elem: Element) => {
+
+        const w90Rect = elem.getBoundingClientRect();
+
+        const skillsAnimated90 = elem.getAttribute('animated-90');
+
+        if(w90Rect){
+            if (w90Rect && skillsAnimated90 !== 'true' && w90Rect.top <= window.innerHeight && w90Rect.bottom >= 0) {
+                
+                elem.setAttribute('animated-90', 'true');
+
+                anime({
+                    targets: elem,
+                    width: '90%',
+                    duration: 1000,
+                    easing: 'easeInOutQuad',
+                    delay: 600,
+                });
+            }
+        }
+
+    });
+
+    skillsW95.forEach((elem: Element) => {
+
+        const w95Rect = elem.getBoundingClientRect();
+
+        const skillsAnimated95 = elem.getAttribute('animated-95');
+
+        if(w95Rect){
+            if (w95Rect && skillsAnimated95 !== 'true' && w95Rect.top <= window.innerHeight && w95Rect.bottom >= 0) {
+                
+                elem.setAttribute('animated-95', 'true');
+
+                anime({
+                    targets: elem,
+                    width: '95%',
+                    duration: 1000,
+                    easing: 'easeInOutQuad',
+                    delay: 600,
+                });
+            }
+        }
+
+    });
+
+});
+
+// Resume Section
+
+let animeResumeTitle = false;
+let animeResumeLeft = false;
+let animeResumeRight = false;
+let animeResumeButton = false;
+
+window.addEventListener('scroll', () => {
+
+    const resumeTitle = document.getElementById('resume-title')?.getBoundingClientRect();
+    const resumeLeft = document.getElementById('resume-exp')?.getBoundingClientRect();
+    const resumeRight = document.getElementById('resume-edu')?.getBoundingClientRect();
+    const resumeButton = document.getElementById('resume-button')?.getBoundingClientRect();
+
+    if(resumeTitle){
+        if (!animeResumeTitle && resumeTitle.top <= window.innerHeight && resumeTitle.bottom >= 0) {
+            animeResumeTitle = true;
+            anime({
+                targets: '#resume-title',
+                opacity: [0, 1],
+                translateY: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(resumeLeft){
+        if (!animeResumeLeft && resumeLeft.top <= window.innerHeight && resumeLeft.bottom >= 0) {
+            animeResumeLeft = true;
+            anime({
+                targets: '#resume-exp',
+                opacity: [0, 1],
+                translateX: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(resumeRight){
+        if (!animeResumeRight && resumeRight.top <= window.innerHeight && resumeRight.bottom >= 0) {
+            animeResumeRight = true;
+            anime({
+                targets: '#resume-edu',
+                opacity: [0, 1],
+                translateX: ['50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(resumeButton){
+        if (!animeResumeButton && resumeButton.top <= window.innerHeight && resumeButton.bottom >= 0) {
+            animeResumeButton = true;
+            anime({
+                targets: '#resume-button',
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+});
+
+// Contact Section
+
+let animeContactTitle = false;
+let animecontactLeft = false;
+let animeConatctRight = false;
+
+window.addEventListener('scroll', () => {
+
+    const contactTitle = document.getElementById('contact-title')?.getBoundingClientRect();
+    const contactLeft = document.getElementById('contact-left')?.getBoundingClientRect();
+    const contactRight = document.getElementById('contact-right')?.getBoundingClientRect();
+
+    if(contactTitle){
+        if (!animeContactTitle && contactTitle.top <= window.innerHeight && contactTitle.bottom >= 0) {
+            animeContactTitle = true;
+            anime({
+                targets: '#contact-title',
+                opacity: [0, 1],
+                translateY: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(contactLeft){
+        if (!animecontactLeft && contactLeft.top <= window.innerHeight && contactLeft.bottom >= 0) {
+            animecontactLeft = true;
+            anime({
+                targets: '#contact-left',
+                opacity: [0, 1],
+                translateX: ['-50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+    if(contactRight){
+        if (!animeConatctRight && contactRight.top <= window.innerHeight && contactRight.bottom >= 0) {
+            animeConatctRight = true;
+            anime({
+                targets: '#contact-right',
+                opacity: [0, 1],
+                translateX: ['50px', '0px'],
+                duration: 1000,
+                easing: 'easeInOutQuad',
+            });
+        }
+    }
+
+});
+
+
+
+// Animations - projects.html
+
+// Projects Hero Section
+
+anime({
+    targets: '#p-hero-content',
+    opacity: [0, 1],
+    translateX: ['-50px', '0px'],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+});
+
+// Projects Content Section
+
+anime({
+    targets: '#filter-title-container, .grid-item',
+    opacity: [0, 1],
+    translateY: ['-50px', '0px'],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+});
+
+const filterAnimeButtons = document.querySelectorAll('.filter-button');
+
+filterAnimeButtons.forEach((elem: Element) => {
+    elem.addEventListener('click', () => {
+
+        anime({
+            targets: '#filter-title-container, .grid-item',
+            opacity: [0, 1],
+            translateY: ['-50px', '0px'],
+            duration: 1000,
+            easing: 'easeInOutQuad',
+            
+        });
+    });
 });

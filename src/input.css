@@ -34,22 +34,6 @@ html {
     background-size: cover;
 }
 
-.w-80 {
-    width: 80%;
-}
-
-.w-85 {
-    width: 85%;
-}
-
-.w-90 {
-    width: 90%;
-}
-
-.w-95 {
-    width: 95%;
-}
-
 .list-none {
     border-bottom: solid 5px transparent;
     border-top: solid 5px transparent;
@@ -61,18 +45,16 @@ html {
 }
 
 #dropdown-menu {
-    
     flex-wrap: nowrap; 
-  }
+}
   
 #dropdown-menu div {
     flex: 0 0 auto; 
     white-space: nowrap; 
 }
 
+
 /* Animation Queries */
-
-
 
 /* Media Queries */
 

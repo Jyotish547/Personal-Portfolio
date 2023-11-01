@@ -596,6 +596,14 @@ video {
   top: 100%;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -765,10 +773,6 @@ video {
 
 .w-7 {
   width: 1.75rem;
-}
-
-.w-80 {
-  width: 20rem;
 }
 
 .w-96 {
@@ -1447,22 +1451,6 @@ html {
 .contact-bg {
   background-image:linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.50)),  url('../assets/contact-background.png');
   background-size: cover;
-}
-
-.w-80 {
-  width: 80%;
-}
-
-.w-85 {
-  width: 85%;
-}
-
-.w-90 {
-  width: 90%;
-}
-
-.w-95 {
-  width: 95%;
 }
 
 .list-none {
