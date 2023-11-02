@@ -34,9 +34,10 @@ if (imgAb) {
     imgAb.src = imgAbout;
   }
 
-// Project Images
+// Project.html Thumbnails
 
-import imgP1 from '../assets/sample1.jpg';
+import imgP1 from '../assets/Nexus Play Thumbnail.png';
+import imgP2 from '../assets/sample1.jpg'
 
 let pGrid1 = document.getElementById("pr-1-img") as HTMLImageElement;
 
@@ -48,22 +49,32 @@ if (pGrid1) {
 let pGrid2 = document.getElementById("pr-2-img") as HTMLImageElement;
 
 if (pGrid2) {
-  pGrid2.src = imgP1;
+  pGrid2.src = imgP2;
   pGrid2.style.width = "100%";
 }
 
 let pGrid3 = document.getElementById("pr-3-img") as HTMLImageElement;
 
 if (pGrid3) {
-  pGrid3.src = imgP1;
+  pGrid3.src = imgP2;
   pGrid3.style.width = "100%";
 }
 
 let pGrid4 = document.getElementById("pr-4-img") as HTMLImageElement;
 
 if (pGrid4) {
-  pGrid4.src = imgP1;
+  pGrid4.src = imgP2;
   pGrid4.style.width = "100%";
+}
+
+// Portfolio pages
+
+import p1Img from '../assets/Nexus Play Case Study.png';
+
+let p1CaseStudy = document.getElementById('p1') as HTMLImageElement;
+
+if(p1CaseStudy) {
+    p1CaseStudy.src = p1Img;
 }
 
 // Nav Bar Selected State
@@ -912,6 +923,16 @@ filterAnimeButtons.forEach((elem: Element) => {
     });
 });
 
+// Portfolio Pages
+
+anime({
+    targets: '#p1',
+    opacity: [0, 1],
+    translateY: ['-50px', '0px'],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+});
+
 // Parallax Effect for Hero Sections
 
 document.addEventListener('scroll', () => {
@@ -955,7 +976,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
 // ParticlesJS Loader
 
 declare var particlesJS: any;
@@ -971,4 +991,19 @@ window.addEventListener('load', function() {
     if (loaderWrapper) {
         loaderWrapper.style.display = 'none';
     }
+});
+
+// Portfolio 1
+
+document.getElementById("button-p1-1")?.addEventListener("click", function() {
+    
+    window.location.href = "./nexusPlay.html";
+
+});
+
+document.getElementById("button-p1-2")?.addEventListener("click", function() {
+    
+    window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play?type=design&node-id=0%3A1&mode=design&t=RfnXBgzVmXHpbMZ0-1", "_blank");
+    
+
 });

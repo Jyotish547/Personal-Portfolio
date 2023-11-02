@@ -9,7 +9,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
-        projects: resolve(__dirname, 'src/projects.html')
+        projects: resolve(__dirname, 'src/projects.html'),
+        p1: resolve(__dirname, 'src/nexusPlay.html')
       },
     },
   },
