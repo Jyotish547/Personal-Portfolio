@@ -1056,12 +1056,12 @@ particlesJS.load('particles-js', './particles.json', function() {
 
 // Not working for Vercel Build - Add in Hosting
 
-// window.addEventListener('load', function() {
-//     const loaderWrapper = document.getElementById('loader-wrapper');
-//     if (loaderWrapper) {
-//         loaderWrapper.style.display = 'none';
-//     }
-// });
+window.addEventListener('load', function() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    if (loaderWrapper) {
+        loaderWrapper.style.display = 'none';
+    }
+});
 
 // Portfolio 1
 
