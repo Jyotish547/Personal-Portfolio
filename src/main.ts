@@ -618,11 +618,27 @@ window.addEventListener('scroll', () => {
 let animeSkillsTitle = false;
 let animeSkillsLeft = false;
 let animeSkillsRight = false;
+let animeSkillsData = false;
+
+// Data Values
+
+let data1 = {
+    value: 0
+};
+
+let data2 = {
+    value: 0
+};
+
+let data3 = {
+    value: 0
+};
 
 window.addEventListener('scroll', () => {
 
     const skillsTitle = document.getElementById('skills-title')?.getBoundingClientRect();
     const skillsLeft = document.getElementById('skills-left')?.getBoundingClientRect();
+    const skillsData = document.getElementById('skills-data')?.getBoundingClientRect();
     const skillsRight = document.getElementById('skills-right')?.getBoundingClientRect();
 
     if(skillsTitle){
@@ -650,6 +666,58 @@ window.addEventListener('scroll', () => {
             });
         }
     }
+
+    // Stats Counter
+    if(skillsData) {
+        if (!animeSkillsData && skillsData.top <= window.innerHeight && skillsData.bottom >= 0) {
+            animeSkillsData = true;
+            anime({
+                targets: data1,
+                value: [0, 2000],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const data1Text = document.getElementById('data-1');
+                    if(data1Text) {
+                        data1Text.innerText = data1.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: data2,
+                value: [0, 13],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const data2Text = document.getElementById('data-2');
+                    if(data2Text) {
+                        data2Text.innerText = data2.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: data3,
+                value: [0, 7],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const data3Text = document.getElementById('data-3');
+                    if(data3Text) {
+                        data3Text.innerText = data3.value.toString();
+                    }
+                }
+            });
+        }
+    }
+
 
     if(skillsRight){
         if (!animeSkillsRight && skillsRight.top <= window.innerHeight && skillsRight.bottom >= 0) {
