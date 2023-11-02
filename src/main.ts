@@ -1054,12 +1054,14 @@ particlesJS.load('particles-js', './particles.json', function() {
 
 // Loader
 
-window.addEventListener('load', function() {
-    const loaderWrapper = document.getElementById('loader-wrapper');
-    if (loaderWrapper) {
-        loaderWrapper.style.display = 'none';
-    }
-});
+// Not working for Vercel Build - Add in Hosting
+
+// window.addEventListener('load', function() {
+//     const loaderWrapper = document.getElementById('loader-wrapper');
+//     if (loaderWrapper) {
+//         loaderWrapper.style.display = 'none';
+//     }
+// });
 
 // Portfolio 1
 
