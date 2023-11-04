@@ -634,6 +634,26 @@ let data3 = {
     value: 0
 };
 
+let skill1 = {
+    value: 0
+};
+
+let skill2 = {
+    value: 0
+};
+
+let skill3 = {
+    value: 0
+};
+
+let skill4 = {
+    value: 0
+};
+
+let skill5 = {
+    value: 0
+};
+
 window.addEventListener('scroll', () => {
 
     const skillsTitle = document.getElementById('skills-title')?.getBoundingClientRect();
@@ -658,7 +678,7 @@ window.addEventListener('scroll', () => {
         if (!animeSkillsLeft && skillsLeft.top <= window.innerHeight && skillsLeft.bottom >= 0) {
             animeSkillsLeft = true;
             anime({
-                targets: '#skills-left',
+                targets: '#skills-left, #tools',
                 opacity: [0, 1],
                 translateX: ['-50px', '0px'],
                 duration: 1000,
@@ -703,7 +723,7 @@ window.addEventListener('scroll', () => {
 
             anime({
                 targets: data3,
-                value: [0, 7],
+                value: [0, 10],
                 round: 1,
                 duration: 2000,
                 easing: 'easeInOutQuad',
@@ -718,6 +738,10 @@ window.addEventListener('scroll', () => {
         }
     }
 
+    // Tools
+
+
+
 
     if(skillsRight){
         if (!animeSkillsRight && skillsRight.top <= window.innerHeight && skillsRight.bottom >= 0) {
@@ -727,6 +751,81 @@ window.addEventListener('scroll', () => {
                 opacity: [0, 1],
                 duration: 1000,
                 easing: 'easeInOutQuad',
+            });
+
+            anime({
+                targets: skill1,
+                value: [0, 90],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const skill1Text = document.getElementById('skill-1');
+                    if(skill1Text) {
+                        skill1Text.innerText = skill1.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: skill2,
+                value: [0, 95],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const skill2Text = document.getElementById('skill-2');
+                    if(skill2Text) {
+                        skill2Text.innerText = skill2.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: skill3,
+                value: [0, 85],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const skill3Text = document.getElementById('skill-3');
+                    if(skill3Text) {
+                        skill3Text.innerText = skill3.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: skill4,
+                value: [0, 95],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const skill4Text = document.getElementById('skill-4');
+                    if(skill4Text) {
+                        skill4Text.innerText = skill4.value.toString();
+                    }
+                }
+            });
+
+            anime({
+                targets: skill5,
+                value: [0, 80],
+                round: 1,
+                duration: 2000,
+                easing: 'easeInOutQuad',
+                delay: 500,
+                update: function() {
+                    const skill5Text = document.getElementById('skill-5');
+                    if(skill5Text) {
+                        skill5Text.innerText = skill5.value.toString();
+                    }
+                }
             });
         }
     }
