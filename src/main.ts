@@ -20,6 +20,8 @@ resumeDownloads.forEach(downloadLink => {
     (downloadLink as HTMLAnchorElement).href = resume;
 });
 
+import '../assets/particles.json';
+
 // Animejs Declaration
 
 import anime from 'animejs/lib/anime.es.js';
@@ -531,6 +533,76 @@ window.addEventListener('scroll', () => {
 
 });
 
+// Contact Section
+
+// TypeScript code with Anime.js for hover effects on social icon wrappers
+document.addEventListener('DOMContentLoaded', () => {
+    const iconWrappers = document.querySelectorAll('.icon-wrapper');
+    
+  
+    iconWrappers.forEach((wrapper) => {
+      const iconContent = wrapper.querySelector('.icon-content') as HTMLElement;
+  
+      wrapper.addEventListener('mouseenter', () => {
+        
+        anime({
+          targets: iconContent,
+          translateX: [-50, 0],
+          opacity: [0, 1],
+          duration: 500,
+          easing: 'easeInOutQuad',
+          begin: () => {
+            if (iconContent) {
+                iconContent.style.display = 'flex';
+                iconContent.classList.add('ml-3');
+            }
+          }
+        });
+
+        iconContent.classList.add('ml-3');
+
+        anime({
+            targets: wrapper,
+            width: "fit",
+            duration: 500,
+            easing: 'easeInOutQuad',
+          });
+  
+        
+        
+      });
+  
+      wrapper.addEventListener('mouseleave', () => {
+        
+        anime({
+          targets: iconContent,
+          translateX: [0, -50],
+          opacity: [1, 0],
+          duration: 500,
+          easing: 'easeInOutQuad',
+          complete: () => {
+            if (iconContent) {
+                iconContent.style.display = 'none';
+                iconContent.classList.remove('ml-3');
+            }
+          }
+        });
+        
+        anime({
+            targets: wrapper,
+            width: "fit",
+            duration: 500,
+            easing: 'easeInOutQuad'
+        });
+
+          
+        // Animate the wrapper itself
+      });
+    });
+});
+  
+  
+
 // My Projects Section
 
 let animeMyProjectsTitle = false;
@@ -739,9 +811,6 @@ window.addEventListener('scroll', () => {
     }
 
     // Tools
-
-
-
 
     if(skillsRight){
         if (!animeSkillsRight && skillsRight.top <= window.innerHeight && skillsRight.bottom >= 0) {
@@ -1147,7 +1216,7 @@ document.addEventListener('scroll', () => {
 
 declare var particlesJS: any;
 
-particlesJS.load('particles-js', './particles.json', function() {
+particlesJS.load('./particles-js', '../assets/particles.json', function() {
     console.log('callback - particles.js config loaded');
 });
 
