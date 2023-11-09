@@ -1,7 +1,3 @@
-// Test Console Log
-
-console.log("Bolla");
-
 // Logo Declaration
 
 import logo from '../assets/logo.png';
@@ -209,8 +205,6 @@ if (gridItems) {
         }
     });
 }
-
-console.log(matchedElements);
 
 // Function to hide/show based on category
 function filterElementsByCategory(targetCategory: string) {
