@@ -2,6 +2,16 @@
 
 console.log("Bolla");
 
+// Logo Declaration
+
+import logo from '../assets/logo.png';
+
+const logoContainer = document.getElementById('logo') as HTMLImageElement;
+
+if(logoContainer) {
+    logoContainer.src = logo;
+}
+
 // CSS Declaration
 
 import '../public/output.css';
@@ -150,15 +160,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Hero-Button Scroll
 
-document.getElementById("hero-button")?.addEventListener("click", function() {
-    const targetElement = document.getElementById("contact-section");
+// document.getElementById("hero-button")?.addEventListener("click", function() {
+//     const targetElement = document.getElementById("contact-section");
 
-    if (targetElement) {
-        targetElement.scrollIntoView({
-            behavior: "smooth"
-        });
-    }
-});
+//     if (targetElement) {
+//         targetElement.scrollIntoView({
+//             behavior: "smooth"
+//         });
+//     }
+// });
 
 
 // Dropdown Menu for Projects Section
@@ -470,7 +480,7 @@ if(window.innerWidth <= 1024) {
 // Hero Section
 
 anime({
-    targets: '#hero-content, #hero-button',
+    targets: '#hero-content',
     opacity: [0, 10],
     duration: 1000,
     translateX: ['-50px', '0px'],
