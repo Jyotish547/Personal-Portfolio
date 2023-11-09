@@ -20,8 +20,6 @@ resumeDownloads.forEach(downloadLink => {
     (downloadLink as HTMLAnchorElement).href = resume;
 });
 
-import '../assets/particles.json';
-
 // Animejs Declaration
 
 import anime from 'animejs/lib/anime.es.js';
@@ -1214,12 +1212,16 @@ document.addEventListener('scroll', () => {
 
 // ParticlesJS Loader
 
-declare var particlesJS: any;
+// import 'particles.js';
 
-particlesJS.load('./particles-js', '../assets/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-});
+// declare global {
+//   interface Window { particlesJS: any; }
+// }
 
+// window.particlesJS?.load('particles-js', '/particles.json', function() {
+//     console.log('callback - particles.js config loaded');
+// });
+  
 // Loader
 
 // Not working for Vercel Build - Add in Hosting
