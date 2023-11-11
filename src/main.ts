@@ -18,6 +18,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// @ts-ignore
 const analytics = getAnalytics(app);
 
 // Logo Declaration
@@ -1198,6 +1200,12 @@ anime({
 document.addEventListener('scroll', () => {
     const offset: number = window.scrollY;
     const factor: number = 1; // Adjust for stronger/weaker parallax effect
+    
+    // Parallax for p5-container
+    const p5Container: HTMLElement | null = document.querySelector('#p5-container');
+    if (p5Container) {
+        p5Container.style.transform = `translateY(${offset * factor}px)`;
+    }
 
     // Hero Section
     const heroSection: HTMLElement | null = document.querySelector('#hero-section');
@@ -1236,21 +1244,100 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// ParticlesJS Loader
+// p5 Animation
 
-// import 'particles.js';
+import p5 from 'p5';
 
-// declare global {
-//   interface Window { particlesJS: any; }
-// }
+document.addEventListener('DOMContentLoaded', () => {
+    let particles: Particle[] = [];
 
-// window.particlesJS?.load('particles-js', '/particles.json', function() {
-//     console.log('callback - particles.js config loaded');
-// });
+const sketch = (p: p5) => {
+    p.setup = () => {
+        let canvasWidth = p.windowWidth;
+        let canvasHeight = p.windowHeight;
+        let canvas = p.createCanvas(canvasWidth, canvasHeight);
+        canvas.parent('p5-container');
+
+        if(window.innerWidth < 1024) {
+            for (let i = 0; i < 15; i++) {
+                particles.push(new Particle(p));
+            }
+        }
+
+        if(window.innerWidth >= 1024) {
+            for (let i = 0; i < 40; i++) {
+                particles.push(new Particle(p));
+            }
+        }
+    };
+
+    p.draw = () => {
+        p.clear();
+        for (let i = 0; i < particles.length; i++) {
+            particles[i].update();
+            particles[i].display();
+            for (let j = i + 1; j < particles.length; j++) {
+                if (particles[i].isNear(particles[j])) {
+                    p.stroke(56, 189, 248, 100);
+                    p.line(particles[i].x, particles[i].y, particles[j].x, particles[j].y);
+                }
+            }
+        }
+    };
+
+    p.windowResized = () => {
+        p.resizeCanvas(p.windowWidth, p.windowHeight);
+    };
+};
+
+class Particle {
+    x: number;
+    y: number;
+    size: number;
+    vx: number;
+    vy: number;
+
+    constructor(private p: p5) {
+        this.x = p.random(p.width);
+        this.y = p.random(p.height);
+        this.size = 12;
+        this.vx = p.random(-1, 1) * 1.5;
+        this.vy = p.random(-1, 1) * 1.5;
+    }
+
+    update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Bounce off edges
+        if (this.x < 0 || this.x > this.p.width) {
+            this.vx *= -1;
+        }
+        if (this.y < 0 || this.y > this.p.height) {
+            this.vy *= -1;
+        }
+    }
+
+    display() {
+        this.p.noStroke();
+        let r = this.p.map(this.x, 0, this.p.width, 29, 100);
+        let g = this.p.map(this.x, 0, this.p.width, 155, 210);
+        let b = this.p.map(this.x, 0, this.p.width, 240, 255);
+        this.p.fill(r, g, b);
+        this.p.circle(this.x, this.y, this.size);
+    }
+
+    isNear(other: Particle) {
+        let d = this.p.dist(this.x, this.y, other.x, other.y);
+        return d < 100;
+    }
+}
+
+new p5(sketch);
+
+});
   
 // Loader
-
-// Not working for Vercel Build - Add in Hosting
 
 window.addEventListener('load', function() {
     const loaderWrapper = document.getElementById('loader-wrapper');

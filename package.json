@@ -26,6 +26,7 @@
     "@fortawesome/fontawesome-free": "^6.4.2",
     "animejs": "^3.2.1",
     "firebase": "^10.5.2",
+    "p5": "^1.8.0",
     "particles.js": "^2.0.0"
   }
 }

@@ -21,7 +21,8 @@
     "noFallthroughCasesInSwitch": true
   },
   "typeRoots": [
-    "../node_modules/@types/"
+    "../node_modules/@types/",
+    "../assets/types"
   ],
   "noImplicitAny": false,
   "include": ["src", "**/*.ts", "test", "src/particles.js"]
