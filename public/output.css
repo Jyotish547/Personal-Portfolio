@@ -770,10 +770,6 @@ video {
   height: 100vh;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -1452,6 +1448,11 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-stone-400\/60 {
+  --tw-shadow-color: rgb(168 162 158 / 0.6);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .shadow-stone-500\/20 {
   --tw-shadow-color: rgb(120 113 108 / 0.2);
   --tw-shadow: var(--tw-shadow-colored);
@@ -1474,16 +1475,6 @@ video {
 
 .shadow-violet-400 {
   --tw-shadow-color: #a78bfa;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-stone-400 {
-  --tw-shadow-color: #a8a29e;
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.shadow-stone-400\/60 {
-  --tw-shadow-color: rgb(168 162 158 / 0.6);
   --tw-shadow: var(--tw-shadow-colored);
 }
 

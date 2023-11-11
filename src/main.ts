@@ -40,6 +40,16 @@ import '../public/output.css';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 
+// Favicon Declaration
+
+import favicon from '../assets/favicon-white.png';
+
+const faviconContainer = document.getElementById('favicon') as HTMLLinkElement;
+
+if(faviconContainer) {
+    faviconContainer.href = favicon;
+}
+
 //  Resume Download
 
 import resume from '../assets/resume.pdf';
