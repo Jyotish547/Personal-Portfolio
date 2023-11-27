@@ -117,6 +117,10 @@ if(p1CaseStudy) {
     p1CaseStudy.src = p1Img;
 }
 
+// Sanity
+
+import './fetchAndRenderProject';
+
 // Nav Bar Selected State
 
 const navItems = document.querySelectorAll(".nav-item");

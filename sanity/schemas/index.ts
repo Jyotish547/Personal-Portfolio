@@ -2,4 +2,6 @@ import caseStudy from "./caseStudy";
 
 import blockContent from "./blockContent";
 
-export const schemaTypes = [caseStudy, blockContent]
+import pet from "./pet"
+
+export const schemaTypes = [caseStudy, blockContent, pet]

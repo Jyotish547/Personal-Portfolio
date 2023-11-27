@@ -11,6 +11,7 @@ export default defineConfig({
         main: resolve(__dirname, 'src/index.html'),
         projects: resolve(__dirname, 'src/projects.html'),
         p1: resolve(__dirname, 'src/nexusPlay.html'),
+        // Add more html pages here that you create in src
       },
     },
   },

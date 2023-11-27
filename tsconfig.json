@@ -18,7 +18,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    // Sanity
+    "baseUrl": ".",
+    "paths": {
+      "@sanity/client": ["./sanity/node_modules/@sanity/client"]
+    },
   },
   "typeRoots": [
     "../node_modules/@types/",
