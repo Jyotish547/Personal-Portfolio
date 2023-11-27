@@ -1,0 +1,22 @@
+{
+    "root": true,
+    "project": {
+      "name": "project-manager"
+    },
+    "api": {
+      "projectId": "em3mffdu",
+      "dataset": "production"
+    },
+    "plugins": [
+      "@sanity/base",
+      "@sanity/default-layout",
+      "@sanity/default-login"
+    ],
+    "parts": [
+      {
+        "name": "part:@sanity/base/schema",
+        "path": "./schemas/index.ts"
+      }
+    ]
+  }
+  
