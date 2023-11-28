@@ -36,39 +36,57 @@ const CaseStudies = {
               name: 'textBlocks',
               title: 'Text Blocks',
               type: 'array',
-              of: [{ type: 'block' }],
-            },
-            {
-              name: 'imagesWithTitle',
-              title: 'Images with Title',
-              type: 'array',
               of: [
-                {
+                { 
                   type: 'object',
                   fields: [
                     {
-                      name: 'image',
-                      title: 'Image',
-                      type: 'image',
-                      options: {
-                        hotspot: true,
-                      },
+                      name: 'articleTitle',
+                      title: 'Article Title',
+                      type: 'string'
                     },
                     {
-                      name: 'imageTitle',
-                      title: 'Image Title',
-                      type: 'string',
+                      name: 'imagesWithTitle',
+                      title: 'Images with Title',
+                      type: 'array',
+                      of: [
+                        {
+                          type: 'object',
+                          fields: [
+                            {
+                              name: 'image',
+                              title: 'Image',
+                              type: 'image',
+                              options: {
+                                hotspot: true,
+                              },
+                            },
+                            {
+                              name: 'imageTitle',
+                              title: 'Image Title',
+                              type: 'string',
+                            },
+                          ],
+                          preview: {
+                            select: {
+                              title: 'imageTitle',
+                              media: 'image',
+                            },
+                          },
+                        },
+                      ],
                     },
-                  ],
-                  preview: {
-                    select: {
-                      title: 'imageTitle',
-                      media: 'image',
+                    {
+                      name: 'articleContent',
+                      title: 'Article Content',
+                      type: 'array',
+                      of: [{ type: 'block' }],
                     },
-                  },
-                },
+                  ]
+                }
               ],
             },
+            
           ],
           preview: {
             select: {
