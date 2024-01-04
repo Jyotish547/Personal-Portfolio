@@ -27,13 +27,30 @@ interface ImageWithTitle {
   imageTitle: string;
 }
 
+interface MarkDef {
+  _key: string;
+  _type: string;
+}
+
 interface ArticleContent {
   _type: 'block';
+  style?: string;
+  listItem?: string;
+  level?: number;
   children: BlockChild[];
+  markDefs?: MarkDef[]
 }
 
 interface BlockChild {
   _type: 'span';
+  children: ChildContent[];
+  listItem?: string;
+  text?: string;
+  marks?: string;
+}
+
+interface ChildContent {
+  marks?: string[];
   text: string;
 }
 
@@ -103,13 +120,33 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
             sectionElement.appendChild(img);
           });
 
-          (block.articleContent || []).forEach(article => {
-            (article.children || []).forEach(child => {
-              const contentElement = document.createElement('p');
-              contentElement.textContent = child.text;
-              sectionElement.appendChild(contentElement);
-            });
+          // Create the list element outside the forEach loop
+          const listElement = document.createElement('ul');
+          listElement.style.listStyleType = 'square';
+          sectionElement.appendChild(listElement);
 
+          // Iterate over each articleContent
+          block.articleContent.forEach(article => {
+            // Only proceed if the block has a listItem of type 'bullet'
+            if (article.listItem === 'bullet') {
+              
+              const listItemElement = document.createElement('li');
+
+              // Concatenate texts for a single bullet
+              let combinedText = '';
+              article.children.forEach(child => {
+                // Check for strong marks and concatenate accordingly
+                combinedText += child.marks && child.marks.includes('strong')
+                  ? `<strong>${child.text}</strong>`
+                  : child.text;
+              });
+
+              // Set the innerHTML of listItemElement to the combinedText
+              listItemElement.innerHTML = combinedText;
+
+              // Append the listItemElement to the listElement
+              listElement.appendChild(listItemElement);
+            }
           });
 
         });
