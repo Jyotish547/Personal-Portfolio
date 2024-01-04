@@ -27,16 +27,25 @@ interface ImageWithTitle {
   imageTitle: string;
 }
 
-interface BlockContent {
+interface ArticleContent {
   _type: 'block';
-  children: Array<{ text: string }>;
-  // ...other block-specific properties
+  children: BlockChild[];
+}
+
+interface BlockChild {
+  _type: 'span';
+  text: string;
+}
+
+interface TextBlock {
+  articleTitle: string;
+  imagesWithTitle: ImageWithTitle[];
+  articleContent: ArticleContent[];
 }
 
 interface SectionContent {
   sectionTitle: string;
-  textBlocks: BlockContent[];
-  imagesWithTitle: ImageWithTitle[];
+  textBlocks: TextBlock[];
 }
 
 interface CaseStudy {
@@ -67,7 +76,6 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
   
       // Render title, subtitle, date
       caseStudyElement.innerHTML = `
-        <h1 class="text-4xl">${caseStudy.title}</h1>
         <h2 class="text-2xl">${caseStudy.subtitle}</h2>
         <p>${new Date(caseStudy.date).toLocaleDateString()}</p>
       `;
@@ -77,36 +85,36 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
       
         const sectionElement = document.createElement('div');
         sectionElement.innerHTML = `<h3>${section.sectionTitle}</h3>`;
-      
-        // Check and render textBlocks
-        if (section.textBlocks && section.textBlocks.length > 0) {
-          section.textBlocks.forEach(block => {
-            if (block._type === 'block') {
-              block.children.forEach(child => {
-                const textElement = document.createElement('p');
-                textElement.textContent = child.text;
-                sectionElement.appendChild(textElement);
-              });
-            }
-          });
-        }
-      
-        // Check and render imagesWithTitle
-        if (section.imagesWithTitle && section.imagesWithTitle.length > 0) {
-          section.imagesWithTitle.forEach(imageWithTitle => {
-            const img = document.createElement('img');
-            img.src = urlFor(imageWithTitle.image).url(); // Adjust this line if you use a different method to resolve image URLs
-            img.alt = imageWithTitle.imageTitle;
-            sectionElement.appendChild(img);
-      
-            const caption = document.createElement('p');
-            caption.textContent = imageWithTitle.imageTitle;
-            sectionElement.appendChild(caption);
-          });
-        }
-      
-        // Append sectionElement to caseStudyElement
+
         caseStudyElement.appendChild(sectionElement);
+
+        section.textBlocks.forEach(block => {
+
+          if(block.articleTitle) {
+            const titleElement = document.createElement('h3');
+            titleElement.textContent = block.articleTitle;
+            sectionElement.appendChild(titleElement);
+          }
+
+          (block.imagesWithTitle || []).forEach(image => {
+            const img = document.createElement('img');
+            img.src = urlFor(image.image).url();
+            img.alt = image.imageTitle;
+            sectionElement.appendChild(img);
+          });
+
+          (block.articleContent || []).forEach(article => {
+            (article.children || []).forEach(child => {
+              const contentElement = document.createElement('p');
+              contentElement.textContent = child.text;
+              sectionElement.appendChild(contentElement);
+            });
+
+          });
+
+        });
+        
+        
       });
   
       targetElement.appendChild(caseStudyElement);
