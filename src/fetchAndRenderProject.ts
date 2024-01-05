@@ -123,7 +123,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
           // Create the list element outside the forEach loop
           const listElement = document.createElement('ul');
           listElement.style.listStyleType = 'square';
-          sectionElement.appendChild(listElement);
+          
 
           // Iterate over each articleContent
           block.articleContent.forEach(article => {
@@ -146,8 +146,16 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
 
               // Append the listItemElement to the listElement
               listElement.appendChild(listItemElement);
+            } else {
+              (article.children || []).forEach(child => {
+                const contentElement = document.createElement('p');
+                contentElement.textContent = child.text ?? '';
+                sectionElement.appendChild(contentElement);
+              });
             }
           });
+
+          sectionElement.appendChild(listElement);
 
         });
         
