@@ -774,6 +774,10 @@ video {
   width: 50%;
 }
 
+.w-1\/3 {
+  width: 33.333333%;
+}
+
 .w-1\/4 {
   width: 25%;
 }
@@ -1033,6 +1037,11 @@ video {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-neutral-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(23 23 23 / var(--tw-bg-opacity));
+}
+
 .bg-pink-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 207 232 / var(--tw-bg-opacity));
@@ -1226,6 +1235,11 @@ video {
   line-height: 2.25rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1302,6 +1316,11 @@ video {
 .text-emerald-600 {
   --tw-text-opacity: 1;
   color: rgb(5 150 105 / var(--tw-text-opacity));
+}
+
+.text-gray-300 {
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .text-green-500 {
@@ -1425,6 +1444,11 @@ video {
 
 .shadow-cyan-500\/20 {
   --tw-shadow-color: rgb(6 182 212 / 0.2);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-gray-800\/50 {
+  --tw-shadow-color: rgb(31 41 55 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -1581,6 +1605,8 @@ html {
 
 #hero-content, #p-hero-content {
   position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #p5-container {
@@ -1669,26 +1695,87 @@ html {
   border-radius: 50%;
 }
 
-/* Media Queries */
+/* Media Queries *
 
 @media screen and (min-width: 1024px) {
-  #nav-button {
-    display: none;
-  }
+    #nav-button {
+        display: none;
+    }
 
-  #nav-menu {
-    display: flex;
-  }
+    #nav-menu {
+        display: flex;
+    }
 
-  .nav-icon {
-    display: none !important;
-  }
+    .nav-icon {
+        display: none !important;
+    }
+
 }
 
 @media screen and (max-width: 1023px) {
-  #nav-button {
-    display: flex;
-  }
+    
+    #nav-button {
+        display: flex;
+    }
+
+}
+
+/* Nexus Play Case Study */
+
+#content-nexus h3 {
+  color: #FF4081;
+}
+
+#content-nexus h1, h2 {
+  color: #B191FF;
+}
+
+#nexus {
+  background-image: url('../assets/caseStudies/NexusPlayBackground.jpg');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  /* Prevent repeating the image */
+  color: rgb(212 212 216);
+}
+
+#nexus::before {
+  content: '';
+  /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  z-index: -2;
+  /* Ensures the overlay is above the background image */
+}
+
+.nexus-bg {
+  background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  /* Prevent repeating the image */
+  color: rgb(212 212 216);
+}
+
+.nexus-bg::before {
+  content: '';
+  /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  /* Semi-transparent black */
+  z-index: 0;
+  /* Ensures the overlay is above the background image */
+}
+
+.nexus-primary-text {
+  color: #B191FF;
 }
 
 .hover\:bg-amber-500:hover {

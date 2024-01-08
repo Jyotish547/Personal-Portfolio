@@ -22,14 +22,32 @@ const app = initializeApp(firebaseConfig);
 // @ts-ignore
 const analytics = getAnalytics(app);
 
-// Logo Declaration
+// logoBlack Declaration
 
-import logo from '../assets/logo.png';
+import logoBlack from '../assets/logoBlack.png';
 
-const logoContainer = document.getElementById('logo') as HTMLImageElement;
+const logoBlackContainer = document.getElementById('logo') as HTMLImageElement;
 
-if(logoContainer) {
-    logoContainer.src = logo;
+if(logoBlackContainer) {
+    logoBlackContainer.src = logoBlack;
+}
+
+import logoWhite from '../assets/logoWhite.png';
+
+const logoWhiteContainer = document.getElementById('logoWhite') as HTMLImageElement;
+
+if(logoWhiteContainer) {
+    logoWhiteContainer.src = logoWhite;
+}
+
+// NexusPlay
+
+import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';
+
+const nexusScreenContainer = document.getElementById('nexus-screen') as HTMLImageElement;
+
+if(nexusScreenContainer) {
+    nexusScreenContainer.src = nexusScreen;
 }
 
 // CSS Declaration
@@ -1253,8 +1271,6 @@ document.addEventListener('scroll', () => {
                 pHeroContent.style.transform = `translateY(calc(${offset * factor}px))`;
             }
         }
-
-        
     }
 });
 

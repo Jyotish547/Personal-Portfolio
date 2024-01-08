@@ -91,6 +91,7 @@ html {
 
 #hero-content, #p-hero-content {
     position: absolute;
+    width: fit-content;
 }
 
 #p5-container {
@@ -172,7 +173,7 @@ html {
     border-radius: 50%;
 }
 
-/* Media Queries */
+/* Media Queries *
 
 @media screen and (min-width: 1024px) {
     #nav-button {
@@ -195,4 +196,54 @@ html {
         display: flex;
     }
 
+}
+
+/* Nexus Play Case Study */
+
+#content-nexus h3 {
+    color: #FF4081;
+}
+
+#content-nexus h1, h2 {
+    color: #B191FF;
+}
+
+#nexus {
+    background-image: url('../assets/caseStudies/NexusPlayBackground.jpg');
+    background-size: 100% auto;
+    background-repeat: repeat-y; /* Prevent repeating the image */
+    color: rgb(212 212 216);
+}
+
+#nexus::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    z-index: -2; /* Ensures the overlay is above the background image */
+}
+
+.nexus-bg {
+    background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y; /* Prevent repeating the image */
+    color: rgb(212 212 216);
+}
+
+.nexus-bg::before {
+    content: ''; /* Required for pseudo-elements */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
+    z-index: 0; /* Ensures the overlay is above the background image */
+}
+
+.nexus-primary-text {
+    color: #B191FF;
 }
