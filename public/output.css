@@ -815,6 +815,10 @@ video {
   width: 100vw;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .max-w-fit {
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -1756,7 +1760,6 @@ html {
   background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
   background-size: 100% auto;
   background-repeat: repeat-y;
-  /* Prevent repeating the image */
   color: rgb(212 212 216);
 }
 
@@ -1769,13 +1772,18 @@ html {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.75);
-  /* Semi-transparent black */
   z-index: 0;
-  /* Ensures the overlay is above the background image */
 }
 
 .nexus-primary-text {
   color: #B191FF;
+}
+
+/* Clarity */
+
+.clarity-bg {
+  background-image: url('../assets/caseStudies/ClarityHeroBackground.png');
+  background-size: 100% auto;
 }
 
 .hover\:bg-amber-500:hover {

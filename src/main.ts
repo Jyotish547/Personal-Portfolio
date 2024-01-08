@@ -40,16 +40,6 @@ if(logoWhiteContainer) {
     logoWhiteContainer.src = logoWhite;
 }
 
-// NexusPlay
-
-import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';
-
-const nexusScreenContainer = document.getElementById('nexus-screen') as HTMLImageElement;
-
-if(nexusScreenContainer) {
-    nexusScreenContainer.src = nexusScreen;
-}
-
 // CSS Declaration
 
 import '../public/output.css';
@@ -1401,7 +1391,27 @@ document.getElementById("button-p2-1")?.addEventListener("click", function() {
 
 document.getElementById("button-p2-2")?.addEventListener("click", function() {
     
-    window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play?type=design&node-id=0%3A1&mode=design&t=RfnXBgzVmXHpbMZ0-1", "_blank");
+    window.open("https://docs.google.com/presentation/d/1OEzM2BjzV6B1oTR4MuU2X9c5D8j_clQQd6EEt_68NpQ/", "_blank");
     
 
 });
+
+// NexusPlay
+
+import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';
+
+const nexusScreenContainer = document.getElementById('nexus-screen') as HTMLImageElement;
+
+if(nexusScreenContainer) {
+    nexusScreenContainer.src = nexusScreen;
+}
+
+// Clarity
+
+import clarityScreen from '../assets/caseStudies/ClarityScreen.png';
+
+const clarityScreenContainer = document.getElementById('clarity-screen') as HTMLImageElement;
+
+if(clarityScreenContainer) {
+    clarityScreenContainer.src = clarityScreen;
+}

@@ -229,7 +229,7 @@ html {
 .nexus-bg {
     background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
     background-size: 100% auto;
-    background-repeat: repeat-y; /* Prevent repeating the image */
+    background-repeat: repeat-y;
     color: rgb(212 212 216);
 }
 
@@ -240,10 +240,17 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black */
-    z-index: 0; /* Ensures the overlay is above the background image */
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 0;
 }
 
 .nexus-primary-text {
     color: #B191FF;
+}
+
+/* Clarity */
+
+.clarity-bg {
+    background-image: url('../assets/caseStudies/ClarityHeroBackground.png');
+    background-size: 100% auto;
 }
