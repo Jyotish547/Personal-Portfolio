@@ -20,6 +20,11 @@ const CaseStudies = {
       type: 'date',
     },
     {
+      name: 'id',
+      title: 'ID',
+      type: 'string',
+    },
+    {
       name: 'sectionContent',
       title: 'Section Content',
       type: 'array',

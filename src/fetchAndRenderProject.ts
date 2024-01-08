@@ -70,33 +70,41 @@ interface CaseStudy {
   title: string;
   subtitle: string;
   date: string;
+  id: string,
   sectionContent: SectionContent[];
 }
 
 // Keep adding case study content IDs here as the first element
-const contentArray = ['content-nexus'];
+const contentArray = [
+  { id: 'content-nexus', refId: 'nexus' },
+  { id: 'content-clarity', refId: 'clarity' }
+];
 let count = 0;
 
 client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
     console.log('Fetched cases:', cases); // Log the fetched data
   
     cases.forEach(caseStudy => {
-      const targetElement = document.getElementById(contentArray[count]);
+      const contentItem = contentArray.find(item => item.refId === caseStudy.id); // Assuming caseStudy has an _id field
+      if (!contentItem) {
+        console.error(`No content item found for case study with ID ${caseStudy.id}.`);
+        return;
+      }
+
+      const targetElement = document.getElementById(contentItem.id);
       if (!targetElement) {
-        console.error(`Element with ID ${contentArray[count]} not found.`);
-        count++;
+        console.error(`Element with ID ${contentItem.id} not found.`);
         return;
       }
   
       console.log('Rendering caseStudy:', caseStudy); // Log each case study
   
-      const caseStudyElement = document.getElementById('content-nexus');
 
-      caseStudyElement?.classList.add('text-gray-50');
+      targetElement.classList.add('text-gray-50');
   
       // Render title, subtitle, date
-      if(caseStudyElement) {
-        caseStudyElement.innerHTML = `
+      if(targetElement) {
+        targetElement.innerHTML = `
         <p class="text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
       `;
       }
@@ -113,8 +121,8 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
 
         sectionElement.appendChild(headerElement);
 
-        if(caseStudyElement) {
-          caseStudyElement.appendChild(sectionElement);
+        if(targetElement) {
+          targetElement.appendChild(sectionElement);
         }
 
         section.textBlocks.forEach(block => {
@@ -228,8 +236,8 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
         
       });
   
-      if (caseStudyElement && targetElement) {
-        targetElement.appendChild(caseStudyElement);
+      if (targetElement && targetElement) {
+        targetElement.appendChild(targetElement);
       } else {
         console.error('Element not found or target element is null');
       }

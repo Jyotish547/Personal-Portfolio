@@ -1390,3 +1390,18 @@ document.getElementById("button-p1-2")?.addEventListener("click", function() {
     
 
 });
+
+// Portfolio 2
+
+document.getElementById("button-p2-1")?.addEventListener("click", function() {
+    
+    window.location.href = "./clarity.html";
+
+});
+
+document.getElementById("button-p2-2")?.addEventListener("click", function() {
+    
+    window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play?type=design&node-id=0%3A1&mode=design&t=RfnXBgzVmXHpbMZ0-1", "_blank");
+    
+
+});
