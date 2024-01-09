@@ -254,3 +254,9 @@ html {
     background-image: url('../assets/caseStudies/ClarityHeroBackground.png');
     background-size: 100% auto;
 }
+
+#clarity {
+    background-image: url('../assets/caseStudies/ClarityBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y; /* Prevent repeating the image */
+}

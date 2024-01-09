@@ -770,6 +770,10 @@ video {
   height: 100vh;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -815,8 +819,24 @@ video {
   width: 100vw;
 }
 
+.w-1\/5 {
+  width: 20%;
+}
+
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-2\/5 {
+  width: 40%;
+}
+
+.w-32 {
+  width: 8rem;
+}
+
+.w-56 {
+  width: 14rem;
 }
 
 .max-w-fit {
@@ -1784,6 +1804,13 @@ html {
 .clarity-bg {
   background-image: url('../assets/caseStudies/ClarityHeroBackground.png');
   background-size: 100% auto;
+}
+
+#clarity {
+  background-image: url('../assets/caseStudies/ClarityBackground.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  /* Prevent repeating the image */
 }
 
 .hover\:bg-amber-500:hover {

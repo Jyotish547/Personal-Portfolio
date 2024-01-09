@@ -99,9 +99,6 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
   
       console.log('Rendering caseStudy:', caseStudy); // Log each case study
   
-
-      targetElement.classList.add('text-gray-50');
-  
       // Render title, subtitle, date
       if(targetElement) {
         targetElement.innerHTML = `
@@ -244,4 +241,66 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
       count++;
       
     });
-  }).catch(error => console.error("Fetching error:", error));  
+  }).catch(error => console.error("Fetching error:", error));
+
+function IframeFunctions() {
+  
+  // Clarity Case Study
+  const clarityContentDiv = document.getElementById('content-clarity');
+
+  if (clarityContentDiv) {
+      // Create a new div for the iframe
+      const iframeDocContainer = document.createElement('div');
+
+      // Document iframe
+      const iframeDoc = document.createElement('iframe');
+      iframeDoc.src = 'https://docs.google.com/document/d/19B8-lNKwgqyiOVUFfif-93j_GNNwqkQHeVx7xlEzJAY/';
+      iframeDoc.width = '100%'; // Set the width to 100% of the container
+      iframeDoc.height = '600'; // Set a fixed height, or adjust as needed
+      iframeDoc.style.border = 'none'; // Optional: Remove border
+      iframeDoc.scrolling = 'yes'; // Enable scrolling
+
+      // Slideshow
+      const iframeSlideContainer = document.createElement('div');
+
+      const iframeSlides = document.createElement('iframe');
+      iframeSlides.src = 'https://docs.google.com/presentation/d/e/2PACX-1vTPOnuk8GKxoTbXmsvK7y25wHvoKzjYKVhuFxtJPqdvRmeHo951BawBoih3lBWl-8hHhlQHpZRiOiXc/embed?start=false&loop=false&delayms=60000';
+      iframeSlides.width = '100%'; // Set the width to 100% of the container
+      iframeSlides.height = '600'; // Set a fixed height, or adjust as needed
+      iframeSlides.style.border = 'none'; // Optional: Remove border
+      iframeSlides.scrolling = 'yes'; // Enable scrolling
+
+      // Append the iframe to the new container
+      iframeDocContainer.appendChild(iframeDoc);
+
+      iframeSlideContainer.appendChild(iframeSlides);
+
+      // Find the last div in content-nexus
+      const lastDiv = clarityContentDiv.lastElementChild;
+
+      const containerDiv = lastDiv?.childNodes[6];
+
+      // Insert the new iframe container before the last div
+      if(lastDiv) {
+        if (containerDiv) {
+          lastDiv.insertBefore(iframeDocContainer, containerDiv);
+        } else {
+            // If there's no last div, just append the new container
+            lastDiv.appendChild(iframeDocContainer);
+        }
+      }
+
+      if(lastDiv) {
+        lastDiv.appendChild(iframeSlideContainer);
+      }
+  }
+
+  console.log("Published");
+}
+
+window.onload = () => {
+  setTimeout(IframeFunctions, 500); // Adjust the delay as needed
+};
+
+
+
