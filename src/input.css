@@ -258,5 +258,22 @@ html {
 #clarity {
     background-image: url('../assets/caseStudies/ClarityBackground.png');
     background-size: 100% auto;
-    background-repeat: repeat-y; /* Prevent repeating the image */
+    background-repeat: repeat-y
+}
+
+/* Alethia */
+
+.alethia-text {
+    color: #CA1E52;
+}
+
+.alethia-bg {
+    background-image: url('../assets/caseStudies/AlethiaHeroBackground.png');
+    background-size: 100% auto;
+}
+
+#alethia {
+    background-image: url('../assets/caseStudies/ClarityBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y
 }

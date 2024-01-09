@@ -770,10 +770,6 @@ video {
   height: 100vh;
 }
 
-.h-auto {
-  height: auto;
-}
-
 .w-1\/2 {
   width: 50%;
 }
@@ -784,6 +780,10 @@ video {
 
 .w-1\/4 {
   width: 25%;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-20 {
@@ -817,26 +817,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-1\/5 {
-  width: 20%;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
-}
-
-.w-2\/5 {
-  width: 40%;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-56 {
-  width: 14rem;
 }
 
 .max-w-fit {
@@ -1809,8 +1789,24 @@ html {
 #clarity {
   background-image: url('../assets/caseStudies/ClarityBackground.png');
   background-size: 100% auto;
-  background-repeat: repeat-y;
-  /* Prevent repeating the image */
+  background-repeat: repeat-y
+}
+
+/* Alethia */
+
+.alethia-text {
+  color: #CA1E52;
+}
+
+.alethia-bg {
+  background-image: url('../assets/caseStudies/AlethiaHeroBackground.png');
+  background-size: 100% auto;
+}
+
+#alethia {
+  background-image: url('../assets/caseStudies/ClarityBackground.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y
 }
 
 .hover\:bg-amber-500:hover {
@@ -1841,6 +1837,11 @@ html {
 .hover\:bg-sky-600:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-sky-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-slate-100:hover {

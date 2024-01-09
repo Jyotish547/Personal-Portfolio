@@ -85,7 +85,12 @@ if (imgAb) {
 // Project.html Thumbnails
 
 import imgP1 from '../assets/Nexus Play Thumbnail.png';
-import imgP2 from '../assets/sample1.jpg'
+
+import imgP2 from '../assets/Clarity Thumbnail.png';
+
+import imgP3 from '../assets/Alethia Thumbnail.png';
+
+import imgP4 from '../assets/UI Designs Thumbnail.png';
 
 let pGrid1 = document.getElementById("pr-1-img") as HTMLImageElement;
 
@@ -104,25 +109,15 @@ if (pGrid2) {
 let pGrid3 = document.getElementById("pr-3-img") as HTMLImageElement;
 
 if (pGrid3) {
-  pGrid3.src = imgP2;
+  pGrid3.src = imgP3;
   pGrid3.style.width = "100%";
 }
 
 let pGrid4 = document.getElementById("pr-4-img") as HTMLImageElement;
 
 if (pGrid4) {
-  pGrid4.src = imgP2;
+  pGrid4.src = imgP4;
   pGrid4.style.width = "100%";
-}
-
-// Portfolio pages
-
-import p1Img from '../assets/Nexus Play Case Study.png';
-
-let p1CaseStudy = document.getElementById('p1') as HTMLImageElement;
-
-if(p1CaseStudy) {
-    p1CaseStudy.src = p1Img;
 }
 
 // Sanity
@@ -1393,7 +1388,30 @@ document.getElementById("button-p2-2")?.addEventListener("click", function() {
     
     window.open("https://docs.google.com/presentation/d/1OEzM2BjzV6B1oTR4MuU2X9c5D8j_clQQd6EEt_68NpQ/", "_blank");
     
+});
 
+// Portfolio 3
+
+document.getElementById("button-p3-1")?.addEventListener("click", function() {
+    
+    window.location.href = "./alethia.html";
+
+});
+
+document.getElementById("button-p3-2")?.addEventListener("click", function() {
+    
+    window.open("https://www.figma.com/file/FcFY5H9kDZ80bXzDLndfiT/Aletheia?type=design&node-id=0%3A1&mode=design&t=sx8gTe4uTo7zuN98-1", "_blank");
+    
+});
+
+// Portfolio 4
+
+document.getElementById('button-p4-2')?.addEventListener('click', function() {
+    window.location.href = "./uiDesigns.html";
+});
+
+document.getElementById('button-p4-2')?.addEventListener('click', function() {
+    window.open("https://www.figma.com/file/v2FVFWTxpHGsrvVlDVql1D/UI%2FUX-Projects?type=design&node-id=0%3A1&mode=design&t=SFBe6dUu8GLqBma0-1", "_blank");
 });
 
 // NexusPlay
@@ -1414,4 +1432,14 @@ const clarityScreenContainer = document.getElementById('clarity-screen') as HTML
 
 if(clarityScreenContainer) {
     clarityScreenContainer.src = clarityScreen;
+}
+
+// Alethia
+
+import alethiaScreen from '../assets/caseStudies/AlethiaScreen.png';
+
+const alethiaScreenContainer = document.getElementById('alethia-screen') as HTMLImageElement;
+
+if(alethiaScreenContainer) {
+    alethiaScreenContainer.src = alethiaScreen;
 }

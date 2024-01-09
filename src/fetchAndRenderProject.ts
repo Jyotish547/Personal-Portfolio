@@ -77,7 +77,8 @@ interface CaseStudy {
 // Keep adding case study content IDs here as the first element
 const contentArray = [
   { id: 'content-nexus', refId: 'nexus' },
-  { id: 'content-clarity', refId: 'clarity' }
+  { id: 'content-clarity', refId: 'clarity' },
+  { id: 'content-alethia', refId: 'alethia' }
 ];
 let count = 0;
 
@@ -244,7 +245,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
   }).catch(error => console.error("Fetching error:", error));
 
 function IframeFunctions() {
-  
+
   // Clarity Case Study
   const clarityContentDiv = document.getElementById('content-clarity');
 
@@ -298,8 +299,25 @@ function IframeFunctions() {
   console.log("Published");
 }
 
+function insertFigmaIframe() {
+  const alethiaContainer = document.getElementById('content-alethia'); // Replace with your container ID
+
+  if (alethiaContainer) {
+      const iframe = document.createElement('iframe');
+      iframe.width = '100%';
+      iframe.height = '650';
+      iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFcFY5H9kDZ80bXzDLndfiT%2FAletheia%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dsx8gTe4uTo7zuN98-1';
+      iframe.allowFullscreen = true;
+
+      const figmaContainer = alethiaContainer.childNodes[5];
+
+      figmaContainer.appendChild(iframe);
+  }
+}
+
 window.onload = () => {
-  setTimeout(IframeFunctions, 500); // Adjust the delay as needed
+  setTimeout(IframeFunctions, 500);
+  setTimeout(insertFigmaIframe, 500);
 };
 
 
