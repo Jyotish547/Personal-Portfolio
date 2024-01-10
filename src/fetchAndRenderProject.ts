@@ -78,7 +78,8 @@ interface CaseStudy {
 const contentArray = [
   { id: 'content-nexus', refId: 'nexus' },
   { id: 'content-clarity', refId: 'clarity' },
-  { id: 'content-alethia', refId: 'alethia' }
+  { id: 'content-alethia', refId: 'alethia' },
+  { id: 'content-uiDesigns', refId: 'uiDesigns'}
 ];
 let count = 0;
 
@@ -300,24 +301,143 @@ function IframeFunctions() {
 }
 
 function insertFigmaIframe() {
+
+  // Alethia
+
   const alethiaContainer = document.getElementById('content-alethia'); // Replace with your container ID
 
   if (alethiaContainer) {
-      const iframe = document.createElement('iframe');
-      iframe.width = '100%';
-      iframe.height = '650';
-      iframe.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFcFY5H9kDZ80bXzDLndfiT%2FAletheia%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dsx8gTe4uTo7zuN98-1';
-      iframe.allowFullscreen = true;
+      const iframeAlethia = document.createElement('iframe');
+      iframeAlethia.width = '100%';
+      iframeAlethia.height = '650';
+      iframeAlethia.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FFcFY5H9kDZ80bXzDLndfiT%2FAletheia%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3Dsx8gTe4uTo7zuN98-1';
+      iframeAlethia.allowFullscreen = true;
 
       const figmaContainer = alethiaContainer.childNodes[5];
 
-      figmaContainer.appendChild(iframe);
+      figmaContainer.appendChild(iframeAlethia);
   }
+
+  // UI Designs
+
+  const uiDesignsContainer = document.getElementById('content-uiDesigns');
+
+  if(uiDesignsContainer) {
+
+    // First iframe
+
+    const iframeUIDesigns1 = document.createElement('iframe');
+    iframeUIDesigns1.width = '100%';
+    iframeUIDesigns1.height = '650';
+    iframeUIDesigns1.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns1.allowFullscreen = true;
+
+    const figmaUIContainer1 = uiDesignsContainer.childNodes[4];
+
+    figmaUIContainer1.appendChild(iframeUIDesigns1);
+
+    // Second iframe
+
+    const iframeUIDesigns2 = document.createElement('iframe');
+    iframeUIDesigns2.width = '100%';
+    iframeUIDesigns2.height = '650';
+    iframeUIDesigns2.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D1%253A4%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns2.allowFullscreen = true;
+
+    const figmaUIContainer2 = uiDesignsContainer.childNodes[5];
+
+    figmaUIContainer2.appendChild(iframeUIDesigns2);
+
+    // Third iframe
+
+    const iframeUIDesigns3 = document.createElement('iframe');
+    iframeUIDesigns3.width = '100%';
+    iframeUIDesigns3.height = '650';
+    iframeUIDesigns3.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D1%253A28111%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns3.allowFullscreen = true;
+
+    const figmaUIContainer3 = uiDesignsContainer.childNodes[6];
+
+    figmaUIContainer3.appendChild(iframeUIDesigns3);
+
+    // Fourth iframe
+
+    const iframeUIDesigns4 = document.createElement('iframe');
+    iframeUIDesigns4.width = '100%';
+    iframeUIDesigns4.height = '650';
+    iframeUIDesigns4.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D1%253A3%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns4.allowFullscreen = true;
+
+    const figmaUIContainer4 = uiDesignsContainer.childNodes[7];
+
+    figmaUIContainer4.appendChild(iframeUIDesigns4);
+
+    // Fifth iframe
+
+    const iframeUIDesigns5 = document.createElement('iframe');
+    iframeUIDesigns5.width = '100%';
+    iframeUIDesigns5.height = '650';
+    iframeUIDesigns5.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D1%253A5%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns5.allowFullscreen = true;
+
+    const figmaUIContainer5 = uiDesignsContainer.childNodes[8];
+
+    figmaUIContainer5.appendChild(iframeUIDesigns5);
+
+    // Sixth iframe
+
+    const iframeUIDesigns6 = document.createElement('iframe');
+    iframeUIDesigns6.width = '100%';
+    iframeUIDesigns6.height = '650';
+    iframeUIDesigns6.src = 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2Fv2FVFWTxpHGsrvVlDVql1D%2FUI%252FUX-Projects%3Ftype%3Ddesign%26node-id%3D1%253A25052%26mode%3Ddesign%26t%3DiLEMmrjXMH99h6Tt-1';
+    iframeUIDesigns6.allowFullscreen = true;
+
+    const figmaUIContainer6 = uiDesignsContainer.childNodes[9];
+
+    figmaUIContainer6.appendChild(iframeUIDesigns6);
+  }
+
 }
+
+// Header colors
+
+function HeaderColors() {
+
+  // Nexus Play
+
+  const h3Nexus = document.querySelectorAll('#content-nexus h3') as NodeListOf<HTMLElement>;
+
+  h3Nexus.forEach(element => {
+      element.style.color = "#FF4081";
+  });
+
+  const h1h2Nexus = document.querySelectorAll('#content-nexus h1, #content-nexus h2') as NodeListOf<HTMLElement>;
+
+  h1h2Nexus.forEach(element => {
+      element.style.color = "#B191FF";
+  });
+
+  // Clarity
+
+  const h1h2Clarity = document.querySelectorAll('#content-clarity h1, #content-clarity h2') as NodeListOf<HTMLElement>;
+
+  h1h2Clarity.forEach(element => {
+      element.classList.add('text-violet-600');
+  })
+
+  const h3Clarity = document.querySelectorAll('#content-clarity h3') as NodeListOf<HTMLElement>;
+
+  h3Clarity.forEach(element => {
+      element.classList.add('text-violet-500');
+  })
+
+}
+
 
 window.onload = () => {
   setTimeout(IframeFunctions, 500);
   setTimeout(insertFigmaIframe, 500);
+  setTimeout(HeaderColors, 500);
 };
 
 

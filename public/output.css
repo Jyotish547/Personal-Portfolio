@@ -951,11 +951,6 @@ video {
   border-left-width: 4px;
 }
 
-.border-amber-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(245 158 11 / var(--tw-border-opacity));
-}
-
 .border-blue-500 {
   --tw-border-opacity: 1;
   border-color: rgb(59 130 246 / var(--tw-border-opacity));
@@ -1079,11 +1074,6 @@ video {
 .bg-teal-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
-}
-
-.bg-violet-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1724,15 +1714,7 @@ html {
 
 }
 
-/* Nexus Play Case Study */
-
-#content-nexus h3 {
-  color: #FF4081;
-}
-
-#content-nexus h1, h2 {
-  color: #B191FF;
-}
+/* Nexus Play */
 
 #nexus {
   background-image: url('../assets/caseStudies/NexusPlayBackground.jpg');
@@ -1809,6 +1791,19 @@ html {
   background-repeat: repeat-y
 }
 
+/* UI Designs */
+
+.uiDesigns-bg {
+  background-image: url('../assets/caseStudies/UIDesignsHeroBackground.png');
+  background-size: 100% auto;
+}
+
+#uiDesigns {
+  background-image: url('../assets/caseStudies/ClarityBackground.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y
+}
+
 .hover\:bg-amber-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(245 158 11 / var(--tw-bg-opacity));
@@ -1852,11 +1847,6 @@ html {
 .hover\:bg-violet-500:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(139 92 246 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-violet-800:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(91 33 182 / var(--tw-bg-opacity));
 }
 
 .hover\:text-sky-300:hover {
@@ -1930,11 +1920,6 @@ html {
 .active\:bg-white:active {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.active\:text-amber-500:active {
-  --tw-text-opacity: 1;
-  color: rgb(245 158 11 / var(--tw-text-opacity));
 }
 
 .active\:text-emerald-600:active {

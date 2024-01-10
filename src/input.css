@@ -198,15 +198,7 @@ html {
 
 }
 
-/* Nexus Play Case Study */
-
-#content-nexus h3 {
-    color: #FF4081;
-}
-
-#content-nexus h1, h2 {
-    color: #B191FF;
-}
+/* Nexus Play */
 
 #nexus {
     background-image: url('../assets/caseStudies/NexusPlayBackground.jpg');
@@ -273,6 +265,19 @@ html {
 }
 
 #alethia {
+    background-image: url('../assets/caseStudies/ClarityBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y
+}
+
+/* UI Designs */
+
+.uiDesigns-bg {
+    background-image: url('../assets/caseStudies/UIDesignsHeroBackground.png');
+    background-size: 100% auto;
+}
+
+#uiDesigns {
     background-image: url('../assets/caseStudies/ClarityBackground.png');
     background-size: 100% auto;
     background-repeat: repeat-y

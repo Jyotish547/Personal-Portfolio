@@ -1406,12 +1406,12 @@ document.getElementById("button-p3-2")?.addEventListener("click", function() {
 
 // Portfolio 4
 
-document.getElementById('button-p4-2')?.addEventListener('click', function() {
+document.getElementById('button-p4-1')?.addEventListener('click', function() {
     window.location.href = "./uiDesigns.html";
 });
 
 document.getElementById('button-p4-2')?.addEventListener('click', function() {
-    window.open("https://www.figma.com/file/v2FVFWTxpHGsrvVlDVql1D/UI%2FUX-Projects?type=design&node-id=0%3A1&mode=design&t=SFBe6dUu8GLqBma0-1", "_blank");
+    window.open("https://www.figma.com/file/v2FVFWTxpHGsrvVlDVql1D/UI%2FUX-Projects?type=design&node-id=0%3A1&mode=design&t=iLEMmrjXMH99h6Tt-1", "_blank");
 });
 
 // NexusPlay
@@ -1443,3 +1443,18 @@ const alethiaScreenContainer = document.getElementById('alethia-screen') as HTML
 if(alethiaScreenContainer) {
     alethiaScreenContainer.src = alethiaScreen;
 }
+
+// UI Designs
+
+import uiDesignsScreen from '../assets/caseStudies/uiDesignsScreen.png'
+
+const uiDesignsScreenContainer = document.getElementById('uiDesigns-screen') as HTMLImageElement;
+
+if(uiDesignsScreenContainer) {
+    uiDesignsScreenContainer.src = uiDesignsScreen;
+}
+
+
+// window.onload = () => {
+//     setTimeout(HeaderColors, 300);
+// }
