@@ -1,5 +1,4 @@
 // sanity/vite.config.js
-import { defineConfig } from 'vite';
 import { resolve } from 'path';
 
 // Resolve Sanity part imports
@@ -18,9 +17,4 @@ const sanityPartsResolve = () => ({
     }
     return null; // Return null for all other imports
   },
-});
-
-export default defineConfig({
-  plugins: [sanityPartsResolve()],
-  // ... you may add other Vite configurations if needed
 });
