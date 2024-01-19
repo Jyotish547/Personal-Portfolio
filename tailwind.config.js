@@ -2,7 +2,7 @@
 module.exports = {
     content: [
       "./src/**/*.html",
-    ".src/**/*.ts"],
+    "./src/**/*.ts"],
     theme: {
       extend: {
         boxShadow: {
@@ -10,5 +10,7 @@ module.exports = {
         },
       },
     },
+    darkMode: false,
+    
     plugins: [],
   }

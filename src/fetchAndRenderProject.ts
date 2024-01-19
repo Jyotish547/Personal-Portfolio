@@ -428,7 +428,25 @@ function HeaderColors() {
   const h3Clarity = document.querySelectorAll('#content-clarity h3') as NodeListOf<HTMLElement>;
 
   h3Clarity.forEach(element => {
-      element.classList.add('text-violet-500');
+      element.classList.add('text-violet-400');
+  })
+
+  const h1h2Alethia = document.querySelectorAll('#content-alethia h1, #content-alethia h2') as NodeListOf<HTMLElement>;
+
+  h1h2Alethia.forEach(element => {
+    element.classList.add('alethia-text');
+  })
+
+  const h1h2UIDesigns = document.querySelectorAll('#content-uiDesigns h1, #content-uiDesigns h2') as NodeListOf<HTMLElement>;
+
+  h1h2UIDesigns.forEach(element => {
+    element.classList.add('text-sky-500');
+  })
+
+  const h3UIDesigns = document.querySelectorAll('#content-uiDesigns h3') as NodeListOf<HTMLElement>;
+
+  h3UIDesigns.forEach(element => {
+    element.classList.add('text-sky-400');
   })
 
 }
