@@ -22,14 +22,15 @@
 
     // Sanity
     "baseUrl": ".",
-    // "paths": {
-    //   "@sanity/client": ["./sanity/node_modules/@sanity/client"]
-    // },
+    "paths": {
+      "@sanity/client": ["./sanity/node_modules/@sanity/client"],
+      "sanity/lib/exports": ["./sanity/node_modules/sanity/lib/exports/index"]
+    },
   },
   "typeRoots": [
     "../node_modules/@types/",
     "../assets/types"
   ],
   "noImplicitAny": false,
-  "include": ["src", "**/*.ts", "test", "src/particles.js"]
+  "include": ["src", "**/*.ts", "test", "src/particles.js", "**/*.d.ts"]
 }
