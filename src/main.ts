@@ -1268,10 +1268,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const sketch = (p: p5) => {
     p.setup = () => {
-        let canvasWidth = p.windowWidth;
-        let canvasHeight = p.windowHeight;
-        let canvas = p.createCanvas(canvasWidth, canvasHeight);
-        canvas.parent('p5-container');
+        let canvasContainer = document.getElementById('p5-container');
+
+        if (canvasContainer) {
+            // Safe to use canvasContainer here
+            
+            let canvasWidth = canvasContainer.offsetWidth;
+            let canvasHeight = p.windowHeight;
+            let canvas = p.createCanvas(canvasWidth, canvasHeight);
+            canvas.parent(canvasContainer);
+            canvas.parent('p5-container');
 
         if(window.innerWidth < 1024) {
             for (let i = 0; i < 15; i++) {
@@ -1284,6 +1290,12 @@ const sketch = (p: p5) => {
                 particles.push(new Particle(p));
             }
         }
+        
+            // ... rest of your code
+        } else {
+            console.error("Element with id 'p5-container' was not found.");
+        }
+        
     };
 
     p.draw = () => {
