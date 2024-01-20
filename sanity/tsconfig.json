@@ -9,11 +9,14 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "ESNext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "sanity/lib/exports": ["./node_modules/sanity/lib/exports/index"]
+    }
   },
   "include": ["**/*.ts", "**/*.tsx", "types/*.d.ts"],
   "exclude": ["node_modules"]

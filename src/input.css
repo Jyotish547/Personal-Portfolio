@@ -87,18 +87,22 @@ html {
     #hero-section {
         height: 80vh;
     }
-    .tools-icon svg {
-        width: 48px;
-        height: 48px;
-    }
+
     #p-hero-section{
         height: 70vh;
     }
 }
 
+@media screen and (max-width: 640px) {
+    .tools-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+}
+
 #p-hero-section{
     position: relative;
-    height: 50vh;
+    height: 35vh;
     z-index: -1;
 }
 

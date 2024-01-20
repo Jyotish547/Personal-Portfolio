@@ -24,7 +24,7 @@
     "baseUrl": ".",
     "paths": {
       "@sanity/client": ["./sanity/node_modules/@sanity/client"],
-      "sanity/lib/exports": ["./sanity/node_modules/sanity/lib/exports/index"]
+      "sanity": ["./sanity/node_modules/sanity/lib/exports/index"]
     },
   },
   "typeRoots": [

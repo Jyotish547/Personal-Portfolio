@@ -40,13 +40,13 @@
   </div>
   <!-- End of Projects Hero Section -->
   <!-- All Projects Section -->
-  <div id="my-projects" class="flex flex-col py-16 items-center bg-white w-screen sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-    <div id="filter-title-container" class="w-full flex sm:flex-col sm:items-start lg:flex-row lg:items-center justify-between mb-12 text-slate-700 relative z-30">
+  <div id="my-projects" class="flex flex-col py-8 sm:py-16 items-center bg-white w-screen px-6 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+    <div id="filter-title-container" class="w-full flex flex-col items-start lg:flex-row lg:items-center justify-between mb-6 sm:mb-12 text-slate-700 relative z-30">
       <div class="md:w-4/5 lg:w-fit">
-        <h2 id="filter-title" class="text-3xl font-semibold pb-3">All Projects</h2>
-        <p id="filter-content" class="text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p> 
+        <h2 id="filter-title" class="text-2xl sm:text-3xl font-semibold pb-3">All Projects</h2>
+        <p id="filter-content" class="text-md sm:text-xl">A comprehensive showcase of my diverse skill set and accomplishments.</p> 
       </div>
-      <div id="filter-options" class="filter-options w-fit font-semibold text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative sm:mt-8 lg:mt-0">
+      <div id="filter-options" class="filter-options w-fit font-semibold text-base sm:text-lg flex flex-col justify-between shadow-custom shadow-stone-500/50 cursor-pointer rounded-lg relative mt-8 lg:mt-0">
         <div class="flex flex-row w-full items-center justify-between py-5 px-8 rounded-lg hover:bg-slate-100 hover:duration-300" data-color="text-blue-500">
             <div id="selected-filter" class="w-fit">
                 <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
@@ -55,7 +55,7 @@
                 <i class="fa-solid fa-chevron-down fa-lg ml-3"></i>
             </div>
         </div>
-        <div id="dropdown-menu" class="hidden right-0 flex flex-col w-fit absolute top-full bg-white shadow-custom shadow-stone-500/50 rounded-lg">
+        <div id="dropdown-menu" class="hidden left-0 sm:right-0 flex flex-col w-fit absolute top-full bg-white shadow-custom shadow-stone-500/50 rounded-lg">
             <!-- Note the added data-color attributes -->
             <div class="filter-button all-filter bg-white py-5 px-8 text-blue-500 hover:bg-blue-500 hover:text-white hover:duration-300 active:bg-blue-700 rounded-t-lg" data-color="text-blue-500">
                 <i class="fa-solid fa-earth-asia fa-lg mr-3"></i> All Projects
@@ -78,65 +78,65 @@
         </div>
       </div>
     </div>
-    <div id="my-projects-container" class="grid md:grid-cols-1 lg:grid-cols-2 grid-flow-row gap-12 min-h-64 relative z-20">
+    <div id="my-projects-container" class="grid md:grid-cols-1 lg:grid-cols-2 grid-flow-row gap-8 sm:gap-12 min-h-64 relative z-20">
       <!-- Create another section saying most recent project -->
-        <div id="project-1" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-2xl self-start">
-          <img id="pr-1-img" class="rounded-t-xl">
-          <div class="pr-content bg-white px-10 py-8 rounded-2xl">
-            <div class="category mb-3 text-lg font-medium text-red-500">
+        <div id="project-1" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-lg sm:rounded-2xl self-start">
+          <img id="pr-1-img" class="rounded-t-md sm:rounded-t-xl">
+          <div class="pr-content bg-white px-6 sm:px-10 py-6 sm:py-8 rounded-lg sm:rounded-2xl">
+            <div class="category mb-3 text-md sm:text-lg font-medium text-red-500">
               <i class="fa-brands fa-figma mr-1"></i> UI/UX Design
             </div>
-            <h3 class="text-2xl font-bold mb-2">NexusPlay</h3>
-            <p class="my-5">NexusPlay is a unified game launcher streamlining access, enhancing social interactions, and elevating the gaming experience. It centralizes game management, fosters friend connections, and introduces new titles.</p>
-            <p class="my-5 font-medium">Date: 6th May, 2023</p>
+            <h3 class="text-xl sm:text-2xl font-bold mb-2">NexusPlay</h3>
+            <p class="text-sm sm:text-base my-5">NexusPlay is a unified game launcher streamlining access, enhancing social interactions, and elevating the gaming experience. It centralizes game management, fosters friend connections, and introduces new titles.</p>
+            <p class="text-sm sm:text-base my-5 font-medium">Date: 6th May, 2023</p>
             <div class="flex flex-row items-center justify-between">
-              <button id="button-p1-1" class="py-3 px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
-              <button id="button-p1-2" class="py-3 px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File Link</button>
+              <button id="button-p1-1" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+              <button id="button-p1-2" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File</button>
             </div>
           </div>
         </div>
-        <div id="project-2" class="grid-item uxr-category shadow-custom shadow-stone-500/50 rounded-2xl self-start">
-          <img id="pr-2-img" class="rounded-t-xl">
-          <div class="pr-content bg-white px-10 py-8 rounded-2xl">
-            <div class="category mb-3 text-lg font-medium text-emerald-600">
+        <div id="project-2" class="grid-item uxr-category shadow-custom shadow-stone-500/50 rounded-lg sm:rounded-2xl self-start">
+          <img id="pr-2-img" class="rounded-t-md sm:rounded-t-xl">
+          <div class="pr-content bg-white px-6 sm:px-10 py-6 sm:py-8 rounded-lg sm:rounded-2xl">
+            <div class="category mb-3 text-md sm:text-lg font-medium text-emerald-600">
               <i class="fa-solid fa-book mr-1"></i> UX Research
             </div>
-            <h3 class="text-2xl font-semibold mb-2">Clarity</h3>
-            <p class="my-5">Clarity helps families and independent schools manage their financial aid process. Our first product is the easiest and fastest financial aid application in the industry and has been used by tens of thousands of families to receive financial aid.</p>
-            <p class="my-5 font-medium">Date: 9th May, 2023</p>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-2">Clarity</h3>
+            <p class="text-sm sm:text-base my-5">Clarity helps families and independent schools manage their financial aid process. Our first product is the easiest and fastest financial aid application in the industry and has been used by tens of thousands of families to receive financial aid.</p>
+            <p class="text-sm sm:text-base my-5 font-medium">Date: 9th May, 2023</p>
             <div class="flex flex-row items-center justify-between">
-              <button id="button-p2-1" class="py-3 px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
-              <button id="button-p2-2" class="py-3 px-4 bg-white rounded-md text-emerald-600 border-2 border-emerald-600 font-medium hover:bg-emerald-600 hover:duration-500 hover:text-white active:bg-white active:text-emerald-600 shadow-lg shadow-stone-500/20"><i class="fa-solid fa-person-chalkboard mr-2"></i>Presentation</button>
+              <button id="button-p2-1" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+              <button id="button-p2-2" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-white rounded-md text-emerald-600 border-2 border-emerald-600 font-medium hover:bg-emerald-600 hover:duration-500 hover:text-white active:bg-white active:text-emerald-600 shadow-lg shadow-stone-500/20"><i class="fa-solid fa-person-chalkboard mr-2"></i>Presentation</button>
             </div>
           </div>
         </div>
-        <div id="project-3" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-2xl self-start">
-          <img id="pr-3-img" class="rounded-t-xl">
-          <div class="pr-content bg-white px-10 py-8 rounded-2xl">
-            <div class="category mb-3 text-lg font-medium text-red-500">
+        <div id="project-3" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-lg sm:rounded-2xl self-start">
+          <img id="pr-3-img" class="rounded-t-md sm:rounded-t-xl">
+          <div class="pr-content bg-white px-6 sm:px-10 py-6 sm:py-8 rounded-lg sm:rounded-2xl">
+            <div class="category mb-3 text-md sm:text-lg font-medium text-red-500">
               <i class="fa-brands fa-figma mr-1"></i> UI/UX Design
             </div>
-            <h3 class="text-2xl font-semibold mb-2">Alethia</h3>
-            <p class="my-5">Alethia is a mobile app developed as a final project to provide a solution for the pandemic scenario. The app focuses on providing the population density and safety score of a particular location, along with the availability and crowd levels of essential facilities such as supermarkets, restaurants, and bars.</p>
-            <p class="font-medium my-5">Date: 9th December, 2022</p>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-2">Alethia</h3>
+            <p class="text-sm sm:text-base my-5">Alethia is a mobile app developed as a final project to provide a solution for the pandemic scenario. The app focuses on providing the population density and safety score of a particular location, along with the availability and crowd levels of essential facilities such as supermarkets, restaurants, and bars.</p>
+            <p class="text-sm sm:text-base font-medium my-5">Date: 9th December, 2022</p>
             <div class="flex flex-row items-center justify-between">
-              <button id="button-p3-1" class="py-3 px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
-              <button id="button-p3-2" class="py-3 px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File Link</button>
+              <button id="button-p3-1" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+              <button id="button-p3-2" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File</button>
             </div>
           </div>
         </div>
-        <div id="project-4" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-2xl self-start">
-          <img id="pr-4-img" class="rounded-t-xl">
-          <div class="pr-content bg-white px-10 py-8 rounded-2xl">
-            <div class="category mb-3 text-lg font-medium text-red-500">
+        <div id="project-4" class="grid-item ux-category shadow-custom shadow-stone-500/50 rounded-lg sm:rounded-2xl self-start">
+          <img id="pr-4-img" class="rounded-t-md sm:rounded-t-xl">
+          <div class="pr-content bg-white px-6 sm:px-10 py-6 sm:py-8 rounded-lg sm:rounded-2xl">
+            <div class="category mb-3 text-md sm:text-lg font-medium text-red-500">
               <i class="fa-brands fa-figma mr-1"></i> UI/UX Design
             </div>
-            <h3 class="text-2xl font-semibold mb-2">UI Designs</h3>
-            <p class="my-5">Showcasing a comprehensive collection of my early UI designs, reflecting the foundational stages of my journey in user interface development. Each piece, crafted with meticulous attention to detail, represents my evolving understanding of user-centric design principles.</p>
-            <p class="my-5 font-medium">Date: November 2021 - May 2022</p>
+            <h3 class="text-xl sm:text-2xl font-semibold mb-2">UI Designs</h3>
+            <p class="text-sm sm:text-base my-5">Showcasing a comprehensive collection of my early UI designs, reflecting the foundational stages of my journey in user interface development. Each piece, crafted with meticulous attention to detail, represents my evolving understanding of user-centric design principles.</p>
+            <p class="text-sm sm:text-base my-5 font-medium">Date: November 2021 - May 2022</p>
             <div class="flex flex-row items-center justify-between">
-              <button id="button-p4-1" class="py-3 px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
-              <button id="button-p4-2" class="py-3 px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File Link</button>
+              <button id="button-p4-1" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-sky-500 rounded-md text-white font-medium hover:bg-sky-700 hover:duration-500 active:bg-violet-900 shadow-lg shadow-stone-500/40"><i class="fa-solid fa-eye mr-2"></i>View Details</button>
+              <button id="button-p4-2" class="text-sm sm:text-base py-3 px-3 sm:px-4 bg-white rounded-md text-red-500 border-2 border-red-500 font-medium hover:bg-red-500 hover:text-white hover:duration-500 active:bg-white active:text-red-500 shadow-lg shadow-stone-500/20"><i class="fa-brands fa-figma mr-2"></i>Figma File</button>
             </div>
           </div>
         </div>
