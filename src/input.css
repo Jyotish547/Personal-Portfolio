@@ -89,7 +89,9 @@ html {
     }
 
     #p-hero-section{
-        height: 70vh;
+        position: relative;
+        height: 60vh;
+        z-index: -1;
     }
 
     #project-hero-section{
@@ -105,6 +107,12 @@ html {
         height: 48px;
     }
 
+    #p-hero-section{
+        position: relative;
+        height: 35vh;
+        z-index: -1;
+    }
+
     #project-hero-section{
         position: relative;
         height: 40vh;
@@ -112,11 +120,7 @@ html {
     }
 }
 
-#p-hero-section{
-    position: relative;
-    height: 35vh;
-    z-index: -1;
-}
+
 
 #hero-content, #p-hero-content, #project-hero-content {
     position: absolute;
@@ -289,7 +293,7 @@ html {
 #clarity {
     background-image: url('../assets/caseStudies/ClarityBackground.png');
     background-size: 100% auto;
-    background-repeat: repeat-y
+    background-repeat: repeat-y;
 }
 
 /* Alethia */
@@ -306,7 +310,7 @@ html {
 #alethia {
     background-image: url('../assets/caseStudies/ClarityBackground.png');
     background-size: 100% auto;
-    background-repeat: repeat-y
+    background-repeat: repeat-y;
 }
 
 /* UI Designs */
@@ -319,5 +323,31 @@ html {
 #uiDesigns {
     background-image: url('../assets/caseStudies/ClarityBackground.png');
     background-size: 100% auto;
-    background-repeat: repeat-y
+    background-repeat: repeat-y;
+}
+
+@media screen and (max-width: 640px) {
+
+    .nexus-bg {
+        background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        color: rgb(212 212 216);
+    }
+
+    .clarity-bg {
+        background-image: url('../assets/caseStudies/ClarityHeroBackground.png');
+        background-size: auto 100%;
+    }
+
+    .alethia-bg {
+        background-image: url('../assets/caseStudies/AlethiaHeroBackground.png');
+        background-size: auto 100%;
+    }
+
+    .uiDesigns-bg {
+        background-image: url('../assets/caseStudies/UIDesignsHeroBackground.png');
+        background-size: auto 100%;
+    }
+
 }

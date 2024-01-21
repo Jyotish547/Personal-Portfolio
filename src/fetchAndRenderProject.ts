@@ -451,9 +451,31 @@ function HeaderColors() {
 
 }
 
+// Per Project br tag Responsiveness in Hero section
+
+function checkAndAddBreak() {
+const minWidthQuery = window.matchMedia('(min-width: 640px)');
+const projectNameSpan = document.getElementById('project-name-text');
+
+if (minWidthQuery.matches) {
+  // Check if the <br> tag is not already added
+  if (projectNameSpan && !projectNameSpan.nextElementSibling?.matches('br')) {
+  // Create and insert the <br> tag
+  const breakElement = document.createElement('br');
+  projectNameSpan.parentNode?.insertBefore(breakElement, projectNameSpan.nextSibling);
+  }
+} else {
+  // Remove the <br> tag if screen width is less than 640px
+  if (projectNameSpan && projectNameSpan.nextElementSibling?.matches('br')) {
+  projectNameSpan.parentNode?.removeChild(projectNameSpan.nextElementSibling);
+  }
+}
+}
 
 window.onload = () => {
   setTimeout(IframeFunctions, 500);
   setTimeout(insertFigmaIframe, 500);
   setTimeout(HeaderColors, 500);
+  checkAndAddBreak();
+  window.onresize = checkAndAddBreak;
 };
