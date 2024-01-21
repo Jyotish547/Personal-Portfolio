@@ -5,37 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UI Designs | Jyothish Gompa</title>
     <link id="favicon" rel="icon" type="image/png" href="">
-  <script type="module" crossorigin src="/assets/main-epbFyDP1.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/main-TwiypSt6.css">
+  <script type="module" crossorigin src="/assets/main-lAnLseu2.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-jyagMPw4.css">
 </head>
 <body class="flex h-full overflow-x-hidden">
   <!-- Change navbar colors here -->
-  <nav id="navbar" class="navbar top-0 left-0 fixed flex flex-row w-full items-center justify-between bg-neutral-900 text-stone-600 shadow-lg shadow-gray-800/50 z-40 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
-    <div class="items-center"><a href="./index.html"><img id="logoWhite" class="w-20"></a></div>
-    <div class="sm:flex sm:flex-col sm:items-center">
+  <nav id="navbar" class="navbar top-0 left-0 fixed flex flex-row w-screen items-center justify-between bg-white text-stone-600 shadow-lg shadow-stone-400/50 z-40 px-6 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+    <div class="items-center"><a href="./index.html"><img id="logo" alt="Logo" class="w-20"></a></div>
+    <div class=" flex  flex-col  items-center">
       <div id="nav-button" class="hidden flex flex-row items-center text-lg font-bold py-5 cursor-pointer">
         <i class="fa-solid fa-bars mr-3"></i>MENU
       </div>
-      <!-- Change navbar colors here -->
-      <div id="nav-menu" class="cursor-pointer text-lg sm:shadow-lg sm:-mr-12 sm:w-72 sm:h-screen font-bold sm:flex-col sm:absolute sm:top-16 sm:mt-1 md:-mr-36 md:w-96 lg:mr-auto lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-full lg:relative lg:top-0 lg:shadow-none lg:w-fit lg:h-fit">
-        <li class="nav-item text-gray-300 list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-house mr-3"></i>HOME</a></li>
-        <li class="nav-item text-gray-300 list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html#resume-section" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-file-lines mr-3"></i>RESUME</a></li>
-        <li class="nav-item text-gray-300 list-none py-5 selected hover:text-sky-400 hover:duration-500"><a href="./projects.html" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-laptop-file mr-3"></i>PROJECTS</a></li>
-        <li class="nav-item text-gray-300 list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html#contact-section" class="sm:px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-paper-plane mr-3"></i>CONTACT</a></li>
-      </div>
+      <ul id="nav-menu" class="cursor-pointer text-lg shadow-lg w-72 h-screen shadow-stone-400/50 font-bold bg-white flex-col absolute  top-16  mt-1 md:-mr-36 md:w-96 lg:mr-auto lg:flex lg:flex-row lg:items-center lg:justify-end lg:w-full lg:relative lg:top-0 lg:shadow-none lg:w-fit lg:h-fit">
+        <li class="nav-item list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html" class=" px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-house mr-3"></i>HOME</a></li>
+        <li class="nav-item list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html#resume-section" class=" px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-file-lines mr-3"></i>RESUME</a></li>
+        <li class="nav-item list-none py-5 selected hover:text-sky-400 hover:duration-500"><a href="./projects.html" class=" px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-laptop-file mr-3"></i>PROJECTS</a></li>
+        <li class="nav-item list-none py-5 hover:text-sky-400 hover:duration-500"><a href="./index.html#contact-section" class=" px-10 lg:px-5 py-5"><i class="nav-icon fa-solid fa-paper-plane mr-3"></i>CONTACT</a></li>
+      </ul>
     </div>
   </nav>
   <main id="projects-app" class="w-screen pt-20 flex flex-col items-center">
     <!-- Projects Hero Section -->
     <!-- Change Hero Backgrond here -->
-  <div id="p-hero-section" class="uiDesigns-bg text-3xl text-stone-600 bg-white py-48 w-screen justify-center sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+  <div id="project-hero-section" class="uiDesigns-bg text-3xl text-stone-600 bg-white py-12 sm:py-48 w-screen justify-center px-6 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
     <!-- Particle.JS Declaration -->
     <div id="p5-container"></div>
-      <div id="p-hero-content" class="flex flex-row justify-between items-center">
+      <div id="project-hero-content" class="flex flex-col-reverse sm:flex-row justify-between sm:items-center">
         <div>
-          <span id="p-name-text" class="text-8xl font-bold leading-tight text-sky-500">UI Designs<br></span>
-          <br>
-          <span class="text-4xl leading-none font-medium">Innovative UI Design for Empowering Experiences</span>
+          <span id="project-name-text" class="text-6xl sm:text-8xl font-bold leading-tight text-sky-500 sm:leading-loose">UI Designs<br></span>
+          <span class="text-xl sm:text-3xl leading-none font-medium leading-loose">Innovative UI Design for Empowering Experiences</span>
         </div>
         <!-- Keep resolution of these images similar to other pages -->
         <img id="uiDesigns-screen" class="w-1/4">
@@ -43,11 +41,11 @@
   </div>
 
   <!-- Change body background here with ID -->
-  <div id="uiDesigns" class="flex flex-col py-16 items-center bg-white w-screen sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
+  <div id="uiDesigns" class="flex flex-col py-8 sm:py-16 items-center bg-white w-screen px-6 sm:px-12 md:px-24 lg:px-36 xl:px-48 2xl:px-96">
     <div id="content-uiDesigns"></div>
   </div>
   <!-- End of Section -->
-  <footer class="w-screen bg-neutral-900 py-4 text-white text-center font-medium relative z-10">
+  <footer class="w-screen bg-neutral-900 text-xs sm:text-base py-4 text-white text-center font-medium relative z-10">
     © 2023 Jyothish Vardhan Gompa. All rights reserved.
   </footer>
   </main>

@@ -1176,6 +1176,14 @@ anime({
     easing: 'easeInOutQuad',
 });
 
+anime({
+    targets: '#project-hero-content',
+    opacity: [0, 1],
+    translateX: ['-50px', '0px'],
+    duration: 1000,
+    easing: 'easeInOutQuad',
+});
+
 // Projects Content Section
 
 anime({
@@ -1254,6 +1262,23 @@ document.addEventListener('scroll', () => {
 
             if (offset * factor <= sectionHeight - (contentHeight - pNameTextHeight)) {
                 pHeroContent.style.transform = `translateY(calc(${offset * factor}px))`;
+            }
+        }
+    }
+
+    // Per Project Hero section
+    const projectHeroSection: HTMLElement | null = document.querySelector('#project-hero-section');
+    const projectHeroContent: HTMLElement | null = document.querySelector('#project-hero-content');
+    const projectNameText: HTMLElement | null = document.querySelector('#project-name-text');
+
+    if (projectHeroSection && projectHeroContent) {
+        const sectionHeight: number = projectHeroSection.offsetHeight;
+        const contentHeight: number = projectHeroContent.offsetHeight;
+        if(projectNameText){
+            const projectNameTextHeight: number = projectNameText.offsetHeight;
+
+            if (offset * factor <= sectionHeight - (contentHeight - projectNameTextHeight)) {
+                projectHeroContent.style.transform = `translateY(calc(${offset * factor}px))`;
             }
         }
     }

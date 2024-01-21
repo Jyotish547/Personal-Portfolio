@@ -104,7 +104,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
       // Render title, subtitle, date
       if(targetElement) {
         targetElement.innerHTML = `
-        <p class="text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
+        <p class="text-base sm:text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
       `;
       }
   
@@ -116,7 +116,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
 
         const headerElement = document.createElement('h2');
         headerElement.textContent = `${section.sectionTitle}`;
-        headerElement.classList.add('text-3xl', 'font-bold', 'my-5');
+        headerElement.classList.add('text-xl', 'sm:text-3xl', 'font-bold', 'my-5');
 
         sectionElement.appendChild(headerElement);
 
@@ -129,7 +129,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
           if(block.articleTitle) {
             const titleElement = document.createElement('h3');
             titleElement.textContent = block.articleTitle;
-            titleElement.classList.add('text-2xl', 'font-semibold', 'my-3');
+            titleElement.classList.add('text-lg', 'sm:text-2xl', 'font-semibold', 'my-3');
             sectionElement.appendChild(titleElement);
           }
 
@@ -203,7 +203,7 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
                 });
         
                 listItemElement.innerHTML = combinedText;
-                listItemElement.classList.add('text-lg');
+                listItemElement.classList.add('text-base', 'sm:text-lg');
                 listElement.appendChild(listItemElement);
             } else {
                 (article.children || []).forEach(child => {
@@ -217,12 +217,12 @@ client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
         
                         const linkDef = article.markDefs?.find((def: MarkDef) => def._key === mark);
                         if (linkDef && linkDef._type === 'link') {
-                            childText = `<a href="${linkDef.href}" target="_blank" class="text-xl font-semibold underline decoration-4 decoration-solid text-violet-500">${childText}</a>`;
+                            childText = `<a href="${linkDef.href}" target="_blank" class="text-lg sm:text-xl font-semibold underline decoration-4 decoration-solid text-violet-500">${childText}</a>`;
                         }
                     });
         
                     contentElement.innerHTML = childText; // Changed to innerHTML to render the tags properly
-                    contentElement.classList.add('text-lg', 'my-3');
+                    contentElement.classList.add('text-base', 'sm:text-lg', 'my-3');
                     sectionElement.appendChild(contentElement);
                 });
             }
@@ -457,6 +457,3 @@ window.onload = () => {
   setTimeout(insertFigmaIframe, 500);
   setTimeout(HeaderColors, 500);
 };
-
-
-

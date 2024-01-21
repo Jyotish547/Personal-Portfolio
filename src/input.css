@@ -91,12 +91,24 @@ html {
     #p-hero-section{
         height: 70vh;
     }
+
+    #project-hero-section{
+        position: relative;
+        height: 60vh;
+        z-index: -1;
+    }
 }
 
 @media screen and (max-width: 640px) {
     .tools-icon svg {
         width: 48px;
         height: 48px;
+    }
+
+    #project-hero-section{
+        position: relative;
+        height: 40vh;
+        z-index: -1;
     }
 }
 
@@ -106,7 +118,7 @@ html {
     z-index: -1;
 }
 
-#hero-content, #p-hero-content {
+#hero-content, #p-hero-content, #project-hero-content {
     position: absolute;
     width: fit-content;
 }
