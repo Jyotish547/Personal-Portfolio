@@ -60,12 +60,20 @@ if(faviconContainer) {
 
 //  Resume Download
 
-import resume from '../assets/resume.pdf';
+import fdResume from '../assets/Front-End Development.pdf';
 
-const resumeDownloads = document.querySelectorAll(".download-resume");
+const fdDownloads = document.querySelectorAll(".download-fd-resume");
 
-resumeDownloads.forEach(downloadLink => {
-    (downloadLink as HTMLAnchorElement).href = resume;
+fdDownloads.forEach(downloadLink => {
+    (downloadLink as HTMLAnchorElement).href = fdResume;
+});
+
+import uxResume from '../assets/UX Design.pdf';
+
+const uxDownloads = document.querySelectorAll(".download-ux-resume");
+
+uxDownloads.forEach(downloadLink => {
+    (downloadLink as HTMLAnchorElement).href = uxResume;
 });
 
 // Animejs Declaration
