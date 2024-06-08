@@ -100,6 +100,8 @@ import imgP3 from '../assets/Alethia Thumbnail.png';
 
 import imgP4 from '../assets/UI Designs Thumbnail.png';
 
+import imgP5 from '../assets/LevelUp Thumbnail.png';
+
 let pGrid1 = document.getElementById("pr-1-img") as HTMLImageElement;
 
 if (pGrid1) {
@@ -126,6 +128,13 @@ let pGrid4 = document.getElementById("pr-4-img") as HTMLImageElement;
 if (pGrid4) {
   pGrid4.src = imgP4;
   pGrid4.style.width = "100%";
+}
+
+let pGrid5 = document.getElementById("pr-5-img") as HTMLImageElement;
+
+if (pGrid5) {
+    pGrid5.src = imgP5;
+    pGrid5.style.width = "100%";
 }
 
 // Sanity
@@ -1459,6 +1468,16 @@ document.getElementById('button-p4-2')?.addEventListener('click', function() {
     window.open("https://www.figma.com/file/v2FVFWTxpHGsrvVlDVql1D/UI%2FUX-Projects?type=design&node-id=0%3A1&mode=design&t=iLEMmrjXMH99h6Tt-1", "_blank");
 });
 
+// Portfolio 5
+
+document.getElementById('button-p5-1')?.addEventListener('click', function() {
+    window.location.href = "./levelUp.html";
+});
+
+document.getElementById('button-p5-2')?.addEventListener('click', function() {
+    window.open("https://level-up-lore.vercel.app/", "_blank");
+});
+
 // NexusPlay
 
 import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';
@@ -1497,6 +1516,16 @@ const uiDesignsScreenContainer = document.getElementById('uiDesigns-screen') as 
 
 if(uiDesignsScreenContainer) {
     uiDesignsScreenContainer.src = uiDesignsScreen;
+}
+
+// LevelUp Lore
+
+import levelUpScreen from '../assets/caseStudies/LevelUpScreen.png'
+
+const levelUpScreenContainer = document.getElementById('levelUp-screen') as HTMLImageElement;
+
+if(levelUpScreenContainer) {
+    levelUpScreenContainer.src = levelUpScreen;
 }
 
 

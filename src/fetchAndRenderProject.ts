@@ -79,7 +79,8 @@ const contentArray = [
   { id: 'content-nexus', refId: 'nexus' },
   { id: 'content-clarity', refId: 'clarity' },
   { id: 'content-alethia', refId: 'alethia' },
-  { id: 'content-uiDesigns', refId: 'uiDesigns'}
+  { id: 'content-uiDesigns', refId: 'uiDesigns'},
+  { id: 'content-levelUp', refId: 'levelUp'}
 ];
 let count = 0;
 
@@ -431,11 +432,15 @@ function HeaderColors() {
       element.classList.add('text-violet-400');
   })
 
+  // Alethia
+
   const h1h2Alethia = document.querySelectorAll('#content-alethia h1, #content-alethia h2') as NodeListOf<HTMLElement>;
 
   h1h2Alethia.forEach(element => {
     element.classList.add('alethia-text');
   })
+
+  // UI Designs
 
   const h1h2UIDesigns = document.querySelectorAll('#content-uiDesigns h1, #content-uiDesigns h2') as NodeListOf<HTMLElement>;
 
@@ -447,6 +452,14 @@ function HeaderColors() {
 
   h3UIDesigns.forEach(element => {
     element.classList.add('text-sky-400');
+  })
+
+  // LevelUp Lore
+
+  const h1h2LevelUp = document.querySelectorAll('#content-levelUp h1, #content-levelUp h2') as NodeListOf<HTMLElement>;
+
+  h1h2LevelUp.forEach(element => {
+    element.classList.add('levelUp-text');
   })
 
 }

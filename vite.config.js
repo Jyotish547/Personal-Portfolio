@@ -13,7 +13,8 @@ export default defineConfig({
         p1: resolve(__dirname, 'src/nexusPlay.html'),
         p2: resolve(__dirname, 'src/clarity.html'),
         p3: resolve(__dirname, 'src/alethia.html'),
-        p4: resolve(__dirname, 'src/uiDesigns.html')
+        p4: resolve(__dirname, 'src/uiDesigns.html'),
+        p5: resolve(__dirname, 'src/levelUp.html')
         // Add more html pages here that you create in src
       },
     },

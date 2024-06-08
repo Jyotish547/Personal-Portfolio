@@ -326,6 +326,27 @@ html {
     background-repeat: repeat-y;
 }
 
+/* LevelUp Lore */
+
+.levelUp-bg {
+    background-image: url('../assets/caseStudies/LevelUpHeroBackground.png');
+    background-size: 100% auto;
+}
+
+#levelUp {
+    background-image: url('../assets/caseStudies/LevelUpBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+}
+
+.levelUp-text {
+    color: #0A263E;
+}
+
+.levelUp-head {
+    color: #14B8A6;
+}
+
 @media screen and (max-width: 640px) {
 
     .nexus-bg {
