@@ -84,167 +84,316 @@ const contentArray = [
 ];
 let count = 0;
 
-client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
-    console.log('Fetched cases:', cases); // Log the fetched data
+// client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
+//     console.log('Fetched cases:', cases); // Log the fetched data
   
-    cases.forEach(caseStudy => {
-      const contentItem = contentArray.find(item => item.refId === caseStudy.id); // Assuming caseStudy has an _id field
+//     cases.forEach(caseStudy => {
+//       const contentItem = contentArray.find(item => item.refId === caseStudy.id); // Assuming caseStudy has an _id field
+//       if (!contentItem) {
+//         console.error(`No content item found for case study with ID ${caseStudy.id}.`);
+//         return;
+//       }
+
+//       const targetElement = document.getElementById(contentItem.id);
+//       if (!targetElement) {
+//         console.error(`Element with ID ${contentItem.id} not found.`);
+//         return;
+//       }
+  
+//       console.log('Rendering caseStudy:', caseStudy); // Log each case study
+  
+//       // Render title, subtitle, date
+//       if(targetElement) {
+//         targetElement.innerHTML = `
+//         <p class="text-base sm:text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
+//       `;
+//       }
+  
+//       (caseStudy.sectionContent || []).forEach(section => {
+//         console.log('Rendering section:', section); // Log each section
+
+      
+//         const sectionElement = document.createElement('div');
+
+//         const headerElement = document.createElement('h2');
+//         headerElement.textContent = `${section.sectionTitle}`;
+//         headerElement.classList.add('text-xl', 'sm:text-3xl', 'font-bold', 'my-5');
+
+//         sectionElement.appendChild(headerElement);
+
+//         if(targetElement) {
+//           targetElement.appendChild(sectionElement);
+//         }
+
+//         section.textBlocks.forEach(block => {
+//           console.log('Rendering block:', block);
+//           if(block.articleTitle) {
+//             const titleElement = document.createElement('h3');
+//             titleElement.textContent = block.articleTitle;
+//             titleElement.classList.add('text-lg', 'sm:text-2xl', 'font-semibold', 'my-3');
+//             sectionElement.appendChild(titleElement);
+//           }
+
+//           const imgContainer = document.createElement('div');
+//           imgContainer.style.width = '100%';
+//           imgContainer.style.overflowX = 'auto';
+//           imgContainer.style.whiteSpace = 'nowrap';
+
+//           imgContainer.classList.add('flex', 'flex-row', 'items-center');
+
+//           (block.imagesWithTitle || []).forEach(image => {
+//             console.log('Rendering image', image);
+//             const img = document.createElement('img');
+//             img.src = urlFor(image.image).url();
+//             img.alt = image.imageTitle;
+
+//             img.style.display = 'inline-block';
+//             img.style.width = 'auto';
+//             img.style.verticalAlign = 'top';
+//             img.classList.add('p-3');
+
+//             imgContainer.appendChild(img);
+
+//             sectionElement.appendChild(imgContainer);
+
+//           });
+
+//           // Assuming imgContainer is already defined as a reference to your div
+//           let imgCount = 0;
+
+//           // Count the number of image elements in the container
+//           imgContainer.querySelectorAll('img').forEach(() => {
+//               imgCount++;
+//           });
+
+//           // Apply justify-content based on the number of images
+//           if (imgCount === 1) {
+//               imgContainer.style.justifyContent = 'center';
+//           } else if (imgCount >= 2 && imgCount <= 4) {
+//               imgContainer.style.justifyContent = 'space-around';
+//           } else if (imgCount >= 5) {
+//               imgContainer.style.justifyContent = 'space-between';
+//           }
+
+//           // Create the list element outside the forEach loop
+//           const listElement = document.createElement('ul');
+//           listElement.style.listStyleType = 'square';
+          
+
+//           // Iterate over each articleContent
+//           block.articleContent.forEach(article => {
+//             if (article.listItem === 'bullet') {
+//                 const listItemElement = document.createElement('li');
+//                 let combinedText = '';
+        
+//                 article.children.forEach(child => {
+//                     let childText = child.text;
+        
+//                     child.marks?.forEach((mark: string) => {
+//                         if (mark === 'strong') {
+//                             childText = `<strong>${childText}</strong>`;
+//                         }
+        
+//                         const linkDef = article.markDefs?.find((def: MarkDef) => def._key === mark);
+//                         if (linkDef && linkDef._type === 'link') {
+//                             childText = `<a href="${linkDef.href}" target="_blank">${childText}</a>`;
+//                         }
+//                     });
+        
+//                     combinedText += childText;
+//                 });
+        
+//                 listItemElement.innerHTML = combinedText;
+//                 listItemElement.classList.add('text-base', 'sm:text-lg');
+//                 listElement.appendChild(listItemElement);
+//             } else {
+//                 (article.children || []).forEach(child => {
+//                     const contentElement = document.createElement('p');
+//                     let childText = child.text ?? '';
+        
+//                     child.marks?.forEach((mark: string) => {
+//                         if (mark === 'strong') {
+//                             childText = `<strong>${childText}</strong>`;
+//                         }
+        
+//                         const linkDef = article.markDefs?.find((def: MarkDef) => def._key === mark);
+//                         if (linkDef && linkDef._type === 'link') {
+//                             childText = `<a href="${linkDef.href}" target="_blank" class="text-lg sm:text-xl font-semibold underline decoration-4 decoration-solid text-violet-500">${childText}</a>`;
+//                         }
+//                     });
+        
+//                     contentElement.innerHTML = childText; // Changed to innerHTML to render the tags properly
+//                     contentElement.classList.add('text-base', 'sm:text-lg', 'my-3');
+//                     sectionElement.appendChild(contentElement);
+//                 });
+//             }
+//         });
+
+//           sectionElement.appendChild(listElement);
+
+//         });
+        
+        
+//       });
+  
+//       if (targetElement && targetElement) {
+//         targetElement.appendChild(targetElement);
+//       } else {
+//         console.error('Element not found or target element is null');
+//       }
+//       count++;
+      
+//     });
+// }).catch(error => console.error("Fetching error:", error));
+
+client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
+  console.log('Fetched cases:', cases); // Log the fetched data
+
+  cases.forEach(caseStudy => {
+      const contentItem = contentArray.find(item => item.refId === caseStudy.id);
       if (!contentItem) {
-        console.error(`No content item found for case study with ID ${caseStudy.id}.`);
-        return;
+          console.error(`No content item found for case study with ID ${caseStudy.id}.`);
+          return;
       }
 
       const targetElement = document.getElementById(contentItem.id);
       if (!targetElement) {
-        console.error(`Element with ID ${contentItem.id} not found.`);
-        return;
+          console.error(`Element with ID ${contentItem.id} not found.`);
+          return;
       }
   
       console.log('Rendering caseStudy:', caseStudy); // Log each case study
   
       // Render title, subtitle, date
-      if(targetElement) {
-        targetElement.innerHTML = `
-        <p class="text-base sm:text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
+      targetElement.innerHTML = `
+          <p class="text-base sm:text-xl mb-5">Completed on ${new Date(caseStudy.date).toLocaleDateString()}</p>
       `;
-      }
-  
-      (caseStudy.sectionContent || []).forEach(section => {
-        console.log('Rendering section:', section); // Log each section
 
-      
-        const sectionElement = document.createElement('div');
+      caseStudy.sectionContent.forEach(section => {
+          console.log('Rendering section:', section); // Log each section
 
-        const headerElement = document.createElement('h2');
-        headerElement.textContent = `${section.sectionTitle}`;
-        headerElement.classList.add('text-xl', 'sm:text-3xl', 'font-bold', 'my-5');
-
-        sectionElement.appendChild(headerElement);
-
-        if(targetElement) {
+          const sectionElement = document.createElement('div');
+          const headerElement = document.createElement('h2');
+          headerElement.textContent = section.sectionTitle;
+          headerElement.classList.add('text-xl', 'sm:text-3xl', 'font-bold', 'my-5');
+          sectionElement.appendChild(headerElement);
           targetElement.appendChild(sectionElement);
-        }
 
-        section.textBlocks.forEach(block => {
+          if (section.textBlocks && section.textBlocks.length > 0) {
+              section.textBlocks.forEach(block => {
+                  console.log('Rendering block:', block); // Log each block
+                  if (block.articleTitle) {
+                      const titleElement = document.createElement('h3');
+                      titleElement.textContent = block.articleTitle;
+                      titleElement.classList.add('text-lg', 'sm:text-2xl', 'font-semibold', 'my-3');
+                      sectionElement.appendChild(titleElement);
+                  }
 
-          if(block.articleTitle) {
-            const titleElement = document.createElement('h3');
-            titleElement.textContent = block.articleTitle;
-            titleElement.classList.add('text-lg', 'sm:text-2xl', 'font-semibold', 'my-3');
-            sectionElement.appendChild(titleElement);
+                  const imgContainer = document.createElement('div');
+                  imgContainer.style.width = '100%';
+                  imgContainer.style.overflowX = 'auto';
+                  imgContainer.style.whiteSpace = 'nowrap';
+                  imgContainer.classList.add('flex', 'flex-row', 'items-center');
+
+                  if (block.imagesWithTitle && block.imagesWithTitle.length > 0) {
+                      block.imagesWithTitle.forEach(image => {
+                          console.log('Rendering image:', image); // Log each image
+                          const img = document.createElement('img');
+                          img.src = urlFor(image.image).url();
+                          img.alt = image.imageTitle;
+                          img.style.display = 'inline-block';
+                          img.style.width = 'auto';
+                          img.style.verticalAlign = 'top';
+                          img.classList.add('p-3');
+                          imgContainer.appendChild(img);
+                      });
+
+                      sectionElement.appendChild(imgContainer);
+
+                      let imgCount = 0;
+                      imgContainer.querySelectorAll('img').forEach(() => imgCount++);
+
+                      if (imgCount === 1) {
+                          imgContainer.style.justifyContent = 'center';
+                      } else if (imgCount >= 2 && imgCount <= 4) {
+                          imgContainer.style.justifyContent = 'space-around';
+                      } else if (imgCount >= 5) {
+                          imgContainer.style.justifyContent = 'space-between';
+                      }
+                  }
+
+                  const listElement = document.createElement('ul');
+                  listElement.style.listStyleType = 'square';
+
+                  if (block.articleContent && block.articleContent.length > 0) {
+                      block.articleContent.forEach(article => {
+                          if (article.listItem === 'bullet') {
+                              const listItemElement = document.createElement('li');
+                              let combinedText = '';
+
+                              if (article.children && article.children.length > 0) {
+                                  article.children.forEach(child => {
+                                      let childText = child.text;
+
+                                      child.marks?.forEach(mark => {
+                                          if (mark === 'strong') {
+                                              childText = `<strong>${childText}</strong>`;
+                                          }
+
+                                          const linkDef = article.markDefs?.find(def => def._key === mark);
+                                          if (linkDef && linkDef._type === 'link') {
+                                              childText = `<a href="${linkDef.href}" target="_blank">${childText}</a>`;
+                                          }
+                                      });
+
+                                      combinedText += childText?.replace(/\n/g, '<br>'); // Replace newlines with <br>
+                                  });
+
+                                  listItemElement.innerHTML = combinedText;
+                                  listItemElement.classList.add('text-base', 'sm:text-lg');
+                                  listElement.appendChild(listItemElement);
+                              }
+                          } else {
+                              if (article.children && article.children.length > 0) {
+                                  const combinedText = article.children.map(child => {
+                                      let childText = child.text ?? '';
+
+                                      child.marks?.forEach(mark => {
+                                          if (mark === 'strong') {
+                                              childText = `<strong>${childText}</strong>`;
+                                          }
+
+                                          const linkDef = article.markDefs?.find(def => def._key === mark);
+                                          if (linkDef && linkDef._type === 'link') {
+                                              childText = `<a href="${linkDef.href}" target="_blank" class="text-lg sm:text-xl font-semibold underline decoration-4 decoration-solid text-violet-500">${childText}</a>`;
+                                          }
+                                      });
+
+                                      return childText;
+
+                                    }).join('');
+                                      const contentElement = document.createElement('p');
+                                      contentElement.innerHTML = combinedText.replace(/\n/g, '<br>'); // Replace newlines with <br>
+                                      contentElement.classList.add('text-base', 'sm:text-lg', 'my-3');
+                                      sectionElement.appendChild(contentElement);
+                                  
+                              }
+                          }
+                      });
+
+                      sectionElement.appendChild(listElement);
+                  }
+              });
+          } else {
+              console.error('No textBlocks found for section:', section);
           }
-
-          const imgContainer = document.createElement('div');
-          imgContainer.style.width = '100%';
-          imgContainer.style.overflowX = 'auto';
-          imgContainer.style.whiteSpace = 'nowrap';
-
-          imgContainer.classList.add('flex', 'flex-row', 'items-center');
-
-          (block.imagesWithTitle || []).forEach(image => {
-
-            const img = document.createElement('img');
-            img.src = urlFor(image.image).url();
-            img.alt = image.imageTitle;
-
-            img.style.display = 'inline-block';
-            img.style.width = 'auto';
-            img.style.verticalAlign = 'top';
-            img.classList.add('p-3');
-
-            imgContainer.appendChild(img);
-
-            sectionElement.appendChild(imgContainer);
-
-          });
-
-          // Assuming imgContainer is already defined as a reference to your div
-          let imgCount = 0;
-
-          // Count the number of image elements in the container
-          imgContainer.querySelectorAll('img').forEach(() => {
-              imgCount++;
-          });
-
-          // Apply justify-content based on the number of images
-          if (imgCount === 1) {
-              imgContainer.style.justifyContent = 'center';
-          } else if (imgCount >= 2 && imgCount <= 4) {
-              imgContainer.style.justifyContent = 'space-around';
-          } else if (imgCount >= 5) {
-              imgContainer.style.justifyContent = 'space-between';
-          }
-
-          // Create the list element outside the forEach loop
-          const listElement = document.createElement('ul');
-          listElement.style.listStyleType = 'square';
-          
-
-          // Iterate over each articleContent
-          block.articleContent.forEach(article => {
-            if (article.listItem === 'bullet') {
-                const listItemElement = document.createElement('li');
-                let combinedText = '';
-        
-                article.children.forEach(child => {
-                    let childText = child.text;
-        
-                    child.marks?.forEach((mark: string) => {
-                        if (mark === 'strong') {
-                            childText = `<strong>${childText}</strong>`;
-                        }
-        
-                        const linkDef = article.markDefs?.find((def: MarkDef) => def._key === mark);
-                        if (linkDef && linkDef._type === 'link') {
-                            childText = `<a href="${linkDef.href}" target="_blank">${childText}</a>`;
-                        }
-                    });
-        
-                    combinedText += childText;
-                });
-        
-                listItemElement.innerHTML = combinedText;
-                listItemElement.classList.add('text-base', 'sm:text-lg');
-                listElement.appendChild(listItemElement);
-            } else {
-                (article.children || []).forEach(child => {
-                    const contentElement = document.createElement('p');
-                    let childText = child.text ?? '';
-        
-                    child.marks?.forEach((mark: string) => {
-                        if (mark === 'strong') {
-                            childText = `<strong>${childText}</strong>`;
-                        }
-        
-                        const linkDef = article.markDefs?.find((def: MarkDef) => def._key === mark);
-                        if (linkDef && linkDef._type === 'link') {
-                            childText = `<a href="${linkDef.href}" target="_blank" class="text-lg sm:text-xl font-semibold underline decoration-4 decoration-solid text-violet-500">${childText}</a>`;
-                        }
-                    });
-        
-                    contentElement.innerHTML = childText; // Changed to innerHTML to render the tags properly
-                    contentElement.classList.add('text-base', 'sm:text-lg', 'my-3');
-                    sectionElement.appendChild(contentElement);
-                });
-            }
-        });
-
-          sectionElement.appendChild(listElement);
-
-        });
-        
-        
       });
-  
-      if (targetElement && targetElement) {
-        targetElement.appendChild(targetElement);
-      } else {
-        console.error('Element not found or target element is null');
-      }
+
       count++;
-      
-    });
-  }).catch(error => console.error("Fetching error:", error));
+  });
+}).catch(error => console.error("Fetching error:", error));
+
+
 
 function IframeFunctions() {
 

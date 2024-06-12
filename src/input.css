@@ -122,7 +122,7 @@ html {
 
 
 
-#hero-content, #p-hero-content, #project-hero-content {
+#hero-content, #p-hero-content {
     position: absolute;
     width: fit-content;
 }
