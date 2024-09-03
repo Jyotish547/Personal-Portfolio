@@ -102,6 +102,8 @@ import imgP4 from '../assets/UI Designs Thumbnail.png';
 
 import imgP5 from '../assets/LevelUp Thumbnail.png';
 
+import imgP6 from '../assets/Graphic Designs Thumbnail.png';
+
 let pGrid1 = document.getElementById("pr-1-img") as HTMLImageElement;
 
 if (pGrid1) {
@@ -135,6 +137,13 @@ let pGrid5 = document.getElementById("pr-5-img") as HTMLImageElement;
 if (pGrid5) {
     pGrid5.src = imgP5;
     pGrid5.style.width = "100%";
+}
+
+let pGrid6 = document.getElementById("pr-6-img") as HTMLImageElement;
+
+if (pGrid6) {
+    pGrid6.src = imgP6;
+    pGrid6.style.width = "100%";
 }
 
 // Sanity
@@ -1526,6 +1535,16 @@ const levelUpScreenContainer = document.getElementById('levelUp-screen') as HTML
 
 if(levelUpScreenContainer) {
     levelUpScreenContainer.src = levelUpScreen;
+}
+
+// Visual Designs
+
+import graphicDesignScreen from '../assets/caseStudies/graphicDesigns-screen.png';
+
+const graphicDesignsScreenContainer = document.getElementById('graphicDesigns-screen') as HTMLImageElement;
+
+if(graphicDesignsScreenContainer) {
+    graphicDesignsScreenContainer.src = graphicDesignScreen;
 }
 
 

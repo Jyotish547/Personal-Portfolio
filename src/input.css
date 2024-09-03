@@ -347,6 +347,27 @@ html {
     color: #14B8A6;
 }
 
+/* Visual Designs Archive */
+
+.graphicDesign-bg {
+    background-image: url('../assets/caseStudies/graphicDesignsHeroBackground.png');
+    background-size: 100% auto;
+  }
+  
+  #graphicDesign {
+    background-image: url('../assets/caseStudies/LevelUpBackground.png');
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+  }
+  
+  .graphicDesign-text {
+    color: #F76EA5;
+  }
+  
+  .graphicDesign-head {
+    color: #14B8A6;
+  }
+
 @media screen and (max-width: 640px) {
 
     .nexus-bg {

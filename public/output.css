@@ -763,11 +763,6 @@ video {
   height: 1.25rem;
 }
 
-.h-fit {
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
 .h-full {
   height: 100%;
 }
@@ -892,6 +887,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.justify-start {
+  justify-content: flex-start;
 }
 
 .justify-center {
@@ -1070,6 +1069,11 @@ video {
 .bg-gray-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
+.bg-green-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-900 {
@@ -1605,16 +1609,16 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
-.transition-colors {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1977,6 +1981,27 @@ html {
   color: #14B8A6;
 }
 
+/* Visual Designs Archive */
+
+.graphicDesign-bg {
+  background-image: url('../assets/caseStudies/graphicDesignsHeroBackground.png');
+  background-size: 100% auto;
+}
+
+#graphicDesign {
+  background-image: url('../assets/caseStudies/LevelUpBackground.png');
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+}
+
+.graphicDesign-text {
+  color: #F76EA5;
+}
+
+.graphicDesign-head {
+  color: #14B8A6;
+}
+
 @media screen and (max-width: 640px) {
   .nexus-bg {
     background-image: url('../assets/caseStudies/NexusPlayHeroBackground.png');
@@ -2001,25 +2026,8 @@ html {
   }
 }
 
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.hover\:scale-105:hover {
-  --tw-scale-x: 1.05;
-  --tw-scale-y: 1.05;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .hover\:border-2:hover {
   border-width: 2px;
-}
-
-.hover\:border-red-500:hover {
-  --tw-border-opacity: 1;
-  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .hover\:border-amber-500:hover {
@@ -2030,6 +2038,11 @@ html {
 .hover\:border-green-500:hover {
   --tw-border-opacity: 1;
   border-color: rgb(34 197 94 / var(--tw-border-opacity));
+}
+
+.hover\:border-red-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 .hover\:bg-amber-500:hover {
@@ -2092,11 +2105,6 @@ html {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
 }
 
-.hover\:bg-black:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .hover\:text-sky-400:hover {
   --tw-text-opacity: 1;
   color: rgb(56 189 248 / var(--tw-text-opacity));
@@ -2105,31 +2113,6 @@ html {
 .hover\:text-white:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.hover\:shadow-red-300\/50:hover {
-  --tw-shadow-color: rgb(252 165 165 / 0.5);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-red-500\/50:hover {
-  --tw-shadow-color: rgb(239 68 68 / 0.5);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-red-500\/70:hover {
-  --tw-shadow-color: rgb(239 68 68 / 0.7);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-amber-500\/70:hover {
-  --tw-shadow-color: rgb(245 158 11 / 0.7);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-green-500\/70:hover {
-  --tw-shadow-color: rgb(34 197 94 / 0.7);
-  --tw-shadow: var(--tw-shadow-colored);
 }
 
 .hover\:shadow-amber-500\/90:hover {
@@ -2144,11 +2127,6 @@ html {
 
 .hover\:shadow-red-500\/90:hover {
   --tw-shadow-color: rgb(239 68 68 / 0.9);
-  --tw-shadow: var(--tw-shadow-colored);
-}
-
-.hover\:shadow-blue-500:hover {
-  --tw-shadow-color: #3b82f6;
   --tw-shadow: var(--tw-shadow-colored);
 }
 
@@ -2230,12 +2208,6 @@ html {
   color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
-.group:hover .group-hover\:scale-110 {
-  --tw-scale-x: 1.1;
-  --tw-scale-y: 1.1;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
 .group:hover .group-hover\:scale-105 {
   --tw-scale-x: 1.05;
   --tw-scale-y: 1.05;
@@ -2245,11 +2217,6 @@ html {
 .group:hover .group-hover\:border-violet-600 {
   --tw-border-opacity: 1;
   border-color: rgb(124 58 237 / var(--tw-border-opacity));
-}
-
-.group:hover .group-hover\:border-amber-500 {
-  --tw-border-opacity: 1;
-  border-color: rgb(245 158 11 / var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:bg-orange-600 {
@@ -2262,11 +2229,6 @@ html {
   background-color: rgb(124 58 237 / var(--tw-bg-opacity));
 }
 
-.group:hover .group-hover\:text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
-}
-
 .group:hover .group-hover\:text-amber-500 {
   --tw-text-opacity: 1;
   color: rgb(245 158 11 / var(--tw-text-opacity));
@@ -2275,6 +2237,11 @@ html {
 .group:hover .group-hover\:text-green-500 {
   --tw-text-opacity: 1;
   color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 @media (min-width: 640px) {
