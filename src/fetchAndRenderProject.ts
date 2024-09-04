@@ -80,7 +80,8 @@ const contentArray = [
   { id: 'content-clarity', refId: 'clarity' },
   { id: 'content-alethia', refId: 'alethia' },
   { id: 'content-uiDesigns', refId: 'uiDesigns'},
-  { id: 'content-levelUp', refId: 'levelUp'}
+  { id: 'content-levelUp', refId: 'levelUp'},
+  { id: 'content-graphicDesign', refId: 'graphicDesign'}
 ];
 let count = 0;
 
@@ -549,6 +550,35 @@ function insertFigmaIframe() {
 
 }
 
+function InsertImages() {
+
+  // Visual Designs
+  const graphicDesignContainer = document.getElementById('content-graphicDesign');
+  const imageFolder='../assets/caseStudies/VisualDesigns/Qualki/'
+  const imageCount = 10;
+
+  if(graphicDesignContainer) {
+    const qualkiImageContainer = document.createElement('div');
+    // for(let i = 1; i <= imageCount; i++) {
+    //   const imgElement = document.createElement('img');
+    //   imgElement.src=`${imageFolder}1.png`;
+    //   imgElement.alt = `Image ${i}`;
+    //   imgElement.onerror = function () {
+    //     console.error(`Failed to load image: ${imgElement.src}`);
+    //     imgElement.alt = 'Image not found'; // Optional: Change alt text if the image fails to load
+    //   };
+    //   qualkiImageContainer?.appendChild(imgElement);
+    // }
+    const testImg = document.createElement('img');
+    testImg.src = '../assets/caseStudies/VisualDesigns/Qualki/1.png';
+    console.log('Current file path:', window.location.href);
+    console.log('Image path:', `${imageFolder}${1}.png`);
+    testImg.alt = 'Test Image';
+    graphicDesignContainer?.appendChild(testImg);
+  }
+  
+}
+
 // Header colors
 
 function HeaderColors() {
@@ -611,6 +641,13 @@ function HeaderColors() {
     element.classList.add('levelUp-text');
   })
 
+  // Visual Designs
+
+  const h1h2GraphicDesigns = document.querySelectorAll('#content-graphicDesign h1, #content-graphicDesign h2') as NodeListOf<HTMLElement>;
+
+  h1h2GraphicDesigns.forEach(element => {
+    element.classList.add('graphicDesign-head');
+  })
 }
 
 // Per Project br tag Responsiveness in Hero section
@@ -637,6 +674,7 @@ if (minWidthQuery.matches) {
 window.onload = () => {
   setTimeout(IframeFunctions, 500);
   setTimeout(insertFigmaIframe, 500);
+  setTimeout(InsertImages, 500);
   setTimeout(HeaderColors, 500);
   checkAndAddBreak();
   window.onresize = checkAndAddBreak;

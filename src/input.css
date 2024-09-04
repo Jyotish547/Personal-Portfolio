@@ -355,17 +355,17 @@ html {
   }
   
   #graphicDesign {
-    background-image: url('../assets/caseStudies/LevelUpBackground.png');
+    background-image: url('../assets/caseStudies/GraphicDesignBackground.png');
     background-size: 100% auto;
     background-repeat: repeat-y;
   }
   
-  .graphicDesign-text {
+  .graphicDesign-head {
     color: #F76EA5;
   }
   
-  .graphicDesign-head {
-    color: #14B8A6;
+  .graphicDesign-text {
+    color: rgb(209, 213, 219);
   }
 
 @media screen and (max-width: 640px) {
