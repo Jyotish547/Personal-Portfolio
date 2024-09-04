@@ -14,7 +14,8 @@ export default defineConfig({
         p2: resolve(__dirname, 'src/clarity.html'),
         p3: resolve(__dirname, 'src/alethia.html'),
         p4: resolve(__dirname, 'src/uiDesigns.html'),
-        p5: resolve(__dirname, 'src/levelUp.html')
+        p5: resolve(__dirname, 'src/levelUp.html'),
+        p6: resolve(__dirname, 'src/graphicDesigns.html')
         // Add more html pages here that you create in src
       },
     },

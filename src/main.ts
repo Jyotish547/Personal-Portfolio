@@ -1487,6 +1487,16 @@ document.getElementById('button-p5-2')?.addEventListener('click', function() {
     window.open("https://level-up-lore.vercel.app/", "_blank");
 });
 
+// Portfolio 6
+
+document.getElementById('button-p6-1')?.addEventListener('click', function() {
+    window.location.href = "./graphicDesigns.html";
+});
+
+document.getElementById('button-p6-2')?.addEventListener('click', function() {
+    window.open("https://drive.google.com/drive/folders/10-VisdX2Qce5_59O27OWyJ5wa4t-Z9NY?usp=drive_link", "_blank");
+});
+
 // NexusPlay
 
 import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';

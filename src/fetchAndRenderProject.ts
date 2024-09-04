@@ -2,6 +2,34 @@ import { client } from './sanityClient';
 
 import imageUrlBuilder from '@sanity/image-url';
 
+// Graphic Design Imports
+
+import qimg1 from '../assets/caseStudies/VisualDesigns/Qualki/1.png';
+import qimg2 from '../assets/caseStudies/VisualDesigns/Qualki/2.png';
+import qimg3 from '../assets/caseStudies/VisualDesigns/Qualki/3.png';
+import qimg4 from '../assets/caseStudies/VisualDesigns/Qualki/4.png';
+import qimg5 from '../assets/caseStudies/VisualDesigns/Qualki/5.png';
+import qimg6 from '../assets/caseStudies/VisualDesigns/Qualki/6.png';
+import qimg7 from '../assets/caseStudies/VisualDesigns/Qualki/7.png';
+import qimg8 from '../assets/caseStudies/VisualDesigns/Qualki/8.png';
+import qimg9 from '../assets/caseStudies/VisualDesigns/Qualki/9.png';
+import qimg10 from '../assets/caseStudies/VisualDesigns/Qualki/10.png';
+
+const qImages = [qimg1, qimg2, qimg3, qimg4, qimg5, qimg6, qimg7, qimg8, qimg9, qimg10];
+
+import aimg1 from '../assets/caseStudies/VisualDesigns/Advaita/1.png';
+import aimg2 from '../assets/caseStudies/VisualDesigns/Advaita/2.png';
+import aimg3 from '../assets/caseStudies/VisualDesigns/Advaita/3.png';
+import aimg4 from '../assets/caseStudies/VisualDesigns/Advaita/4.png';
+import aimg5 from '../assets/caseStudies/VisualDesigns/Advaita/5.png';
+import aimg6 from '../assets/caseStudies/VisualDesigns/Advaita/6.png';
+import aimg7 from '../assets/caseStudies/VisualDesigns/Advaita/7.png';
+import aimg8 from '../assets/caseStudies/VisualDesigns/Advaita/8.png';
+import aimg9 from '../assets/caseStudies/VisualDesigns/Advaita/9.png';
+import aimg10 from '../assets/caseStudies/VisualDesigns/Advaita/10.png';
+
+const aImages = [aimg1, aimg2, aimg3, aimg4, aimg5, aimg6, aimg7, aimg8, aimg9, aimg10];
+
 // Initialize the image URL builder
 interface ImageSource {
     asset: {
@@ -554,29 +582,65 @@ function InsertImages() {
 
   // Visual Designs
   const graphicDesignContainer = document.getElementById('content-graphicDesign');
-  const imageFolder='../assets/caseStudies/VisualDesigns/Qualki/'
   const imageCount = 10;
 
   if(graphicDesignContainer) {
-    const qualkiImageContainer = document.createElement('div');
-    // for(let i = 1; i <= imageCount; i++) {
-    //   const imgElement = document.createElement('img');
-    //   imgElement.src=`${imageFolder}1.png`;
-    //   imgElement.alt = `Image ${i}`;
-    //   imgElement.onerror = function () {
-    //     console.error(`Failed to load image: ${imgElement.src}`);
-    //     imgElement.alt = 'Image not found'; // Optional: Change alt text if the image fails to load
-    //   };
-    //   qualkiImageContainer?.appendChild(imgElement);
-    // }
-    const testImg = document.createElement('img');
-    testImg.src = '../assets/caseStudies/VisualDesigns/Qualki/1.png';
-    console.log('Current file path:', window.location.href);
-    console.log('Image path:', `${imageFolder}${1}.png`);
-    testImg.alt = 'Test Image';
-    graphicDesignContainer?.appendChild(testImg);
+
+    // Qualki
+
+    let qualkiImageContainer = document.createElement('div');
+
+    const qualkiPosition = graphicDesignContainer.children[2];
+
+    if(qualkiPosition) {
+      graphicDesignContainer.insertBefore(qualkiImageContainer, qualkiPosition)
+    } else {
+      graphicDesignContainer.appendChild(qualkiImageContainer)
+    }
+
+    qualkiImageContainer.classList.add('grid', 'grid-cols-5', 'gap-4');
+
+    for(let i = 0; i < imageCount; i++) {
+      const imgElement = document.createElement('img');
+      imgElement.classList.add('w-full', 'h-auto', 'object-cover')
+      imgElement.src=qImages[i];
+      imgElement.alt = `Image ${i}`;
+      console.log(`${qImages[i]}`)
+      imgElement.onerror = function () {
+        console.error(`Failed to load image: ${imgElement.src}`);
+        imgElement.alt = 'Image not found'; // Optional: Change alt text if the image fails to load
+      };
+      qualkiImageContainer?.appendChild(imgElement);
+    }
+
+    // Advaita
+    
+    let advaitaImageContainer = document.createElement('div');
+
+    const advaitaPosition = graphicDesignContainer.children[4];
+
+    if(advaitaPosition) {
+      graphicDesignContainer.insertBefore(advaitaImageContainer, advaitaPosition)
+    } else {
+      graphicDesignContainer.appendChild(advaitaImageContainer)
+    }
+
+    advaitaImageContainer.classList.add('grid', 'grid-cols-5', 'gap-4');
+
+    for(let i = 0; i < imageCount; i++) {
+      const imgElement = document.createElement('img');
+      imgElement.classList.add('w-full', 'h-auto', 'object-cover')
+      imgElement.src=aImages[i];
+      imgElement.alt = `Image ${i}`;
+      console.log(`${qImages[i]}`)
+      imgElement.onerror = function () {
+        console.error(`Failed to load image: ${imgElement.src}`);
+        imgElement.alt = 'Image not found'; // Optional: Change alt text if the image fails to load
+      };
+      advaitaImageContainer?.appendChild(imgElement);
+    }
+
   }
-  
 }
 
 // Header colors
