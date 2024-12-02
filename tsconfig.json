@@ -32,5 +32,5 @@
     "../assets/types"
   ],
   "noImplicitAny": false,
-  "include": ["src", "**/*.ts", "test", "src/particles.js", "**/*.d.ts"]
+  "include": ["src", "**/*.ts", "test", "src/particles.js", "**/*.d.ts", "global.d.ts"]
 }

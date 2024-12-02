@@ -275,10 +275,10 @@ let count = 0;
 //     });
 // }).catch(error => console.error("Fetching error:", error));
 
-client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then(cases => {
+client.fetch<CaseStudy[]>('*[_type == "caseStudy"]').then((cases: CaseStudy[]) => {
   console.log('Fetched cases:', cases); // Log the fetched data
 
-  cases.forEach(caseStudy => {
+  cases.forEach((caseStudy: CaseStudy) => {
       const contentItem = contentArray.find(item => item.refId === caseStudy.id);
       if (!contentItem) {
           console.error(`No content item found for case study with ID ${caseStudy.id}.`);
