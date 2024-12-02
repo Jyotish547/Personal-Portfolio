@@ -1497,6 +1497,66 @@ document.getElementById('button-p6-2')?.addEventListener('click', function() {
     window.open("https://drive.google.com/drive/folders/10-VisdX2Qce5_59O27OWyJ5wa4t-Z9NY?usp=drive_link", "_blank");
 });
 
+// Portfolio Pages Buttons
+
+// LevelUp Lore
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-lul-1')?.addEventListener('click', function() {
+        window.open("https://www.figma.com/design/Q98SAgj0YihETBzIBU1kCo/LevelUp-Lore?node-id=295-2&t=3f1AYhVrZ2RoR2lG-1", "_blank");
+    });
+
+    document.getElementById('button-lul-2')?.addEventListener('click', function() {
+        window.open("https://level-up-lore.vercel.app/", "_blank");
+    });
+});
+
+// Nexus Play
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-nexus')?.addEventListener('click', function() {
+        window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play?type=design&node-id=0%3A1&mode=design&t=RfnXBgzVmXHpbMZ0-1", "_blank");
+    });
+});
+
+// Clarity
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-clarity-1')?.addEventListener('click', function() {
+        window.open("https://docs.google.com/document/d/19B8-lNKwgqyiOVUFfif-93j_GNNwqkQHeVx7xlEzJAY/edit?usp=sharing", "_blank");
+    });
+
+    document.getElementById('button-clarity-2')?.addEventListener('click', function() {
+        window.open("https://docs.google.com/presentation/d/1OEzM2BjzV6B1oTR4MuU2X9c5D8j_clQQd6EEt_68NpQ/edit?usp=sharing", "_blank");
+    });
+});
+
+// UI/UX Designs
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-ui')?.addEventListener('click', function() {
+        window.open("https://www.figma.com/file/v2FVFWTxpHGsrvVlDVql1D?type=design&node-id=0%3A1&mode=design", "_blank");
+    });
+});
+
+// Alethia
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-alethia')?.addEventListener('click', function() {
+        window.open("https://www.figma.com/file/FcFY5H9kDZ80bXzDLndfiT/Aletheia?type=design&node-id=0%3A1&mode=design&t=sx8gTe4uTo7zuN98-1", "_blank");
+    });
+});
+
+// Graphic Designs
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('button-graphic')?.addEventListener('click', function() {
+        window.open("https://drive.google.com/drive/folders/10-VisdX2Qce5_59O27OWyJ5wa4t-Z9NY", "_blank");
+    });
+});
+
+// Portfolio Screens
+
 // NexusPlay
 
 import nexusScreen from '../assets/caseStudies/NexusPlayScreen.png';
