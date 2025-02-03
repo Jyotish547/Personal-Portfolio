@@ -68,6 +68,28 @@ html {
    
 } */
 
+/* Resume Progress bar */
+
+#progress-bar {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .progress-step {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #e2e8f0; /* Light gray for inactive state */
+    transition: background-color 0.3s;
+  }
+  
+  .progress-step.active {
+    background-color: #7c3aed; /* Violet for active state */
+  }
+  
+
 /* Parralax Effect */
 
 #resume-section, #projects-section, #contact-section {

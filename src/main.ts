@@ -420,7 +420,7 @@ if (filterOptions && dropdownMenu) {
     });
 
     // Close the dropdown if clicked outside
-    document.addEventListener('click', function(event) {
+    dropdownMenu.addEventListener('click', function(event) {
         if (!filterOptions.contains(event.target as Node)) {
             dropdownMenu.classList.add("hidden");
         }
@@ -1072,6 +1072,63 @@ window.addEventListener('scroll', () => {
 
 // Resume Section
 
+// Resume Buttons logic
+
+const expItems = document.querySelectorAll<HTMLDivElement>('.exp-item');
+const nextButton = document.getElementById('exp-next-btn') as HTMLButtonElement;
+const prevButton = document.getElementById('exp-prev-btn') as HTMLButtonElement;
+const progressBar = document.getElementById('progress-bar') as HTMLDivElement;
+
+let currentIndex = 0;
+const itemsPerPage = 2;
+const totalPages = Math.ceil(expItems.length / itemsPerPage);
+
+function updateProgressBar() {
+    // Clear the progress bar
+    progressBar.innerHTML = '';
+  
+    // Create progress steps
+    for (let i = 0; i < totalPages; i++) {
+      const step = document.createElement('div');
+      step.classList.add('progress-step');
+      if (i === Math.floor(currentIndex / itemsPerPage)) {
+        step.classList.add('active');
+      }
+      progressBar.appendChild(step);
+    }
+  }
+
+function updateExperienceDisplay() {
+    expItems.forEach((item, index) => {
+        if(index >= currentIndex && index < currentIndex + itemsPerPage) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex + itemsPerPage >= expItems.length;
+
+    updateProgressBar();
+}
+
+nextButton.addEventListener('click', () => {
+    if(currentIndex + itemsPerPage < expItems.length) {
+        currentIndex += itemsPerPage;
+    }
+    updateExperienceDisplay();
+});
+
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+      currentIndex -= itemsPerPage; // Decrement by itemsPerPage
+    }
+    updateExperienceDisplay();
+  });
+
+updateExperienceDisplay();
+
 let animeResumeTitle = false;
 let animeResumeLeft = false;
 let animeResumeRight = false;
@@ -1427,18 +1484,36 @@ window.addEventListener('load', function() {
 
 // Portfolio 1
 
-document.getElementById("button-p1-1")?.addEventListener("click", function() {
-    
+// Attach click event for the entire card
+document.getElementById("project-1")?.addEventListener("click", function () {
     window.location.href = "./nexusPlay.html";
+  });
+  
+  // Button for "View Details"
+document.getElementById("button-p1-1")?.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevent click from bubbling to parent <div>
+    window.location.href = "./nexusPlay.html";
+    console.log('clicked');
+});
+  
+  // Button for "Figma File"
+// document.getElementById("button-p1-2")?.addEventListener("click", function (event) {
+// event.stopPropagation(); // Prevents the event from bubbling to the parent <div>
+// window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play", "_blank");
+// });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.getElementById("button-p1-2");
+    if (button) {
+        button.addEventListener("click", function () {
+            console.log("");
+            window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play", "_blank");
+        });
+    } else {
+        console.error("Button p1-2 not found in the DOM!");
+    }
 });
 
-document.getElementById("button-p1-2")?.addEventListener("click", function() {
-    
-    window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play?type=design&node-id=0%3A1&mode=design&t=RfnXBgzVmXHpbMZ0-1", "_blank");
-    
-
-});
 
 // Portfolio 2
 
