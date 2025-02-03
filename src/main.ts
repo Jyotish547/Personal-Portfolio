@@ -670,8 +670,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
-  
-  
 
 // My Projects Section
 
@@ -1113,21 +1111,27 @@ function updateExperienceDisplay() {
     updateProgressBar();
 }
 
-nextButton.addEventListener('click', () => {
-    if(currentIndex + itemsPerPage < expItems.length) {
-        currentIndex += itemsPerPage;
-    }
-    updateExperienceDisplay();
-});
+if (nextButton) {
+    nextButton.addEventListener('click', () => {
+        if (currentIndex + itemsPerPage < expItems.length) {
+            currentIndex += itemsPerPage;
+        }
+        updateExperienceDisplay();
+    });
+} else {
+    console.warn("Warning: nextButton does not exist on this page.");
+}
 
-prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex -= itemsPerPage; // Decrement by itemsPerPage
-    }
-    updateExperienceDisplay();
-  });
-
-updateExperienceDisplay();
+if (prevButton) {
+    prevButton.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex -= itemsPerPage;
+        }
+        updateExperienceDisplay();
+    });
+} else {
+    console.warn("Warning: prevButton does not exist on this page.");
+}
 
 let animeResumeTitle = false;
 let animeResumeLeft = false;
@@ -1496,22 +1500,9 @@ document.getElementById("button-p1-1")?.addEventListener("click", function (even
     console.log('clicked');
 });
   
-  // Button for "Figma File"
-// document.getElementById("button-p1-2")?.addEventListener("click", function (event) {
-// event.stopPropagation(); // Prevents the event from bubbling to the parent <div>
-// window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play", "_blank");
-// });
-
-document.addEventListener("DOMContentLoaded", () => {
-    const button = document.getElementById("button-p1-2");
-    if (button) {
-        button.addEventListener("click", function () {
-            console.log("");
-            window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play", "_blank");
-        });
-    } else {
-        console.error("Button p1-2 not found in the DOM!");
-    }
+document.getElementById("button-p1-2")?.addEventListener("click", function (event) {
+event.stopPropagation(); // Prevents the event from bubbling to the parent <div>
+window.open("https://www.figma.com/file/RVKGe1pXhECviwOPaDIxJZ/Nexus-Play", "_blank");
 });
 
 
